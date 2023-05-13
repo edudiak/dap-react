@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  // font-size: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+svg {
+  max-width: 100%;
+  width: 100%;
+}
+.svg_icon svg path {
+  fill: currentcolor;
+}
+
+// @media screen and (min-width: 480px) and (max-width: 1023px) {
+//   html {
+//     font-size: 10px;
+//   }
+// }
+
+// @media screen and (min-width: 1024px) and (max-width: 1440px) {
+//   html {
+//     font-size: calc(100vw / 1440 * 10);
+//   }
+// }
+
+// @media screen and (min-width: 1441px) {
+//   html {
+//     font-size: calc(100vw / 1920 * 10);
+//   }
+// }
+
+// h1 {
+//   font-size: clamp(2rem, 4.65vw, 12rem);
+// }
