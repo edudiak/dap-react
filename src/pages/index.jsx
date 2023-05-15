@@ -46,7 +46,7 @@ export default function Home() {
     {
       id: 5,
       position: {
-        x: 'ml-[200px]',
+        x: 'ml-[220px]',
         y: 'mt-[-100px]',
         speed: 0.9,
       },
@@ -197,7 +197,7 @@ export default function Home() {
 
       gsap.timeline({
         scrollTrigger: {
-          markers: true,
+          // markers: true,
           trigger: section2_panel1.current,
           start: 'top top',
           end: 'bottom 90%',
@@ -396,7 +396,7 @@ export default function Home() {
                 <div className="relative">
                   {thePackDogs.map((dog, i) => {
                     const dogSpeed = dog.position.speed;
-                    const cssClass = `${dog.position.y} ${dog.position.x} w-[40%] overflow-hidden rounded-full rounded-bl-[100px] rounded-br-[100px] bg-white bg-opacity-50 shadow-2xl`;
+                    const cssClass = `${dog.position.y} ${dog.position.x} w-[40%] overflow-hidden rounded-tl-[30vw] rounded-tr-[30vw] shadow-2xl`;
                     return (
                       <div
                         key={dog.id}
@@ -411,7 +411,7 @@ export default function Home() {
                             height={400}
                           />
                         </div>
-                        <div className="p-[1.5vw] text-purple-secondary">
+                        <div className="rounded-bl-[2vw] rounded-br-[2vw] bg-white bg-opacity-50 p-[1.5vw] text-purple-secondary backdrop-blur">
                           <p className="mb-[1vw] text-[clamp(1rem,1.25vw,3rem)] font-bold leading-none">
                             Dog Name, Age 3
                           </p>
