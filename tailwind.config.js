@@ -17,6 +17,7 @@ module.exports = {
         purple: {
           primary: '#895CD0',
           secondary: '#250A60',
+          light: '#FFDADA',
         },
       },
     },
