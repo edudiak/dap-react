@@ -18,6 +18,7 @@ module.exports = {
           primary: '#895CD0',
           secondary: '#250A60',
           light: '#FFDADA',
+          200: '#E8DCFF',
         },
       },
     },

@@ -1,10 +1,12 @@
 /* eslint @next/next/no-img-element: "off" */
 import Image from 'next/image';
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
 import Link from 'next/link';
+
+import VideoPopup from '@/components/video-popup';
 
 import ArrowDown from '@assets/images/icons/arrow-down.svg';
 import PlayIcon from '@assets/images/icons/play-video.svg';
@@ -12,6 +14,8 @@ import PlayIcon from '@assets/images/icons/play-video.svg';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function Home() {
+  const [openVideoPopup, setOpenVideoPopup] = useState(false);
+
   const thePackDogs = [
     {
       id: 1,
@@ -121,6 +125,7 @@ export default function Home() {
   const section1_panel1_elm2 = useRef(null);
   const section1_panel1_elm3 = useRef(null);
   const section1_panel1_elm4 = useRef(null);
+  const section1_panel1_elm4_circle = useRef(null);
   const section1_panel1_elm5 = useRef(null);
   const section1_panel2 = useRef(null);
   const section1_panel2_elm1 = useRef(null);
@@ -140,6 +145,21 @@ export default function Home() {
   const section3_panel1_elm3 = useRef(null);
   const section3_panel1_elm4 = useRef(null);
   const section3_panel1_elm5 = useRef(null);
+
+  const section4 = useRef(null);
+  const section4_panel2 = useRef(null);
+  const section4_panel2_box1 = useRef(null);
+  const section4_panel2_box2 = useRef(null);
+  const section4_panel2_box3 = useRef(null);
+  const section4_panel2_box4 = useRef(null);
+  const section4_panel2_box5 = useRef(null);
+  const section4_panel2_box6 = useRef(null);
+  const section4_panel2_box1_dot = useRef(null);
+  const section4_panel2_box2_dot = useRef(null);
+  const section4_panel2_box3_dot = useRef(null);
+  const section4_panel2_box4_dot = useRef(null);
+  const section4_panel2_box5_dot = useRef(null);
+  const section4_panel2_box6_dot = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -175,6 +195,12 @@ export default function Home() {
           { y: 10, opacity: 1 },
           'section1_Start+=0.1',
         )
+        .to(section1_panel1_elm4_circle.current, {
+          rotate: 360,
+          duration: 6,
+          repeat: -1,
+          ease: 'none',
+        })
         .fromTo(
           section1_panel1_elm5.current,
           { y: 100, opacity: 0 },
@@ -207,7 +233,6 @@ export default function Home() {
 
       gsap.timeline({
         scrollTrigger: {
-          // markers: true,
           trigger: section2_panel1.current,
           start: 'top top',
           end: 'bottom bottom',
@@ -218,12 +243,10 @@ export default function Home() {
       gsap
         .timeline({
           scrollTrigger: {
-            // markers: true,
             trigger: section3.current,
             start: 'top top',
             end: 'bottom bottom',
             pin: section3_panel1_elm1.current,
-            // scrub: 1,
           },
         })
         .addLabel('section3_panel2_Start')
@@ -240,6 +263,250 @@ export default function Home() {
           { y: 100, opacity: 0 },
           { y: 0, opacity: 1 },
           'section1_panel2_Start+=0.1',
+        );
+
+      // Box animation
+      // Box 1 Animation
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: section4.current,
+            start: 'top top',
+            end: '+=1000px',
+            pin: section4.current,
+            scrub: true,
+            snap: {
+              snapTo: 1,
+              duration: 0.7,
+              delay: 0,
+            },
+          },
+        })
+        .addLabel('section4_panel2_box1')
+        .fromTo(
+          section4_panel2_box1.current,
+          { backgroundColor: '#B894FF' },
+          {
+            backgroundColor: '#216A97',
+          },
+        )
+        .fromTo(
+          section4_panel2_box1_dot.current,
+          { opacity: 0, backgroundColor: '#B894FF', scale: 1 },
+          { opacity: 1, backgroundColor: '#216A97', scale: 50 },
+          'section4_panel2_box1',
+        )
+        .fromTo(
+          [
+            section4_panel2_box2.current,
+            section4_panel2_box3.current,
+            section4_panel2_box4.current,
+            section4_panel2_box5.current,
+            section4_panel2_box6.current,
+          ],
+          { backgroundColor: '#B894FF' },
+          { backgroundColor: '#5DC0FD' },
+          'section4_panel2_box1',
+        );
+
+      // Box 2 Animation
+      gsap
+        .timeline({
+          paused: true,
+          scrollTrigger: {
+            trigger: section4.current,
+            start: (self) => self.previous().end,
+            end: '+=1000px',
+            pin: section4.current,
+            scrub: true,
+            snap: {
+              snapTo: 1,
+              duration: 0.7,
+              delay: 0,
+            },
+          },
+        })
+        .addLabel('section4_panel2_box2')
+        .to(
+          section4_panel2_box2.current,
+          { backgroundColor: '#6F48C6' },
+          'section4_panel2_box2',
+        )
+        .to(
+          section4_panel2_box2_dot.current,
+          { opacity: 1, backgroundColor: '#6F48C6', scale: 50 },
+          'section4_panel2_box2',
+        )
+        .to(
+          [
+            section4_panel2_box1.current,
+            section4_panel2_box3.current,
+            section4_panel2_box4.current,
+            section4_panel2_box5.current,
+            section4_panel2_box6.current,
+          ],
+          { backgroundColor: '#B894FF' },
+          'section4_panel2_box2',
+        );
+
+      // Box 3 Animation
+      gsap
+        .timeline({
+          paused: true,
+          scrollTrigger: {
+            trigger: section4.current,
+            start: (self) => self.previous().end,
+            end: '+=1000px',
+            pin: section4.current,
+            scrub: true,
+            snap: {
+              snapTo: 1,
+              duration: 0.7,
+              delay: 0,
+            },
+          },
+        })
+        .addLabel('section4_panel2_box3')
+        .to(
+          section4_panel2_box3.current,
+          { backgroundColor: '#C3912A' },
+          'section4_panel2_box3',
+        )
+        .to(
+          section4_panel2_box3_dot.current,
+          { opacity: 1, backgroundColor: '#C3912A', scale: 50 },
+          'section4_panel2_box3',
+        )
+        .to(
+          [
+            section4_panel2_box1.current,
+            section4_panel2_box2.current,
+            section4_panel2_box4.current,
+            section4_panel2_box5.current,
+            section4_panel2_box6.current,
+          ],
+          { backgroundColor: '#FEC652' },
+          'section4_panel2_box3',
+        );
+
+      // Box 4 Animation
+      gsap
+        .timeline({
+          paused: true,
+          scrollTrigger: {
+            trigger: section4.current,
+            start: (self) => self.previous().end,
+            end: '+=1000px',
+            pin: section4.current,
+            scrub: true,
+            snap: {
+              snapTo: 1,
+              duration: 0.7,
+              delay: 0,
+            },
+          },
+        })
+        .addLabel('section4_panel2_box4')
+        .to(
+          section4_panel2_box4.current,
+          { backgroundColor: '#847552' },
+          'section4_panel2_box4',
+        )
+        .to(
+          section4_panel2_box4_dot.current,
+          { opacity: 1, backgroundColor: '#847552', scale: 50 },
+          'section4_panel2_box4',
+        )
+        .to(
+          [
+            section4_panel2_box1.current,
+            section4_panel2_box2.current,
+            section4_panel2_box3.current,
+            section4_panel2_box5.current,
+            section4_panel2_box6.current,
+          ],
+          { backgroundColor: '#D0BD8F' },
+          'section4_panel2_box4',
+        );
+
+      // Box 5 Animation
+      gsap
+        .timeline({
+          paused: true,
+          scrollTrigger: {
+            trigger: section4.current,
+            start: (self) => self.previous().end,
+            end: '+=1000px',
+            pin: section4.current,
+            scrub: true,
+            snap: {
+              snapTo: 1,
+              duration: 0.7,
+              delay: 0,
+            },
+          },
+        })
+        .addLabel('section4_panel2_box5')
+        .to(
+          section4_panel2_box5.current,
+          { backgroundColor: '#AF4A40' },
+          'section4_panel2_box5',
+        )
+        .to(
+          section4_panel2_box5_dot.current,
+          { opacity: 1, backgroundColor: '#AF4A40', scale: 50 },
+          'section4_panel2_box5',
+        )
+        .to(
+          [
+            section4_panel2_box1.current,
+            section4_panel2_box2.current,
+            section4_panel2_box3.current,
+            section4_panel2_box4.current,
+            section4_panel2_box6.current,
+          ],
+          { backgroundColor: '#F38176' },
+          'section4_panel2_box5',
+        );
+
+      // Box 6 Animation
+      gsap
+        .timeline({
+          paused: true,
+          scrollTrigger: {
+            trigger: section4.current,
+            start: (self) => self.previous().end,
+            end: '+=1000px',
+            pin: section4.current,
+            scrub: true,
+            snap: {
+              snapTo: 1,
+              duration: 0.7,
+              delay: 0,
+            },
+          },
+        })
+        .addLabel('section4_panel2_box6')
+        .to(
+          section4_panel2_box6.current,
+          { backgroundColor: '#663B40' },
+          'section4_panel2_box6',
+        )
+        .to(
+          section4_panel2_box6_dot.current,
+          { opacity: 1, backgroundColor: '#663B40', scale: 50 },
+          'section4_panel2_box6',
+        )
+        .to(
+          [
+            section4_panel2_box1.current,
+            section4_panel2_box2.current,
+            section4_panel2_box3.current,
+            section4_panel2_box4.current,
+            section4_panel2_box5.current,
+          ],
+          { backgroundColor: '#CB878F' },
+          'section4_panel2_box6',
         );
 
       // globalTL.add(section1_TL).play();
@@ -316,14 +583,26 @@ export default function Home() {
                 <div
                   ref={section1_panel1_elm4}
                   data-speed={0.9}
-                  className="absolute -top-[5vw] right-[3vw] flex max-w-[45%] items-center justify-center overflow-hidden rounded-full shadow-[inset_0px_0px_7px_rgba(0,0,0,0.7)]"
+                  className="absolute -top-[5vw] right-[3vw] flex max-w-[45%] items-center justify-center"
                 >
-                  <Image
-                    src="/images/banner-dog.jpg"
-                    alt="Dog in a field"
-                    width={584 * 2}
-                    height={584 * 2}
-                  />
+                  <div
+                    ref={section1_panel1_elm4_circle}
+                    className="absolute right-[-1vw] flex h-[calc(100%+2vw)] w-[calc(100%+2vw)] text-transparent"
+                  >
+                    <img
+                      src="/images/icons/banner-semi-circle.png"
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-full shadow-[inset_0px_0px_7px_rgba(0,0,0,0.7)]">
+                    <Image
+                      src="/images/banner-dog.jpg"
+                      alt="Dog in a field"
+                      width={584 * 2}
+                      height={584 * 2}
+                    />
+                  </div>
                 </div>
               </div>
               <button
@@ -381,13 +660,22 @@ export default function Home() {
                 style={{ backgroundImage: 'url(/images/dog-play.jpg)' }}
               >
                 <div className="absolute inset-0 h-full w-full bg-white bg-opacity-50" />
-                <button type="button" className="relative">
+                <button
+                  type="button"
+                  className="relative"
+                  onClick={() => setOpenVideoPopup(true)}
+                >
                   <PlayIcon />
                 </button>
               </div>
             </div>
           </div>
         </div>
+
+        <VideoPopup
+          isOpen={openVideoPopup}
+          onClose={() => setOpenVideoPopup(false)}
+        />
 
         <div
           ref={section2}
@@ -447,7 +735,17 @@ export default function Home() {
                             height={400}
                           />
                         </div>
-                        <div className="rounded-bl-[2vw] rounded-br-[2vw] bg-white bg-opacity-50 p-[1.5vw] text-purple-secondary backdrop-blur">
+                        <div
+                          className="rounded-bl-[2vw] rounded-br-[2vw] p-[1.5vw] text-purple-secondary backdrop-blur"
+                          style={{
+                            background:
+                              'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
+                            backgroundBlendMode: 'overlay, normal, normal',
+                            boxShadow:
+                              '31px 46px 22px rgba(0, 0, 0, 0.01), 18px 26px 19px rgba(0, 0, 0, 0.05), 8px 12px 14px rgba(0, 0, 0, 0.09), 2px 3px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+                            backdropFilter: 'blur(20px)',
+                          }}
+                        >
                           <p className="mb-[1vw] text-[clamp(1rem,1.25vw,3rem)] font-bold leading-none">
                             Dog Name, Age 3
                           </p>
@@ -484,7 +782,7 @@ export default function Home() {
 
           <div
             ref={section3_panel1}
-            className="panel relative px-[5%] py-[14vw]"
+            className="panel relative px-[5%] py-[10vw]"
           >
             <h2
               ref={section3_panel1_elm2}
@@ -498,7 +796,7 @@ export default function Home() {
               className="mt-[8vw] max-w-[40vw] rounded-[2vw] p-[2vw] leading-snug text-white"
               style={{
                 background:
-                  'url(DAP_Noise_BG.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
+                  'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
                 backgroundBlendMode: 'overlay, normal, normal',
                 boxShadow: '0px 0px 14px 3px rgba(0, 0, 0, 0.3)',
                 backdropFilter: 'blur(20px)',
@@ -527,7 +825,7 @@ export default function Home() {
               className="ml-auto mt-[8vw] max-w-[30vw] rounded-[2vw] p-[2vw] leading-snug text-white"
               style={{
                 background:
-                  'url(DAP_Noise_BG.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
+                  'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
                 backgroundBlendMode: 'overlay, normal, normal',
                 boxShadow: '0px 0px 14px 3px rgba(0, 0, 0, 0.3)',
                 backdropFilter: 'blur(20px)',
@@ -547,7 +845,7 @@ export default function Home() {
               className="mt-[8vw] h-[1000px] w-full rounded-[2vw] p-[2vw] leading-snug text-white"
               style={{
                 background:
-                  'url(DAP_Noise_BG.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
+                  'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
                 backgroundBlendMode: 'overlay, normal, normal',
                 boxShadow: '0px 0px 14px 3px rgba(0, 0, 0, 0.3)',
                 backdropFilter: 'blur(20px)',
@@ -570,7 +868,7 @@ export default function Home() {
               className="mt-[8vw] max-w-[30vw] rounded-[2vw] p-[2vw] leading-snug text-white"
               style={{
                 background:
-                  'url(DAP_Noise_BG.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
+                  'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
                 backgroundBlendMode: 'overlay, normal, normal',
                 boxShadow: '0px 0px 14px 3px rgba(0, 0, 0, 0.3)',
                 backdropFilter: 'blur(20px)',
@@ -586,6 +884,143 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div ref={section4} className="overflow-hidden bg-[#6543A5] py-[14vw]">
+          <div className="mx-auto max-w-[70%]">
+            <div className="max-w-[40vw] text-purple-200">
+              <h4 className="text-[clamp(3rem,3.15vw,6rem)] uppercase">
+                Accelerating Scientific Discovery & Innovation for Dogs and
+                Humans
+              </h4>
+              <p className="mb-[2vw] mt-[3vw] text-[clamp(1rem,1.6vw,2.5rem)] uppercase leading-snug">
+                Our Research Goals
+              </p>
+              <p className="max-w-[35vw] text-[clamp(1rem,1.1vw,2.5rem)] leading-snug">
+                The goal of the Dog Aging Project is to understand how genes,
+                lifestyle, and environment influence health and aging. Our
+                research program is designed to collect—and connect—critical
+                data in six scientific domains: health, genetics, environment,
+                lifestyle, cognition, and activity. We use innovative approaches
+                and cutting-edge technologies to assemble, analyze, and share
+                high quality canine health data with the scientific community
+                and the public.
+              </p>
+            </div>
+            <div className="ml-auto mt-[3vw] max-w-[35vw] text-[clamp(.9rem,.7vw,2rem)] leading-snug text-purple-200">
+              From within the Dog Aging Project Pack, we enroll subsets of dogs
+              into cohorts based on specific scientific criteria. These cohorts
+              include Foundation, a genomics study; Precision, a biochemical
+              study; and the Test of Rapamycin in Aging Dogs (TRIAD), a
+              double-blind, placebo-controlled clinical trial.
+            </div>
+          </div>
+
+          <div ref={section4_panel2} className="mt-[5vw] px-[5%]">
+            <div className="flex gap-[1vw]">
+              <div className="relative flex-1">
+                <div
+                  ref={section4_panel2_box1_dot}
+                  className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+                />
+                <div
+                  ref={section4_panel2_box1}
+                  className="box relative z-[2] rounded-[1vw] bg-[#B894FF] px-[3vw] py-[5vw] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+                >
+                  <div className="relative">
+                    <p className="mb-[.5vw] text-[clamp(1rem,1.6vw,2.5rem)] leading-none">
+                      Health
+                    </p>
+                    <p>explore</p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative flex-1">
+                <div
+                  ref={section4_panel2_box2_dot}
+                  className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+                />
+                <div
+                  ref={section4_panel2_box2}
+                  className="box relative z-[2] rounded-[1vw] px-[3vw] py-[5vw] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+                >
+                  <p className="mb-[.5vw] text-[clamp(1rem,1.6vw,2.5rem)] leading-none">
+                    Health
+                  </p>
+                  <p>explore</p>
+                </div>
+              </div>
+              <div className="relative flex-1">
+                <div
+                  ref={section4_panel2_box3_dot}
+                  className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+                />
+                <div
+                  ref={section4_panel2_box3}
+                  className="box relative z-[2] rounded-[1vw] px-[3vw] py-[5vw] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+                >
+                  <p className="mb-[.5vw] text-[clamp(1rem,1.6vw,2.5rem)] leading-none">
+                    Health
+                  </p>
+                  <p>explore</p>
+                </div>
+              </div>
+              <div className="relative flex-1">
+                <div
+                  ref={section4_panel2_box4_dot}
+                  className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+                />
+                <div
+                  ref={section4_panel2_box4}
+                  className="box relative z-[2] rounded-[1vw] px-[3vw] py-[5vw] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+                >
+                  <p className="mb-[.5vw] text-[clamp(1rem,1.6vw,2.5rem)] leading-none">
+                    Health
+                  </p>
+                  <p>explore</p>
+                </div>
+              </div>
+              <div className="relative flex-1">
+                <div
+                  ref={section4_panel2_box5_dot}
+                  className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+                />
+                <div
+                  ref={section4_panel2_box5}
+                  className="box relative z-[2] rounded-[1vw] px-[3vw] py-[5vw] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+                >
+                  <p className="mb-[.5vw] text-[clamp(1rem,1.6vw,2.5rem)] leading-none">
+                    Health
+                  </p>
+                  <p>explore</p>
+                </div>
+              </div>
+              <div className="relative flex-1">
+                <div
+                  ref={section4_panel2_box6_dot}
+                  className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+                />
+                <div
+                  ref={section4_panel2_box6}
+                  className="box relative z-[2] rounded-[1vw] px-[3vw] py-[5vw] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+                >
+                  <p className="mb-[.5vw] text-[clamp(1rem,1.6vw,2.5rem)] leading-none">
+                    Health
+                  </p>
+                  <p>explore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="h-[1600px]"
+          style={{
+            background:
+              'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #6543A5 5.37%, rgba(100, 66, 164, 0.85) 34.94%, rgba(100, 66, 164, 0.28) 70.41%, rgba(255, 255, 255, 0) 96.74%), #FFFFFF',
+            backgroundBlendMode: 'overlay, normal, normal',
+          }}
+        />
       </div>
     </main>
   );
