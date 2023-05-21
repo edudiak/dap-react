@@ -15,9 +15,10 @@ module.exports = {
       colors: {
         primary: '#A22727',
         purple: {
-          primary: '#895CD0',
-          secondary: '#250A60',
+          primary: '#8a5dd2',
+          secondary: '#532EA4',
           light: '#FFDADA',
+          100: '#F8F4FF',
           200: '#E8DCFF',
         },
       },

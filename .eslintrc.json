@@ -22,6 +22,7 @@
     "no-var": "error",
     "jsx-a11y/anchor-is-valid": "off",
     "import/extensions": "off",
-    "import/order": "off"
+    "import/order": "off",
+    "implicit-arrow-linebreak": "off"
   }
 }
