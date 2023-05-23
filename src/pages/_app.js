@@ -3,6 +3,7 @@ import { DM_Sans } from 'next/font/google';
 
 import '@/styles/globals.scss';
 import { useEffect, useState } from 'react';
+import Layout from '@/components/layout';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
@@ -33,7 +34,11 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="page-container">
-        {isLoaded && <Component {...pageProps} />}
+        {isLoaded && (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        )}
       </div>
     </>
   );
