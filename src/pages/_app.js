@@ -1,9 +1,10 @@
-import Head from 'next/head';
+import { ViewportProvider } from '@/context/ViewPortContext';
 import { DM_Sans } from 'next/font/google';
+import Head from 'next/head';
+
+import Layout from '@/components/layout';
 
 import '@/styles/globals.scss';
-import { useEffect, useState } from 'react';
-import Layout from '@/components/layout';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
@@ -12,12 +13,6 @@ const dmSans = DM_Sans({
 });
 
 export default function App({ Component, pageProps }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true); // This is to fix the hydration issue with the useLayoutEffect.
-  }, []);
-
   return (
     <>
       <style jsx global>
@@ -33,13 +28,11 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="page-container">
-        {isLoaded && (
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        )}
-      </div>
+      <ViewportProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ViewportProvider>
     </>
   );
 }

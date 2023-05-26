@@ -5,9 +5,14 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  // font-size: 20px;
   font-size: 16px;
   font-weight: 400;
+}
+
+@media all and (min-width: 1024px) {
+  html {
+    font-size: var(--rem);
+  }
 }
 
 svg {
