@@ -51,7 +51,7 @@ export default function HomePanelFour() {
         />
       </div>
 
-      <div className="panel relative px-[5%] py-[21.333rem]">
+      <div className="panel relative px-[4%] py-[21.333rem]">
         <h2 className="max-w-[60rem] text-[10.667rem] leading-none text-white">
           Become a community scientist
         </h2>

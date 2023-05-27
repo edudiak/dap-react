@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function HomePanelEight() {
   return (
     <div className="flex">
-      <div className="flex w-1/2 items-center bg-[#AF4A40] pl-[5%] pr-[4%]">
+      <div className="flex w-1/2 items-center bg-[#AF4A40] pl-[4%] pr-[4%]">
         <div className="py-[6rem]">
           <h2 className="text-[8rem] leading-none tracking-tight text-[#FFDADA]">
             Join the effort to extend the lifespan of pets and their owners.

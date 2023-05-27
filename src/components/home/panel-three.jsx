@@ -127,7 +127,7 @@ export default function HomePanelThree() {
   }, []);
 
   return (
-    <div ref={panel} className="panel flex flex-1 items-start px-[5%]">
+    <div ref={panel} className="panel flex flex-1 items-start px-[4%]">
       <div ref={elm_1} className="w-[45%]">
         <div>
           <h2 className="text-[10.667rem] leading-none text-[#F7F3FF]">

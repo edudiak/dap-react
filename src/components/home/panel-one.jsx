@@ -68,7 +68,7 @@ export default function HomePanelOne() {
 
   return (
     <div className="panel pb-[15%]">
-      <div className="relative mb-[6vw] flex items-center pl-[10%] pr-[2%]">
+      <div className="relative mb-[6vw] flex items-center pl-[8%] pr-[2%]">
         <div className="z-[1] w-3/4">
           <h1
             ref={elm_1}

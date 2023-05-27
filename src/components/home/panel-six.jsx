@@ -7,7 +7,7 @@ import BorderPurple200Small from '@assets/images/icons/border-purple-200-small.s
 
 export default function HomePanelSix() {
   return (
-    <div className="relative flex items-center pl-[10%] pr-[2%]">
+    <div className="relative flex items-center pl-[8%] pr-[2%]">
       <div className="relative z-[1] w-3/4">
         <h2 className="max-w-[100rem] text-[10rem] leading-tight tracking-tighter text-[#E8DCFF]">
           Enroll your dog now & join this exciting project

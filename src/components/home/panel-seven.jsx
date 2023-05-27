@@ -9,10 +9,10 @@ import ArrowRight from '@assets/images/icons/arrow-right.svg';
 export default function HomePanelSeven() {
   return (
     <div className="pb-[5%] pt-[25%]">
-      <h2 className="ml-auto mr-[5%] max-w-[100rem] text-[8rem] leading-none tracking-tight text-[#6543A5]">
+      <h2 className="ml-auto mr-[4%] max-w-[100rem] text-[8rem] leading-none tracking-tight text-[#6543A5]">
         Our data is already advancing new discoveries
       </h2>
-      <div className="flex gap-[4rem] pl-[5%]">
+      <div className="flex gap-[4rem] pl-[4%]">
         {[...Array(3)].map((card, index) => (
           <div
             key={index}
