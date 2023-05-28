@@ -3,13 +3,48 @@
 /* eslint indent: "off" */
 /* eslint react/no-array-index-key: "off" */
 import Link from 'next/link';
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import ArrowRight from '@assets/images/icons/arrow-right.svg';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function HomePanelSeven() {
+  const elm_1 = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_1.current,
+            start: 'top 90%',
+            end: 'bottom+=100 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_1.current,
+          { x: 60, scale: 1.05, opacity: 0 },
+          {
+            x: 0,
+            scale: 1,
+            opacity: 1,
+          },
+        );
+    }); // <- scopes all selector text to the root element
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="pb-[5%] pt-[25%]">
-      <h2 className="ml-auto mr-[4%] max-w-[100rem] text-[8rem] leading-none tracking-tight text-[#6543A5]">
+      <h2
+        ref={elm_1}
+        className="ml-auto mr-[4%] max-w-[100rem] text-[8rem] leading-none tracking-tight text-[#6543A5]"
+      >
         Our data is already advancing new discoveries
       </h2>
       <div className="flex gap-[4rem] pl-[4%]">

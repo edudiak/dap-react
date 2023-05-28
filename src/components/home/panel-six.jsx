@@ -1,18 +1,94 @@
 /* eslint @next/next/no-img-element: "off" */
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import BorderPurple200 from '@assets/images/icons/border-purple-200.svg';
 import BorderPurple200Small from '@assets/images/icons/border-purple-200-small.svg';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function HomePanelSix() {
+  const elm_1 = useRef(null);
+  const elm_2 = useRef(null);
+  const elm_3 = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_1.current,
+            start: 'top 90%',
+            end: 'bottom+=100 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_1.current,
+          { x: 40, scale: 1.05, opacity: 0 },
+          {
+            x: 0,
+            scale: 1,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_2.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_2.current,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_3.current,
+            start: 'top 90%',
+            end: 'bottom+=100 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_3.current,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+          },
+        );
+    }); // <- scopes all selector text to the root element
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="relative flex items-center pl-[8%] pr-[2%]">
       <div className="relative z-[1] w-3/4">
-        <h2 className="max-w-[100rem] text-[10rem] leading-tight tracking-tighter text-[#E8DCFF]">
+        <h2
+          ref={elm_1}
+          className="max-w-[100rem] text-[10rem] leading-tight tracking-tighter text-[#E8DCFF]"
+        >
           Enroll your dog now & join this exciting project
         </h2>
-        <div className="mb-[7rem] mt-[3rem] max-w-[74rem] text-[2.8rem] leading-snug text-[#E8DCFF]">
+        <div
+          ref={elm_2}
+          className="mb-[7rem] mt-[3rem] max-w-[74rem] text-[2.8rem] leading-snug text-[#E8DCFF]"
+        >
           <p className="mb-[4rem]">
             At the Dog Aging Project, we know how important dogs are for the
             health and wellbeing of their owners. They give us comfort, joy, and
@@ -24,6 +100,7 @@ export default function HomePanelSix() {
           <p>Will you join us?</p>
         </div>
         <Link
+          ref={elm_3}
           href="#"
           className="inline-block rounded-full bg-[#F7F3FF] px-[4rem] py-[2.133rem] text-[2.4rem] font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF]"
         >
