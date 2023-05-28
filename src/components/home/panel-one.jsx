@@ -68,17 +68,17 @@ export default function HomePanelOne() {
 
   return (
     <div className="panel pb-[15%]">
-      <div className="relative mb-[6vw] flex items-center pl-[8%] pr-[2%]">
+      <div className="relative mb-[10rem] flex items-center pl-[8%] pr-[2%]">
         <div className="z-[1] w-3/4">
           <h1
             ref={elm_1}
-            className="max-w-[104rem] text-[10.667rem] leading-none text-purple-100"
+            className="max-w-[104rem] text-[10.667rem] leading-none text-[#F7F3FF]"
           >
             Discovering the Keys to a Healthy Lifespan
           </h1>
           <div
             ref={elm_2}
-            className="mt-[5.333rem] max-w-[88rem] text-[3.6rem] leading-snug text-purple-100"
+            className="mt-[5.333rem] max-w-[88rem] text-[3.6rem] leading-snug text-[#F7F3FF]"
           >
             At the Dog Aging Project, we care deeply about the health and
             happiness of dogs. Our discoveries about healthy aging in our canine

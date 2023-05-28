@@ -59,7 +59,10 @@ export default function Header() {
         </Link>
         <ul className="primary-nav flex items-center text-[2.4rem] font-bold text-black">
           <MenuWithDropdown href="#" text="Project Details">
-            <DropdownMenuItem href="#" text="Project Overview" />
+            <DropdownMenuItem
+              href="/triad-fast-track"
+              text="Project Overview"
+            />
             <DropdownMenuItem href="#" text="Veterinarians" />
             <DropdownMenuItem href="#" text="Our Supporters" />
             <DropdownMenuItem href="#" text="Our Team" />
