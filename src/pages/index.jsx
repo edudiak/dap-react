@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <div
-        className="pb-[30rem] pt-[13.333rem]"
+        className="pb-52 pt-20 lg:pb-[30rem] lg:pt-[13.333rem]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #8A5DD2 7.93%, #250A60 100%)',

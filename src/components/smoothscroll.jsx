@@ -14,7 +14,7 @@ export default function SmoothScroll({ children }) {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       ScrollSmoother.create({
-        smooth: 1.5,
+        smooth: 2,
         effects: true,
         smoothTouch: 0.1,
       });

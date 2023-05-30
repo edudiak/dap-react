@@ -68,17 +68,17 @@ export default function HomePanelOne() {
 
   return (
     <div className="panel pb-[15%]">
-      <div className="relative mb-[10rem] flex items-center pl-[8%] pr-[2%]">
-        <div className="z-[1] w-3/4">
+      <div className="relative mb-20 flex flex-wrap-reverse items-center px-5 lg:mb-[10rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
+        <div className="z-[1] mt-20 w-full lg:mt-0 lg:w-3/4">
           <h1
             ref={elm_1}
-            className="max-w-[104rem] text-[10.667rem] leading-none text-[#F7F3FF]"
+            className="text-5xl leading-tight text-[#F7F3FF] lg:max-w-[104rem] lg:text-[10.667rem] lg:leading-none"
           >
             Discovering the Keys to a Healthy Lifespan
           </h1>
           <div
             ref={elm_2}
-            className="mt-[5.333rem] max-w-[88rem] text-[3.6rem] leading-snug text-[#F7F3FF]"
+            className="mt-6 text-xl leading-snug text-[#F7F3FF] lg:mt-[5.333rem] lg:max-w-[88rem] lg:text-[3.6rem]"
           >
             At the Dog Aging Project, we care deeply about the health and
             happiness of dogs. Our discoveries about healthy aging in our canine
@@ -88,31 +88,35 @@ export default function HomePanelOne() {
           </div>
           <div
             ref={elm_3}
-            className="mt-[14rem] flex max-w-[104rem] items-center justify-between text-[2.4rem] text-white"
+            className="mt-10 flex flex-wrap items-center justify-between text-white lg:mt-[14rem] lg:max-w-[104rem] lg:flex-nowrap lg:text-[2.4rem]"
           >
-            <div className="flex items-center gap-x-[2rem]">
-              <div className="">
-                <span className="will-be-dynamic mr-[3rem]">65,348,562</span>
-                Dogs in the Pack
+            <div className="flex items-center gap-x-4 lg:gap-x-[2rem]">
+              <div className="flex">
+                <span className="will-be-dynamic mr-3 block lg:mr-[3rem]">
+                  65,348,562
+                </span>
+                <span className="block">Dogs in the Pack</span>
               </div>
-              <div className="h-[.267rem] w-[10rem] bg-white" />
+              <div className="h-[2px] w-20 bg-white lg:h-[.267rem] lg:w-[10rem]" />
               <div>{currentDate}</div>
             </div>
-            <Link
-              href="#"
-              className="block rounded-full bg-[#F7F3FF] px-[2.667rem] py-[1.333rem] text-[2.4rem] font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white"
-            >
-              Enroll Your Dog
-            </Link>
+            <div>
+              <Link
+                href="#"
+                className="block rounded-full bg-[#F7F3FF] px-6 py-3 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white lg:px-[2.667rem] lg:py-[1.333rem] lg:text-[2.4rem]"
+              >
+                Enroll Your Dog
+              </Link>
+            </div>
           </div>
         </div>
         <div
           ref={elm_4}
-          className="absolute -top-[5%] right-[4%] flex max-w-[75rem] items-center justify-center"
+          className="mx-auto flex max-w-[70%] items-center justify-center lg:mx-0 lg:max-w-[75rem] xl:absolute xl:-top-[5%] xl:right-[4%]"
         >
           <div
             ref={elm_4_circle}
-            className="absolute -right-[3.2rem] flex h-[calc(100%+6.4rem)] w-[calc(100%+6.4rem)] text-transparent"
+            className="absolute flex h-[calc(100%+3rem)] w-[calc(100%+3rem)] text-transparent lg:-right-[3.2rem] lg:h-[calc(100%+6.4rem)] lg:w-[calc(100%+6.4rem)]"
           >
             <div className="svg_icon h-full w-full">
               <BorderPurplePrimary />
@@ -131,9 +135,9 @@ export default function HomePanelOne() {
       <button
         ref={elm_5}
         type="button"
-        className="relative mx-auto block text-white opacity-75"
+        className="relative mx-auto flex flex-col items-center text-[#D8C4FF] opacity-75"
       >
-        <span className="mb-2 block">scroll</span>
+        <span className="mb-2 block lg:text-[2.133rem]">scroll</span>
         <div className="svg_icon w-[3vw]">
           <ArrowDown />
         </div>

@@ -1,5 +1,6 @@
 /* eslint operator-linebreak: "off" */
-import Image from 'next/image';
+/* eslint @next/next/no-img-element: "off" */
+// import Image from 'next/image';
 import Link from 'next/link';
 
 import ArrowDownIcon from '@assets/images/icons/arrow-down-small.svg';
@@ -47,14 +48,15 @@ function DropdownMenuItem({ href, text }) {
 
 export default function Header() {
   return (
-    <header className="z-50 bg-white">
+    <header className="z-50 hidden bg-white lg:block">
       <div className="flex items-center justify-between pl-[4%]">
         <Link href="/" className="flex">
-          <Image
+          <img
             src="/images/dap-logo.svg"
             alt="Dog aging project"
-            width={180}
-            height={73}
+            // width={180}
+            // height={73}
+            className="h-[9.5rem] w-auto"
           />
         </Link>
         <ul className="primary-nav flex items-center text-[2.4rem] font-bold text-black">

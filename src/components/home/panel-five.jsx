@@ -461,17 +461,17 @@ export default function HomePanelFive() {
           ref={panel_7}
           className="absolute left-0 top-0 z-[-1] h-full w-full bg-[#6543A5]"
         >
-          <div className="mx-auto flex h-[calc(100%-24rem)] w-full max-w-[70%] items-center">
+          <div className="mx-auto flex h-[calc(100%-24rem)] w-full items-center px-5 lg:max-w-[70%]">
             <div className="w-full text-[#E8DCFF]">
-              <div className="max-w-[70rem]">
-                <h4 className="text-[7.2rem] leading-none tracking-tighter">
+              <div className="lg:max-w-[70rem]">
+                <h4 className="text-4xl leading-tight tracking-tighter lg:text-[7.2rem] lg:leading-none">
                   Accelerating Scientific Discovery & Innovation for Dogs and
                   Humans
                 </h4>
-                <p className="mb-[2rem] mt-[4rem] text-[3.6rem] uppercase leading-snug">
+                <p className="mb-6 mt-6 text-2xl uppercase leading-snug lg:mb-[2rem] lg:mt-[4rem] lg:text-[3.6rem]">
                   Our Research Goals
                 </p>
-                <p className="text-[2.4rem] leading-snug">
+                <p className="text-lg leading-snug lg:text-[2.4rem]">
                   The goal of the Dog Aging Project is to understand how genes,
                   lifestyle, and environment influence health and aging. Our
                   research program is designed to collect—and connect—critical
@@ -482,7 +482,7 @@ export default function HomePanelFive() {
                   community and the public.
                 </p>
               </div>
-              <div className="ml-auto mt-[4rem] max-w-[70rem] text-[1.867rem] font-medium leading-snug">
+              <div className="ml-auto mt-8 font-medium leading-snug lg:mt-[4rem] lg:max-w-[70rem] lg:text-[1.867rem]">
                 From within the Dog Aging Project Pack, we enroll subsets of
                 dogs into cohorts based on specific scientific criteria. These
                 cohorts include Foundation, a genomics study; Precision, a
@@ -496,108 +496,118 @@ export default function HomePanelFive() {
 
       <div
         // ref={section4_panel2}
-        className="absolute bottom-[2rem] left-0 z-[2] w-full px-[5%]"
+        className="absolute bottom-2 left-0 z-[2] w-full px-2 lg:bottom-[2rem] lg:px-[5%]"
       >
-        <div className="flex justify-center gap-[2rem]">
-          <div className="relative">
+        <div className="flex justify-center gap-2 lg:gap-[2rem]">
+          <div className="relative w-1/6">
             <div
               ref={panel_box_1_dot}
-              className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_1}
-              className="box relative z-[2] flex h-[22rem] w-[24rem] items-center justify-center rounded-[2.667rem] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+              className="box relative z-[2] flex h-28 items-center justify-center rounded-[10px] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)] lg:h-[22rem] lg:w-[24rem] lg:rounded-[2.667rem]"
             >
               <div className="relative w-full">
-                <p className="mb-[2rem] text-[3rem] leading-none">Health</p>
-                <p className="inline-block rounded-full border border-white px-4 py-1 text-[1.333rem]">
+                <p className="mb-2 text-base leading-none lg:mb-[2rem] lg:text-[3rem]">
+                  Health
+                </p>
+                <p className="inline-block rounded-full border border-white px-3 py-1 text-[10px] lg:text-[1.333rem]">
                   explore
                 </p>
               </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-1/6">
             <div
               ref={panel_box_2_dot}
-              className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_2}
-              className="box relative z-[2] flex h-[22rem] w-[24rem] items-center justify-center rounded-[2.667rem] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+              className="box relative z-[2] flex h-28 items-center justify-center rounded-[10px] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)] lg:h-[22rem] lg:w-[24rem] lg:rounded-[2.667rem]"
             >
               <div className="relative w-full">
-                <p className="mb-[2rem] text-[3rem] leading-none">Genetics</p>
-                <p className="inline-block rounded-full border border-white px-4 py-1 text-[1.333rem]">
+                <p className="mb-2 text-base leading-none lg:mb-[2rem] lg:text-[3rem]">
+                  Genetics
+                </p>
+                <p className="inline-block rounded-full border border-white px-3 py-1 text-[10px] lg:text-[1.333rem]">
                   explore
                 </p>
               </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-1/6">
             <div
               ref={panel_box_3_dot}
-              className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_3}
-              className="box relative z-[2] flex h-[22rem] w-[24rem] items-center justify-center rounded-[2.667rem] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+              className="box relative z-[2] flex h-28 items-center justify-center rounded-[10px] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)] lg:h-[22rem] lg:w-[24rem] lg:rounded-[2.667rem]"
             >
               <div className="relative w-full">
-                <p className="mb-[2rem] text-[3rem] leading-none">
+                <p className="mb-2 text-base leading-none lg:mb-[2rem] lg:text-[3rem]">
                   Environment
                 </p>
-                <p className="inline-block rounded-full border border-white px-4 py-1 text-[1.333rem]">
+                <p className="inline-block rounded-full border border-white px-3 py-1 text-[10px] lg:text-[1.333rem]">
                   explore
                 </p>
               </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-1/6">
             <div
               ref={panel_box_4_dot}
-              className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_4}
-              className="box relative z-[2] flex h-[22rem] w-[24rem] items-center justify-center rounded-[2.667rem] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+              className="box relative z-[2] flex h-28 items-center justify-center rounded-[10px] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)] lg:h-[22rem] lg:w-[24rem] lg:rounded-[2.667rem]"
             >
               <div className="relative w-full">
-                <p className="mb-[2rem] text-[3rem] leading-none">Lifestyle</p>
-                <p className="inline-block rounded-full border border-white px-4 py-1 text-[1.333rem]">
+                <p className="mb-2 text-base leading-none lg:mb-[2rem] lg:text-[3rem]">
+                  Lifestyle
+                </p>
+                <p className="inline-block rounded-full border border-white px-3 py-1 text-[10px] lg:text-[1.333rem]">
                   explore
                 </p>
               </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-1/6">
             <div
               ref={panel_box_5_dot}
-              className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_5}
-              className="box relative z-[2] flex h-[22rem] w-[24rem] items-center justify-center rounded-[2.667rem] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+              className="box relative z-[2] flex h-28 items-center justify-center rounded-[10px] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)] lg:h-[22rem] lg:w-[24rem] lg:rounded-[2.667rem]"
             >
               <div className="relative w-full">
-                <p className="mb-[2rem] text-[3rem] leading-none">Cognition</p>
-                <p className="inline-block rounded-full border border-white px-4 py-1 text-[1.333rem]">
+                <p className="mb-2 text-base leading-none lg:mb-[2rem] lg:text-[3rem]">
+                  Cognition
+                </p>
+                <p className="inline-block rounded-full border border-white px-3 py-1 text-[10px] lg:text-[1.333rem]">
                   explore
                 </p>
               </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative w-1/6">
             <div
               ref={panel_box_6_dot}
-              className="dot absolute right-0 top-0 h-[100px] w-[100px] rounded-full"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_6}
-              className="box relative z-[2] flex h-[22rem] w-[24rem] items-center justify-center rounded-[2.667rem] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)]"
+              className="box relative z-[2] flex h-28 items-center justify-center rounded-[10px] bg-[#B894FF] text-center uppercase text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)] lg:h-[22rem] lg:w-[24rem] lg:rounded-[2.667rem]"
             >
               <div className="relative w-full">
-                <p className="mb-[2rem] text-[3rem] leading-none">Activity</p>
-                <p className="inline-block rounded-full border border-white px-3 text-xs">
+                <p className="mb-2 text-base leading-none lg:mb-[2rem] lg:text-[3rem]">
+                  Activity
+                </p>
+                <p className="inline-block rounded-full border border-white px-3 text-xs lg:text-[1.333rem]">
                   explore
                 </p>
               </div>
