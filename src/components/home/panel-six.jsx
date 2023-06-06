@@ -77,19 +77,19 @@ export default function HomePanelSix() {
   }, []);
 
   return (
-    <div className="relative flex items-center pl-[8%] pr-[2%]">
-      <div className="relative z-[1] w-3/4">
+    <div className="relative flex flex-wrap items-center px-5 lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
+      <div className="relative z-[1] pb-20 lg:w-3/4 lg:pb-0">
         <h2
           ref={elm_1}
-          className="max-w-[100rem] text-[10rem] leading-tight tracking-tighter text-[#E8DCFF]"
+          className="text-5xl leading-tight tracking-tighter text-[#E8DCFF] lg:max-w-[100rem] lg:text-[10rem]"
         >
           Enroll your dog now & join this exciting project
         </h2>
         <div
           ref={elm_2}
-          className="mb-[7rem] mt-[3rem] max-w-[74rem] text-[2.8rem] leading-snug text-[#E8DCFF]"
+          className="mb-16 mt-5 text-xl leading-snug text-[#E8DCFF] lg:mb-[7rem] lg:mt-[3rem] lg:max-w-[74rem] lg:text-[2.8rem]"
         >
-          <p className="mb-[4rem]">
+          <p className="mb-5 lg:mb-[4rem]">
             At the Dog Aging Project, we know how important dogs are for the
             health and wellbeing of their owners. They give us comfort, joy, and
             unconditional love. Being a part of this study, gives each and every
@@ -102,16 +102,16 @@ export default function HomePanelSix() {
         <Link
           ref={elm_3}
           href="#"
-          className="inline-block rounded-full bg-[#F7F3FF] px-[4rem] py-[2.133rem] text-[2.4rem] font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF]"
+          className="inline-block rounded-full bg-[#F7F3FF] px-6 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
         >
           Enroll Your Dog
         </Link>
       </div>
       <div
         data-speed={1.07}
-        className="absolute -top-[5%] right-[4%] flex max-w-[75rem] items-center justify-center"
+        className="mx-auto ml-[25%] flex max-w-[70%] items-center justify-center lg:absolute lg:-top-[5%] lg:right-[4%] lg:mx-0 lg:max-w-[75rem]"
       >
-        <div className="absolute -right-[3.2rem] flex h-[calc(100%+6.4rem)] w-[calc(100%+6.4rem)] text-transparent">
+        <div className="absolute flex h-[calc(100%+3rem)] w-[calc(100%+3rem)] text-transparent lg:-right-[3.2rem] lg:h-[calc(100%+6.4rem)] lg:w-[calc(100%+6.4rem)]">
           <div className="svg_icon h-full w-full">
             <BorderPurple200 />
           </div>
@@ -127,9 +127,9 @@ export default function HomePanelSix() {
       </div>
       <div
         data-speed={1.07}
-        className="absolute right-[41%] top-[69%] flex max-w-[20%] items-center justify-center"
+        className="absolute left-[6%] top-[84%] flex max-w-[25%] items-center justify-center lg:right-[41%] lg:top-[69%] lg:max-w-[20%]"
       >
-        <div className="absolute right-[-3rem] flex h-[calc(100%+6rem)] w-[calc(100%+6rem)] text-transparent">
+        <div className="absolute -right-4 flex h-[calc(100%+2rem)] w-[calc(100%+2rem)] text-transparent lg:right-[-3rem] lg:h-[calc(100%+6rem)] lg:w-[calc(100%+6rem)]">
           <div className="svg_icon h-full w-full">
             <BorderPurple200Small />
           </div>

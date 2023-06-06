@@ -270,7 +270,7 @@ export default function HomePanelFive() {
       <div className="section4_sticky_panels relative h-screen">
         <div
           ref={panel_1}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-24rem)] w-full items-start pt-[5rem] opacity-0"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-115px)] w-full items-start pt-[5rem] opacity-0 lg:h-[calc(100%-24rem)]"
         >
           <div className="mx-auto flex h-full w-full items-center px-[5%]">
             <div className="w-1/2 text-center">
@@ -281,16 +281,16 @@ export default function HomePanelFive() {
               />
             </div>
             <div className="w-1/2">
-              <div className="max-w-[70rem] text-[#CAEBFF]">
-                <h4 className="mb-[3rem] text-[6rem] uppercase">
+              <div className="text-[#CAEBFF] lg:max-w-[70rem]">
+                <h4 className="mb-8 text-4xl uppercase lg:mb-[3rem] lg:text-[6rem]">
                   CANINE HEALTH
                 </h4>
-                <p className="mb-[3rem] text-[2.4rem] leading-snug">
+                <p className="mb-5 text-lg leading-snug lg:mb-[3rem] lg:text-[2.4rem]">
                   Our team collects comprehensive health and diet data via
                   owner-reported surveys, veterinary medical records, and
                   frailty assessments.
                 </p>
-                <p className="text-[2.4rem] leading-snug">
+                <p className="text-lg leading-snug lg:text-[2.4rem]">
                   For members of the Precision and TRIAD Cohorts, we partner
                   with primary care and speciality veterinarians to collect
                   biological samples for detailed biochemical analysis.
@@ -302,7 +302,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_2}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-24rem)] w-full items-start pt-[5rem] opacity-0"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-115px)] w-full items-start pt-[5rem] opacity-0 lg:h-[calc(100%-24rem)]"
         >
           <div className="mx-auto flex h-full w-full items-center px-[5%]">
             <div className="w-1/2 text-center">
@@ -313,16 +313,16 @@ export default function HomePanelFive() {
               />
             </div>
             <div className="w-1/2">
-              <div className="max-w-[70rem] text-[#E5D8FF]">
-                <h4 className="mb-[3rem] text-[6rem] uppercase">
+              <div className="text-[#E5D8FF] lg:max-w-[70rem]">
+                <h4 className="mb-8 text-4xl uppercase lg:mb-[3rem] lg:text-[6rem]">
                   CANINE GENETICS
                 </h4>
-                <p className="mb-[3rem] text-[2.4rem] leading-snug">
+                <p className="mb-5 text-lg leading-snug lg:mb-[3rem] lg:text-[2.4rem]">
                   Participants in the Foundation, Precision, and TRIAD cohorts,
                   receive a free DNA Kit with which to collect a cheek swab
                   sample for use in low-pass sequencing.
                 </p>
-                <p className="text-[2.4rem] leading-snug">
+                <p className="text-lg leading-snug lg:text-[2.4rem]">
                   Genome sequence data are integrated with health measures and
                   age-related physiological and behavioral traits to carry out
                   comprehensive genome-wide association studies of common
@@ -335,7 +335,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_3}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-24rem)] w-full items-start pt-[5rem] opacity-0"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-115px)] w-full items-start pt-[5rem] opacity-0 lg:h-[calc(100%-24rem)]"
         >
           <div className="mx-auto flex h-full w-full items-center px-[5%]">
             <div className="w-1/2 text-center">
@@ -346,16 +346,16 @@ export default function HomePanelFive() {
               />
             </div>
             <div className="w-1/2">
-              <div className="max-w-[70rem] text-[#FFF9ED]">
-                <h4 className="mb-[3rem] text-[6rem] uppercase">
+              <div className="text-[#FFF9ED] lg:max-w-[70rem]">
+                <h4 className="mb-8 text-4xl uppercase lg:mb-[3rem] lg:text-[6rem]">
                   ENVIRONMENTAL EFFECTS
                 </h4>
-                <p className="mb-[3rem] text-[2.4rem] leading-snug">
+                <p className="mb-5 text-lg leading-snug lg:mb-[3rem] lg:text-[2.4rem]">
                   Dogs share our environment. They live with us. They often
                   sleep with us. Sometimes they even share our food.
                   Environmental exposures can have a profound impact on health.
                 </p>
-                <p className="text-[2.4rem] leading-snug">
+                <p className="text-lg leading-snug lg:text-[2.4rem]">
                   In addition to owner-reported information about each dog’s
                   home and yard, our team compiles extensive environmental data
                   geolocated by zip code for each participant. For smaller
@@ -369,7 +369,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_4}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-24rem)] w-full items-start pt-[5rem] opacity-0"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-115px)] w-full items-start pt-[5rem] opacity-0 lg:h-[calc(100%-24rem)]"
         >
           <div className="mx-auto flex h-full w-full items-center px-[5%]">
             <div className="w-1/2 text-center">
@@ -380,11 +380,11 @@ export default function HomePanelFive() {
               />
             </div>
             <div className="w-1/2">
-              <div className="max-w-[70rem] text-[#FFF3D8]">
-                <h4 className="mb-[3rem] text-[6rem] uppercase">
+              <div className="text-[#FFF3D8] lg:max-w-[70rem]">
+                <h4 className="mb-8 text-4xl uppercase lg:mb-[3rem] lg:text-[6rem]">
                   CANINE LIFESTYLE
                 </h4>
-                <p className="text-[2.4rem] leading-snug">
+                <p className="text-lg leading-snug lg:text-[2.4rem]">
                   The Pack contains dogs from all walks of life, including
                   companion dogs, working dogs, and dogs who participate in many
                   different activities like nosework or agility. We use
@@ -398,7 +398,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_5}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-24rem)] w-full items-start pt-[5rem] opacity-0"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-115px)] w-full items-start pt-[5rem] opacity-0 lg:h-[calc(100%-24rem)]"
         >
           <div className="mx-auto flex h-full w-full items-center px-[5%]">
             <div className="w-1/2 text-center">
@@ -409,11 +409,11 @@ export default function HomePanelFive() {
               />
             </div>
             <div className="w-1/2">
-              <div className="max-w-[70rem] text-[#FFDADA]">
-                <h4 className="mb-[3rem] text-[6rem] uppercase">
+              <div className="text-[#FFDADA] lg:max-w-[70rem]">
+                <h4 className="mb-8 text-4xl uppercase lg:mb-[3rem] lg:text-[6rem]">
                   BRAIN HEALTH
                 </h4>
-                <p className="text-[2.4rem] leading-snug">
+                <p className="text-lg leading-snug lg:text-[2.4rem]">
                   Aging dogs sometimes experience canine cognitive decline, a
                   condition that is analogous to Alzheimer’s disease in humans.
                   We’ve designed a comprehensive program to study all phases of
@@ -429,7 +429,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_6}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-24rem)] w-full items-start pt-[5rem] opacity-0"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-115px)] w-full items-start pt-[5rem] opacity-0 lg:h-[calc(100%-24rem)]"
         >
           <div className="mx-auto flex h-full w-full items-center px-[5%]">
             <div className="w-1/2 text-center">
@@ -440,11 +440,11 @@ export default function HomePanelFive() {
               />
             </div>
             <div className="w-1/2">
-              <div className="max-w-[70rem] text-[#FFF7F8]">
-                <h4 className="mb-[3rem] text-[6rem] uppercase">
+              <div className="text-[#FFF7F8] lg:max-w-[70rem]">
+                <h4 className="mb-8 text-4xl uppercase lg:mb-[3rem] lg:text-[6rem]">
                   CANINE ACTIVITY
                 </h4>
-                <p className="text-[2.4rem] leading-snug">
+                <p className="text-lg leading-snug lg:text-[2.4rem]">
                   Our research is already demonstrating links between activity
                   levels and various health measures. We quantify activity
                   levels through surveys, at-home mobility activities that
@@ -461,7 +461,7 @@ export default function HomePanelFive() {
           ref={panel_7}
           className="absolute left-0 top-0 z-[-1] h-full w-full bg-[#6543A5]"
         >
-          <div className="mx-auto flex h-[calc(100%-24rem)] w-full items-center px-5 lg:max-w-[70%]">
+          <div className="mx-auto flex h-[calc(100%-115px)] w-full items-center px-5 lg:h-[calc(100%-24rem)] lg:max-w-[70%]">
             <div className="w-full text-[#E8DCFF]">
               <div className="lg:max-w-[70rem]">
                 <h4 className="text-4xl leading-tight tracking-tighter lg:text-[7.2rem] lg:leading-none">
@@ -482,7 +482,7 @@ export default function HomePanelFive() {
                   community and the public.
                 </p>
               </div>
-              <div className="ml-auto mt-8 font-medium leading-snug lg:mt-[4rem] lg:max-w-[70rem] lg:text-[1.867rem]">
+              <div className="ml-auto mt-8 font-medium leading-snug lg:mt-[4rem] lg:lg:max-w-[70rem] lg:text-[1.867rem]">
                 From within the Dog Aging Project Pack, we enroll subsets of
                 dogs into cohorts based on specific scientific criteria. These
                 cohorts include Foundation, a genomics study; Precision, a

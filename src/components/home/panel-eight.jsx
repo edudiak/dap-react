@@ -76,18 +76,18 @@ export default function HomePanelEight() {
   }, []);
 
   return (
-    <div className="flex">
-      <div className="flex w-1/2 items-center bg-[#AF4A40] pl-[4%] pr-[4%]">
-        <div className="py-[6rem]">
+    <div className="flex flex-wrap-reverse lg:flex-nowrap">
+      <div className="flex w-full items-center bg-[#AF4A40] px-5 lg:w-1/2 lg:px-[4%]">
+        <div className="py-16 lg:py-[6rem]">
           <h2
             ref={elm_1}
-            className="text-[8rem] leading-none tracking-tight text-[#FFDADA]"
+            className="text-5xl leading-tight tracking-tight text-[#FFDADA] lg:text-[8rem] lg:leading-none"
           >
             Join the effort to extend the lifespan of pets and their owners.
           </h2>
           <div
             ref={elm_2}
-            className="pb-[10rem] pt-[7rem] text-[2.4rem] leading-normal text-[#FFDADA]"
+            className="pb-10 pt-6 text-xl leading-normal text-[#FFDADA] lg:pb-[10rem] lg:pt-[7rem] lg:text-[2.4rem]"
           >
             We have established the Dog Aging Project as an engine for
             innovation. While core research activities are supported by the
@@ -99,14 +99,14 @@ export default function HomePanelEight() {
           <div ref={elm_3} className="text-center">
             <Link
               href="#"
-              className="inline-block rounded-full bg-[#F7F3FF] px-[4rem] py-[2.133rem] text-[2.4rem] font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF]"
+              className="inline-block rounded-full bg-[#F7F3FF] px-8 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
             >
               Donate Now
             </Link>
           </div>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="w-full lg:w-1/2">
         <video className="w-full" autoPlay loop muted>
           <source src="/videos/red-dog.mp4" type="video/mp4" />
         </video>

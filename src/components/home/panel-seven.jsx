@@ -40,54 +40,54 @@ export default function HomePanelSeven() {
   }, []);
 
   return (
-    <div className="pb-[5%] pt-[25%]">
+    <div className="px-5 pb-[5%] pt-[25%] lg:px-0">
       <h2
         ref={elm_1}
-        className="ml-auto mr-[4%] max-w-[100rem] text-[8rem] leading-none tracking-tight text-[#6543A5]"
+        className="mb-10 text-5xl leading-none tracking-tight text-[#6543A5] lg:mb-0 lg:ml-auto lg:mr-[4%] lg:max-w-[100rem] lg:text-[8rem] lg:text-[#6543A5]"
       >
         Our data is already advancing new discoveries
       </h2>
-      <div className="flex gap-[4rem] pl-[4%]">
+      <div className="flex gap-5 lg:gap-[4rem] lg:pl-[4%]">
         {[...Array(3)].map((card, index) => (
           <div
             key={index}
             data-speed={1.0 + index * 0.05}
-            className={`relative flex-1 shrink-0 transform overflow-hidden rounded-[4rem] bg-white ${
+            className={`relative flex-1 shrink-0 transform overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem] ${
               index === 0
                 ? ''
                 : index === 1
-                ? 'translate-y-[7rem]'
-                : '-mr-[20%] translate-y-[14rem]'
+                ? 'translate-y-8 lg:translate-y-[7rem]'
+                : '-mr-[20%] translate-y-16 lg:translate-y-[14rem]'
             }`}
           >
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)]" />
-            <div className="p-[2.667rem]">
-              <div className="flex justify-between text-[1.867rem] uppercase text-[#532EA4]">
+            <div className="p-5 lg:p-[2.667rem]">
+              <div className="flex justify-between text-xs uppercase text-[#532EA4] lg:text-[1.867rem]">
                 <div>09.12.2022</div>
                 <div>Scientific Results</div>
               </div>
-              <h4 className="mb-[3rem] mt-[2rem] text-[3.6rem] font-medium text-[#250A60]">
+              <h4 className="mb-3 mt-3 text-xl font-medium text-[#250A60] lg:mb-[3rem] lg:mt-[2rem] lg:text-[3.6rem]">
                 Demographic factor associated with joint supplement use in dogs
                 from the Dog Aging Project
               </h4>
-              <div className="mb-[4rem] text-[2.133rem] leading-tight text-[#7B7B7B]">
+              <div className="mb-3 leading-tight text-[#7B7B7B] lg:mb-[4rem] lg:text-[2.133rem]">
                 As dogs age, their risk of developing osteoarthritis (OA)
                 increases. Similar to OA in humans, OA in dogs has no cure,
                 limiting treatment options to those that reduce...
               </div>
               <Link
                 href="#"
-                className="flex items-center text-[2.133rem] font-bold text-[#532EA4]"
+                className="flex items-center font-bold text-[#532EA4] lg:text-[2.133rem]"
               >
                 Read More
-                <div className="svg_icon ml-[1rem] flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-full border-2 border-[#532EA4] text-transparent">
-                  <div className="w-[1.7rem]">
+                <div className="svg_icon ml-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#532EA4] text-transparent lg:ml-[1rem] lg:h-[3.3rem] lg:w-[3.3rem]">
+                  <div className="w-[10px] lg:w-[1.7rem]">
                     <ArrowRight />
                   </div>
                 </div>
               </Link>
             </div>
-            <div className="pointer-events-none -mt-[4rem] overflow-hidden rounded-tl-full rounded-tr-full">
+            <div className="pointer-events-none overflow-hidden rounded-tl-full rounded-tr-full lg:-mt-[4rem]">
               <img
                 src={`/images/blog/blog-grid-${index + 1}.jpg`}
                 alt="blog-grid-1"
@@ -96,47 +96,47 @@ export default function HomePanelSeven() {
           </div>
         ))}
       </div>
-      <div className="mt-[5%] flex gap-[4rem] pl-[5%]">
+      <div className="mt-[5%] flex gap-5 lg:gap-[4rem] lg:pl-[4%]">
         {[...Array(3)].map((card, index) => (
           <div
             key={index}
             data-speed={1.0 + index * 0.05}
-            className={`relative flex-1 shrink-0 transform overflow-hidden rounded-[4rem] bg-white ${
+            className={`relative flex-1 shrink-0 transform overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem] ${
               index === 0
                 ? ''
                 : index === 1
-                ? 'translate-y-[7rem]'
-                : '-mr-[20%] translate-y-[14rem]'
+                ? 'translate-y-8 lg:translate-y-[7rem]'
+                : '-mr-[20%] translate-y-16 lg:translate-y-[14rem]'
             }`}
           >
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)]" />
-            <div className="p-[2.667rem]">
-              <div className="flex justify-between text-[1.867rem] uppercase text-[#532EA4]">
+            <div className="p-5 lg:p-[2.667rem]">
+              <div className="flex justify-between text-xs uppercase text-[#532EA4] lg:text-[1.867rem]">
                 <div>09.12.2022</div>
                 <div>Scientific Results</div>
               </div>
-              <h4 className="mb-[3rem] mt-[2rem] text-[3.6rem] font-medium text-[#250A60]">
+              <h4 className="mb-3 mt-3 text-xl font-medium text-[#250A60] lg:mb-[3rem] lg:mt-[2rem] lg:text-[3.6rem]">
                 Demographic factor associated with joint supplement use in dogs
                 from the Dog Aging Project
               </h4>
-              <div className="mb-[4rem] text-[2.133rem] leading-tight text-[#7B7B7B]">
+              <div className="mb-3 leading-tight text-[#7B7B7B] lg:mb-[4rem] lg:text-[2.133rem]">
                 As dogs age, their risk of developing osteoarthritis (OA)
                 increases. Similar to OA in humans, OA in dogs has no cure,
                 limiting treatment options to those that reduce...
               </div>
               <Link
                 href="#"
-                className="flex items-center text-[2.133rem] font-bold text-[#532EA4]"
+                className="flex items-center font-bold text-[#532EA4] lg:text-[2.133rem]"
               >
                 Read More
-                <div className="svg_icon ml-[1rem] flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-full border-2 border-[#532EA4] text-transparent">
-                  <div className="w-[1.7rem]">
+                <div className="svg_icon ml-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#532EA4] text-transparent lg:ml-[1rem] lg:h-[3.3rem] lg:w-[3.3rem]">
+                  <div className="w-[10px] lg:w-[1.7rem]">
                     <ArrowRight />
                   </div>
                 </div>
               </Link>
             </div>
-            <div className="pointer-events-none -mt-[4rem] overflow-hidden rounded-tl-full rounded-tr-full">
+            <div className="pointer-events-none overflow-hidden rounded-tl-full rounded-tr-full lg:-mt-[4rem]">
               <img
                 src={`/images/blog/blog-grid-${index + 1}.jpg`}
                 alt="blog-grid-1"

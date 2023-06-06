@@ -2,7 +2,7 @@
 export default function Footer() {
   return (
     <footer
-      className="footer bg-cover bg-left-top bg-no-repeat px-[4%] py-[10%]"
+      className="footer hidden bg-cover bg-left-top bg-no-repeat px-[4%] py-[10%] lg:block"
       style={{
         background:
           'url(/images/dap-bg-noise-20.png), url(/images/footer-bg.png), #6543A5',

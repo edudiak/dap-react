@@ -30,7 +30,7 @@ export default function Home() {
       <HomePanelFive />
 
       <div
-        className="pb-[21.333rem] pt-[33.333rem]"
+        className="pb-20 pt-20 lg:pb-[21.333rem] lg:pt-[33.333rem]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #6543A5 5.37%, rgba(100, 66, 164, 0.85) 34.94%, rgba(100, 66, 164, 0.28) 70.41%, rgba(255, 255, 255, 0) 96.74%), #FFFFFF',

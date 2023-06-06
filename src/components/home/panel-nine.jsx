@@ -175,66 +175,69 @@ export default function HomePanelNine() {
     >
       <h2
         ref={elm_1}
-        className="mb-[10rem] ml-auto mr-[5%] max-w-[98rem] text-[8rem] tracking-tight text-[#D8C4FF]"
+        className="mb-14 ml-auto max-w-[585px] text-5xl tracking-tight text-[#D8C4FF] lg:mb-[10rem] lg:mr-[5%] lg:max-w-[98rem] lg:text-[8rem]"
       >
         Our Stats Show the Scale & Scope of Our Project
       </h2>
       <div ref={elm_2} className="flex items-start">
-        <p className="mr-[7rem] text-[24rem] font-medium leading-none text-[#D1BD8F]">
+        <p className="mr-4 text-[100px] font-medium leading-none text-[#D1BD8F] lg:mr-[7rem] lg:text-[24rem]">
           65,000K+
         </p>
-        <p className="mt-[3rem] max-w-[40rem] text-[2.8rem] font-medium leading-normal text-[#FFF3D8]">
+        <p className="mt-2 max-w-[180px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[40rem] lg:text-[2.8rem]">
           Dogs currently enrolled in our studies
         </p>
       </div>
-      <div ref={elm_3} className="ml-auto max-w-fit">
-        <p className="text-[14rem] font-medium leading-none text-[#D1BD8F]">
+      <div ref={elm_3} className="ml-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
           240+
         </p>
-        <p className="mt-[1.5rem] max-w-[40rem] text-[2.8rem] font-medium leading-normal text-[#FFF3D8]">
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
           Research projects using data from the Dog Aging Project Terra Platform
         </p>
       </div>
-      <div ref={elm_4} className="mx-auto max-w-fit">
-        <p className="text-[14rem] font-medium leading-none text-[#D1BD8F]">
+      <div ref={elm_4} className="mx-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
           5 Years
         </p>
-        <p className="mt-[1.5rem] max-w-[40rem] text-[2.8rem] font-medium leading-normal text-[#FFF3D8]">
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
           Of collecting data from our Community Scientists to grow our results
         </p>
       </div>
-      <div ref={elm_5} className="max-w-fit">
-        <p className="text-[14rem] font-medium leading-none text-[#D1BD8F]">
+      <div ref={elm_5} className="mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
           700+
         </p>
-        <p className="mt-[1.5rem] max-w-[40rem] text-[2.8rem] font-medium leading-normal text-[#FFF3D8]">
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
           Dog breeds enrolled in our studies (and we always need more! Maybe
           yours?)
         </p>
       </div>
-      <div ref={elm_6} className="my-[4rem] flex items-start justify-end">
-        <p className="mr-[7rem] text-[24rem] font-medium leading-none text-[#D1BD8F]">
+      <div
+        ref={elm_6}
+        className="my-8 flex items-start justify-end lg:my-[4rem]"
+      >
+        <p className="mr-4 text-[100px] font-medium leading-none text-[#D1BD8F] lg:mr-[7rem] lg:text-[24rem]">
           6000+
         </p>
-        <p className="mt-[3rem] max-w-[40rem] text-[2.8rem] font-medium leading-normal text-[#FFF3D8]">
+        <p className="mt-2 max-w-[240px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[40rem] lg:text-[2.8rem]">
           Dogs who have been part of the project into their very senior years
           (11-22)
         </p>
       </div>
       <div ref={elm_7} className="max-w-fit">
-        <p className="text-[14rem] font-medium leading-none text-[#D1BD8F]">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
           Over 12
         </p>
-        <p className="mt-[1.5rem] max-w-[44rem] text-[2.8rem] font-medium leading-normal text-[#FFF3D8]">
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[44rem] lg:text-[2.8rem]">
           Different primary activity categories for Dog Pack members (companion,
           service, assistance, working, agility, show, breeding, rescue, etc.)
         </p>
       </div>
-      <div ref={elm_8} className="ml-auto max-w-fit">
-        <p className="text-[14rem] font-medium leading-none text-[#D1BD8F]">
+      <div ref={elm_8} className="ml-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
           10K+
         </p>
-        <p className="mt-[1.5rem] max-w-[40rem] text-[2.8rem] font-medium leading-normal text-[#FFF3D8]">
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
           Dogs who have been adopted from shelter, enrolled in our project
         </p>
       </div>
