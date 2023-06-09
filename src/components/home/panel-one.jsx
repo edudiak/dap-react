@@ -67,18 +67,18 @@ export default function HomePanelOne() {
   }, []);
 
   return (
-    <div className="panel pb-[15%]">
-      <div className="relative mb-20 flex flex-wrap-reverse items-center px-5 lg:mb-[10rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
-        <div className="z-[1] mt-20 w-full lg:mt-0 lg:w-3/4">
+    <div className="panel mb-[10%] md:pb-[15%]">
+      <div className="relative mb-14 flex flex-wrap-reverse items-center px-5 md:mb-20 lg:mb-[10rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
+        <div className="z-[1] mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
           <h1
             ref={elm_1}
-            className="text-5xl leading-tight text-[#F7F3FF] lg:max-w-[104rem] lg:text-[10.667rem] lg:leading-none"
+            className="text-4xl leading-tight text-[#F7F3FF] md:text-5xl lg:max-w-[104rem] lg:text-[10.667rem] lg:leading-none"
           >
             Discovering the Keys to a Healthy Lifespan
           </h1>
           <div
             ref={elm_2}
-            className="mt-6 text-xl leading-snug text-[#F7F3FF] lg:mt-[5.333rem] lg:max-w-[88rem] lg:text-[3.6rem]"
+            className="mt-6 text-lg leading-snug text-[#F7F3FF] md:text-xl lg:mt-[5.333rem] lg:max-w-[88rem] lg:text-[3.6rem] lg:leading-snug"
           >
             At the Dog Aging Project, we care deeply about the health and
             happiness of dogs. Our discoveries about healthy aging in our canine
@@ -88,22 +88,22 @@ export default function HomePanelOne() {
           </div>
           <div
             ref={elm_3}
-            className="mt-10 flex flex-wrap items-center justify-between text-white lg:mt-[14rem] lg:max-w-[104rem] lg:flex-nowrap lg:text-[2.4rem]"
+            className="mt-10 flex flex-wrap items-center justify-between text-sm text-white md:text-base lg:mt-[14rem] lg:max-w-[104rem] lg:flex-nowrap lg:text-[2.4rem]"
           >
-            <div className="flex items-center gap-x-4 lg:gap-x-[2rem]">
+            <div className="flex items-center gap-x-3 md:gap-x-4 lg:gap-x-[2rem]">
               <div className="flex">
-                <span className="will-be-dynamic mr-3 block lg:mr-[3rem]">
+                <span className="will-be-dynamic mr-2 block md:mr-3 lg:mr-[3rem]">
                   65,348,562
                 </span>
                 <span className="block">Dogs in the Pack</span>
               </div>
-              <div className="h-[2px] w-20 bg-white lg:h-[.267rem] lg:w-[10rem]" />
+              <div className="h-[2px] w-10 bg-white md:w-20 lg:h-[.267rem] lg:w-[10rem]" />
               <div>{currentDate}</div>
             </div>
             <div>
               <Link
                 href="#"
-                className="block rounded-full bg-[#F7F3FF] px-6 py-3 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white lg:px-[2.667rem] lg:py-[1.333rem] lg:text-[2.4rem]"
+                className="mt-6 block rounded-full bg-[#F7F3FF] px-6 py-3 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white md:mt-0 lg:px-[2.667rem] lg:py-[1.333rem] lg:text-[2.4rem]"
               >
                 Enroll Your Dog
               </Link>
@@ -112,7 +112,7 @@ export default function HomePanelOne() {
         </div>
         <div
           ref={elm_4}
-          className="mx-auto flex max-w-[70%] items-center justify-center lg:mx-0 lg:max-w-[75rem] xl:absolute xl:-top-[5%] xl:right-[4%]"
+          className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:mx-0 lg:max-w-[75rem] xl:absolute xl:-top-[5%] xl:right-[4%]"
         >
           <div
             ref={elm_4_circle}

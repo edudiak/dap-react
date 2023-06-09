@@ -18,30 +18,42 @@ export default function HomePanelTwo() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: panel.current,
-            start: 'top 85%',
-            end: 'bottom 70%',
-            scrub: 1,
-          },
-        })
-        .fromTo(
-          elm_1.current,
-          { y: 100, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-          },
-          '<=',
-        )
-        .fromTo(
-          elm_2.current,
-          { y: 100, opacity: 0 },
-          { y: 0, opacity: 1 },
-          '<=',
-        );
+      const mm = gsap.matchMedia();
+
+      mm.add(
+        {
+          isDesktop: '(min-width: 768px)',
+          isMobile: '(max-width: 767px)',
+        },
+        (context) => {
+          const { isDesktop } = context.conditions;
+
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: panel.current,
+                start: isDesktop ? 'top 85%' : 'top bottom',
+                end: isDesktop ? 'bottom 70%' : 'bottom 80%',
+                scrub: 1,
+              },
+            })
+            .fromTo(
+              elm_1.current,
+              { y: 100, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+              },
+              '<=',
+            )
+            .fromTo(
+              elm_2.current,
+              { y: 100, opacity: 0 },
+              { y: 0, opacity: 1 },
+              '<=',
+            );
+        },
+      );
     }); // <- scopes all selector text to the root element
 
     return () => ctx.revert();
@@ -65,10 +77,10 @@ export default function HomePanelTwo() {
           }}
         >
           <div>
-            <h3 className="text-4xl leading-none text-white lg:text-[8rem]">
+            <h3 className="text-3xl leading-none text-white md:text-4xl lg:text-[8rem] lg:leading-none">
               Partner With Us
             </h3>
-            <div className="mb-5 mt-5 text-xl leading-snug text-[#FFDADA] lg:mb-[6.5rem] lg:mt-[2.5rem] lg:text-[2.4rem]">
+            <div className="my-5 text-lg leading-snug text-[#FFDADA] md:text-xl lg:mb-[6.5rem] lg:mt-[2.5rem] lg:text-[2.4rem] lg:leading-snug">
               The Dog Aging Project is an innovative initiative that brings
               together a community of dogs, owners, veterinarians, researchers,
               and volunteers to carry out the most ambitious canine health study

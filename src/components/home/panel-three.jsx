@@ -207,11 +207,11 @@ export default function HomePanelThree() {
         className="bg- w-full pt-5 lg:w-[45%] lg:bg-transparent lg:pt-0"
       >
         <div>
-          <h2 className="text-5xl leading-none text-[#F7F3FF] lg:text-[10.667rem]">
+          <h2 className="text-4xl leading-none text-[#F7F3FF] md:text-5xl lg:text-[10.667rem]">
             Meet The Pack
           </h2>
-          <div className="mb-5 mt-5 text-lg leading-snug text-[#D2BEFF] lg:mb-[6rem] lg:mt-[4rem] lg:max-w-[70.667rem] lg:text-[2.8rem]">
-            <p className="mb-4 lg:mb-[2rem]">
+          <div className="mb-5 mt-3 leading-snug text-[#D2BEFF] md:text-lg lg:mb-[6rem] lg:mt-[4rem] lg:max-w-[70.667rem] lg:text-[2.8rem] lg:leading-tight">
+            <p className="mb-2 md:mb-4 lg:mb-[2.5rem]">
               We welcome ALL dogs—young and old, mixed breed and purebred,
               healthy and those with chronic illness—from all fifty US states.
             </p>
@@ -233,14 +233,14 @@ export default function HomePanelThree() {
         <div className="relative">
           {thePackDogs.map((dog, i) => {
             const dogSpeed = dog.position.speed;
-            const cssClass = `${dog.mobilePosition.y} ${dog.mobilePosition.x} ${dog.position.y} ${dog.position.x} w-[40%] overflow-hidden rounded-tl-full rounded-tr-full shadow-2xl`;
+            const cssClass = `${dog.mobilePosition.y} ${dog.mobilePosition.x} ${dog.position.y} ${dog.position.x} w-[60%] md:w-[40%] overflow-hidden rounded-tl-full rounded-tr-full shadow-2xl`;
             return (
               <div key={dog.id} data-speed={dogSpeed} className={cssClass}>
                 <div className="w-full lg:h-[30.5rem]">
                   <img
                     src={`/images/dogs/dog-${i + 1}-min.jpg`}
                     alt={`Dog-${i}`}
-                    className="h-[200px] w-full object-cover lg:h-full"
+                    className="h-[160px] w-full object-cover md:h-[250px] lg:h-full"
                   />
                 </div>
                 <div

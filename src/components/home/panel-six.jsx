@@ -81,13 +81,13 @@ export default function HomePanelSix() {
       <div className="relative z-[1] pb-20 lg:w-3/4 lg:pb-0">
         <h2
           ref={elm_1}
-          className="text-5xl leading-tight tracking-tighter text-[#E8DCFF] lg:max-w-[100rem] lg:text-[10rem]"
+          className="text-4xl leading-tight tracking-tighter text-[#E8DCFF] md:text-5xl lg:max-w-[100rem] lg:text-[10rem] lg:leading-tight"
         >
           Enroll your dog now & join this exciting project
         </h2>
         <div
           ref={elm_2}
-          className="mb-16 mt-5 text-xl leading-snug text-[#E8DCFF] lg:mb-[7rem] lg:mt-[3rem] lg:max-w-[74rem] lg:text-[2.8rem]"
+          className="mb-10 mt-5 text-lg leading-snug text-[#E8DCFF] md:mb-16 md:text-xl lg:mb-[7rem] lg:mt-[3rem] lg:max-w-[74rem] lg:text-[2.8rem]"
         >
           <p className="mb-5 lg:mb-[4rem]">
             At the Dog Aging Project, we know how important dogs are for the
@@ -111,7 +111,7 @@ export default function HomePanelSix() {
         data-speed={1.07}
         className="mx-auto ml-[25%] flex max-w-[70%] items-center justify-center lg:absolute lg:-top-[5%] lg:right-[4%] lg:mx-0 lg:max-w-[75rem]"
       >
-        <div className="absolute flex h-[calc(100%+3rem)] w-[calc(100%+3rem)] text-transparent lg:-right-[3.2rem] lg:h-[calc(100%+6.4rem)] lg:w-[calc(100%+6.4rem)]">
+        <div className="absolute flex h-[calc(100%+1.5rem)] w-[calc(100%+1.5rem)] text-transparent md:h-[calc(100%+3rem)] md:w-[calc(100%+3rem)] lg:-right-[3.2rem] lg:h-[calc(100%+6.4rem)] lg:w-[calc(100%+6.4rem)]">
           <div className="svg_icon h-full w-full">
             <BorderPurple200 />
           </div>
@@ -127,9 +127,9 @@ export default function HomePanelSix() {
       </div>
       <div
         data-speed={1.07}
-        className="absolute left-[6%] top-[84%] flex max-w-[25%] items-center justify-center lg:right-[41%] lg:top-[69%] lg:max-w-[20%]"
+        className="absolute top-[93%] flex max-w-[25%] items-center justify-center md:top-[88%] lg:right-[41%] lg:top-[69%] lg:max-w-[20%]"
       >
-        <div className="absolute -right-4 flex h-[calc(100%+2rem)] w-[calc(100%+2rem)] text-transparent lg:right-[-3rem] lg:h-[calc(100%+6rem)] lg:w-[calc(100%+6rem)]">
+        <div className="absolute -right-2 flex h-[calc(100%+1rem)] w-[calc(100%+1rem)] text-transparent md:-right-4 md:h-[calc(100%+2rem)] md:w-[calc(100%+2rem)] lg:right-[-3rem] lg:h-[calc(100%+6rem)] lg:w-[calc(100%+6rem)]">
           <div className="svg_icon h-full w-full">
             <BorderPurple200Small />
           </div>

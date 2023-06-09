@@ -175,7 +175,7 @@ export default function HomePanelNine() {
     >
       <h2
         ref={elm_1}
-        className="mb-14 ml-auto max-w-[585px] text-5xl tracking-tight text-[#D8C4FF] lg:mb-[10rem] lg:mr-[5%] lg:max-w-[98rem] lg:text-[8rem]"
+        className="mb-14 ml-auto max-w-[585px] text-4xl tracking-tight text-[#D8C4FF] md:text-5xl lg:mb-[10rem] lg:mr-[5%] lg:max-w-[98rem] lg:text-[8rem]"
       >
         Our Stats Show the Scale & Scope of Our Project
       </h2>

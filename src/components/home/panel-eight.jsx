@@ -78,16 +78,16 @@ export default function HomePanelEight() {
   return (
     <div className="flex flex-wrap-reverse lg:flex-nowrap">
       <div className="flex w-full items-center bg-[#AF4A40] px-5 lg:w-1/2 lg:px-[4%]">
-        <div className="py-16 lg:py-[6rem]">
+        <div className="py-10 md:py-16 lg:py-[6rem]">
           <h2
             ref={elm_1}
-            className="text-5xl leading-tight tracking-tight text-[#FFDADA] lg:text-[8rem] lg:leading-none"
+            className="text-4xl leading-tight tracking-tight text-[#FFDADA] md:text-5xl lg:text-[8rem] lg:leading-none"
           >
             Join the effort to extend the lifespan of pets and their owners.
           </h2>
           <div
             ref={elm_2}
-            className="pb-10 pt-6 text-xl leading-normal text-[#FFDADA] lg:pb-[10rem] lg:pt-[7rem] lg:text-[2.4rem]"
+            className="pb-10 text-lg leading-normal text-[#FFDADA] md:pt-6 md:text-xl lg:pb-[10rem] lg:pt-[7rem] lg:text-[2.4rem]"
           >
             We have established the Dog Aging Project as an engine for
             innovation. While core research activities are supported by the
