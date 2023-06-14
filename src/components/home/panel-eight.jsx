@@ -87,7 +87,7 @@ export default function HomePanelEight() {
           </h2>
           <div
             ref={elm_2}
-            className="pb-10 text-lg leading-normal text-[#FFDADA] md:pt-6 md:text-xl lg:pb-[10rem] lg:pt-[7rem] lg:text-[2.4rem]"
+            className="pb-10 text-lg leading-normal text-[#FFDADA] md:pt-6 md:text-xl lg:pb-[10rem] lg:pt-[7rem] lg:text-[2.4rem] lg:leading-tight"
           >
             We have established the Dog Aging Project as an engine for
             innovation. While core research activities are supported by the

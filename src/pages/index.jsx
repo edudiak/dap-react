@@ -12,13 +12,18 @@ export default function Home() {
   return (
     <div>
       <div
-        className="pb-36 pt-20 md:pb-52 lg:pb-[30rem] lg:pt-[13.333rem]"
+        className="pb-36 pt-36 md:pb-52 lg:pb-[30rem] lg:pt-[28rem]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #8A5DD2 7.93%, #250A60 100%)',
         }}
       >
         <HomePanelOne />
+
+        <video autoPlay muted playsInline loop className="w-full">
+          <source src="/videos/dna-video.webm" type="video/webm" />
+          <source src="/videos/dna-video.mp4" type="video/mp4" />
+        </video>
 
         <HomePanelTwo />
 

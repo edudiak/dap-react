@@ -20,7 +20,7 @@ export default function HomePanelNine() {
         .timeline({
           scrollTrigger: {
             trigger: elm_1.current,
-            start: 'top 90%',
+            start: 'top 80%',
             end: 'bottom+=100 bottom',
             scrub: true,
           },
@@ -179,8 +179,8 @@ export default function HomePanelNine() {
       >
         Our Stats Show the Scale & Scope of Our Project
       </h2>
-      <div ref={elm_2} className="flex items-start">
-        <p className="mr-4 text-[100px] font-medium leading-none text-[#D1BD8F] lg:mr-[7rem] lg:text-[24rem]">
+      <div ref={elm_2} className="flex flex-wrap items-start md:flex-nowrap">
+        <p className="mr-4 text-[70px] font-medium leading-none text-[#D1BD8F] md:text-[100px] lg:mr-[7rem] lg:text-[24rem]">
           65,000K+
         </p>
         <p className="mt-2 max-w-[180px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[40rem] lg:text-[2.8rem]">
@@ -214,9 +214,9 @@ export default function HomePanelNine() {
       </div>
       <div
         ref={elm_6}
-        className="my-8 flex items-start justify-end lg:my-[4rem]"
+        className="my-8 flex flex-wrap items-start justify-end md:flex-nowrap lg:my-[4rem]"
       >
-        <p className="mr-4 text-[100px] font-medium leading-none text-[#D1BD8F] lg:mr-[7rem] lg:text-[24rem]">
+        <p className="mr-4 text-[70px] font-medium leading-none text-[#D1BD8F] md:text-[100px] lg:mr-[7rem] lg:text-[24rem]">
           6000+
         </p>
         <p className="mt-2 max-w-[240px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[40rem] lg:text-[2.8rem]">

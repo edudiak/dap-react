@@ -63,7 +63,7 @@ export default function HomePanelTwo() {
     <>
       <div
         ref={panel}
-        className="panel relative mb-[25%] flex w-full flex-wrap gap-y-5 px-5 lg:flex-nowrap lg:gap-[4rem] lg:px-[4%]"
+        className="panel relative -mt-[10%] mb-[25%] flex w-full flex-wrap gap-y-5 px-5 lg:flex-nowrap lg:gap-[4rem] lg:px-[4%]"
       >
         <div
           ref={elm_1}

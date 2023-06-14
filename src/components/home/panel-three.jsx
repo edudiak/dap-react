@@ -16,7 +16,7 @@ export default function HomePanelThree() {
         speed: 1.05,
       },
       mobilePosition: {
-        x: 'ml-0',
+        x: '-ml-[5%]',
         y: 'mt-0',
         speed: 1.05,
       },
@@ -94,7 +94,7 @@ export default function HomePanelThree() {
         speed: 1,
       },
       mobilePosition: {
-        x: 'ml-[-2%]',
+        x: 'ml-[-7%]',
         y: 'mt-[-15%]',
         speed: 1,
       },
@@ -133,7 +133,7 @@ export default function HomePanelThree() {
         speed: 1.1,
       },
       mobilePosition: {
-        x: 'ml-0',
+        x: '-ml-[5%]',
         y: 'mt-[-50%]',
         speed: 1.1,
       },

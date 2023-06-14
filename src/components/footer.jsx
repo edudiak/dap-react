@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="w-1/2">
             <form action="">
               <label
-                for="signUpForBlog"
+                htmlFor="signUpForBlog"
                 className="mb-[3rem] flex items-center"
               >
                 <input
@@ -44,7 +44,10 @@ export default function Footer() {
                   Sign me up for blog updates
                 </div>
               </label>
-              <label for="signUpForNewsletter" className="flex items-center">
+              <label
+                htmlFor="signUpForNewsletter"
+                className="flex items-center"
+              >
                 <input
                   id="signUpForNewsletter"
                   type="checkbox"
