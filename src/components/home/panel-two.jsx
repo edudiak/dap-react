@@ -63,8 +63,18 @@ export default function HomePanelTwo() {
     <>
       <div
         ref={panel}
-        className="panel relative -mt-[10%] mb-[25%] flex w-full flex-wrap gap-y-5 px-5 lg:flex-nowrap lg:gap-[4rem] lg:px-[4%]"
+        className="panel relative mb-[25%] flex w-full flex-wrap gap-y-5 px-5 lg:flex-nowrap lg:gap-[4rem] lg:px-[4%]"
       >
+        <video
+          autoPlay
+          muted
+          playsInline
+          loop
+          className="absolute -top-[10%] left-0 w-full md:-top-1/4 lg:-top-2/3"
+        >
+          <source src="/videos/dna-video.webm" type="video/webm" />
+          <source src="/videos/dna-video.mp4" type="video/mp4" />
+        </video>
         <div
           ref={elm_1}
           className="flex w-full items-center rounded-3xl p-6 lg:flex-1 lg:rounded-[4rem] lg:p-[5.33rem]"

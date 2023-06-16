@@ -20,11 +20,6 @@ export default function Home() {
       >
         <HomePanelOne />
 
-        <video autoPlay muted playsInline loop className="w-full">
-          <source src="/videos/dna-video.webm" type="video/webm" />
-          <source src="/videos/dna-video.mp4" type="video/mp4" />
-        </video>
-
         <HomePanelTwo />
 
         <HomePanelThree />

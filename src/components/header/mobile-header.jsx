@@ -2,10 +2,11 @@
 /* eslint @next/next/no-img-element: "off" */
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 import Link from 'next/link';
 
 import ArrowDownIcon from '@assets/images/icons/arrow-down-small.svg';
+import { useRouter } from 'next/router';
 
 function MenuWithDropdown({ text, children }) {
   return (
@@ -13,7 +14,7 @@ function MenuWithDropdown({ text, children }) {
       {({ open }) => (
         /* Use the `open` state to conditionally change the direction of an icon. */
         <div className="mobile-dropdown-item z-10">
-          <Disclosure.Button className="relative flex w-full items-center justify-center text-lg">
+          <Disclosure.Button className="relative flex w-full items-center text-lg">
             <span className="mr-4">{text}</span>
             <div
               className={`svg_icon w-[14px] transform text-black ${
@@ -23,7 +24,18 @@ function MenuWithDropdown({ text, children }) {
               <ArrowDownIcon />
             </div>
           </Disclosure.Button>
-          <Disclosure.Panel>{children}</Disclosure.Panel>
+          <Transition
+            enter="transition duration-100 ease-out"
+            enterFrom="transform scale-95 opacity-0"
+            enterTo="transform scale-100 opacity-100"
+            leave="transition duration-75 ease-out"
+            leaveFrom="transform scale-100 opacity-100"
+            leaveTo="transform scale-95 opacity-0"
+          >
+            <Disclosure.Panel className="flex flex-col gap-y-4 pt-5">
+              {children}
+            </Disclosure.Panel>
+          </Transition>
         </div>
       )}
     </Disclosure>
@@ -31,6 +43,7 @@ function MenuWithDropdown({ text, children }) {
 }
 
 export default function MobileHeader() {
+  const router = useRouter();
   const header = useRef(null);
   const wrapper = useRef(null);
   const overlay_1 = useRef(null);
@@ -115,7 +128,14 @@ export default function MobileHeader() {
       className="mobile-header relative z-[2] h-14 w-full lg:hidden"
     >
       <div className="flex items-center justify-between bg-white px-3">
-        <Link href="/" className="mobile-header__logo relative z-[6]">
+        <Link
+          href="/"
+          onClick={() => {
+            setReversed(true);
+            router.push('/');
+          }}
+          className="mobile-header__logo relative z-[6]"
+        >
           <img src="/images/dap-logo.svg" alt="DAP Logo" className="w-36" />
         </Link>
 
@@ -156,37 +176,81 @@ export default function MobileHeader() {
         <div className="flex min-h-[calc(100vh-70px)] w-full items-center justify-center">
           <div className="flex flex-col gap-y-5 font-bold text-black">
             <MenuWithDropdown href="#" text="Project Details">
-              <Link href="/triad-fast-track">Project Overview</Link>
-              <Link href="#">Veterinarians</Link>
-              <Link href="#">Our Supporters</Link>
-              <Link href="#">Our Team</Link>
-              <Link href="#">Contact Us</Link>
+              <Link
+                onClick={() => {
+                  setReversed(true);
+                  router.push('/triad-fast-track');
+                }}
+                href="/triad-fast-track"
+              >
+                Project Overview
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Veterinarians
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Our Supporters
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Our Team
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Contact Us
+              </Link>
             </MenuWithDropdown>
 
             <MenuWithDropdown href="#" text="Research">
-              <Link href="#">Publications</Link>
-              <Link href="#">Data Access</Link>
-              <Link href="#">Careers</Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Publications
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Data Access
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Careers
+              </Link>
             </MenuWithDropdown>
 
             <MenuWithDropdown href="#" text="Media">
-              <Link href="#">News Coverage</Link>
-              <Link href="#">Press Resources</Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                News Coverage
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Press Resources
+              </Link>
             </MenuWithDropdown>
 
             <MenuWithDropdown href="#" text="Blog">
-              <Link href="#">Scientific Results</Link>
-              <Link href="#">Inside Science</Link>
-              <Link href="#">Inside Cognition</Link>
-              <Link href="#">Inside Foundation</Link>
-              <Link href="#">Inside Precision</Link>
-              <Link href="#">Aging Dog Care</Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Scientific Results
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Inside Science
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Inside Cognition
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Inside Foundation
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Inside Precision
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Aging Dog Care
+              </Link>
             </MenuWithDropdown>
 
             <MenuWithDropdown href="#" text="FAQ">
-              <Link href="#">Project FAQ</Link>
-              <Link href="#">Participant FAQ</Link>
-              <Link href="#">Veterinarian FAQ</Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Project FAQ
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Participant FAQ
+              </Link>
+              <Link onClick={() => setReversed(true)} href="#">
+                Veterinarian FAQ
+              </Link>
             </MenuWithDropdown>
           </div>
         </div>

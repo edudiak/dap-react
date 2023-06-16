@@ -1,6 +1,8 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 
+import CloseIcon from '@assets/images/icons/close.svg';
+
 export default function VideoPopup({ isOpen, onClose }) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -14,11 +16,11 @@ export default function VideoPopup({ isOpen, onClose }) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black bg-opacity-25" />
+          <div className="fixed inset-0 bg-black bg-opacity-60" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="flex min-h-full w-full items-center justify-center p-3 text-center md:p-5 lg:p-[4%]">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -28,29 +30,37 @@ export default function VideoPopup({ isOpen, onClose }) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                <Dialog.Title
-                  as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900"
-                >
-                  Payment successful
-                </Dialog.Title>
-                <div className="mt-2">
-                  <p className="text-sm text-gray-500">
-                    Your payment has been successfully submitted. We’ve sent you
-                    an email with all of the details of your order.
-                  </p>
+              <Dialog.Panel className="w-full transform rounded-lg bg-[#250A60] p-2 text-left align-middle shadow-xl transition-all md:rounded-2xl md:p-5 lg:p-10">
+                <div>
+                  <div
+                    style={{ padding: '56.25% 0 0 0', position: 'relative' }}
+                  >
+                    <iframe
+                      src="https://player.vimeo.com/video/476337765?h=eebc925a44&color=855fbf&title=0&byline=0"
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                      }}
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullscreen
+                      title="DAP Video"
+                    />
+                  </div>
+                  <script src="https://player.vimeo.com/api/player.js" defer />
                 </div>
 
-                <div className="mt-4">
-                  <button
-                    type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                    onClick={onClose}
-                  >
-                    Got it, thanks!
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  className="absolute -right-3 -top-3 flex h-7 w-7 items-center justify-center rounded-full bg-white text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 md:-right-5 md:-top-5 md:h-10 md:w-10 lg:-right-[3rem] lg:-top-[3rem] lg:h-[8rem] lg:w-[8rem]"
+                  onClick={onClose}
+                >
+                  <span className="svg_icon w-3 md:w-5 lg:w-[4rem]">
+                    <CloseIcon />
+                  </span>
+                </button>
               </Dialog.Panel>
             </Transition.Child>
           </div>
