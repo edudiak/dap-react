@@ -3,12 +3,9 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Disclosure } from '@headlessui/react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 
 import ArrowDownIcon from '@assets/images/icons/arrow-down-small.svg';
-
-gsap.registerPlugin(ScrollTrigger);
 
 function MenuWithDropdown({ text, children }) {
   return (

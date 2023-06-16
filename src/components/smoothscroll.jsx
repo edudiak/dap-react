@@ -5,7 +5,6 @@ import { useLayoutEffect, useRef } from 'react';
 
 import Footer from './footer';
 import Header from './header';
-import MobileHeader from './header/mobile-header';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -24,14 +23,11 @@ export default function SmoothScroll({ children }) {
   }, []);
 
   return (
-    <div className="page-container overflow-hidden">
-      <MobileHeader />
-      <div ref={root} id="smooth-wrapper">
-        <div id="smooth-content">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+    <div ref={root} id="smooth-wrapper">
+      <div id="smooth-content">
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </div>
     </div>
   );
