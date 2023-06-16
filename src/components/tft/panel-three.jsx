@@ -1,65 +1,152 @@
-/* eslint @next/next/no-img-element: "off" */
 import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import Link from 'next/link';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function TFTPanelThree() {
-  const elm_1 = useRef(null);
   const panel = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: panel.current,
-            start: 'top 85%',
-            end: 'bottom 70%',
-            scrub: 1,
-          },
-        })
-        .fromTo(
-          elm_1.current,
-          { y: 100, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-          },
-        );
+      const mm = gsap.matchMedia();
+
+      mm.add(
+        {
+          isDesktop: '(min-width: 1024px)',
+          isMobile: '(max-width: 1023px)',
+        },
+        (context) => {
+          const { isDesktop } = context.conditions;
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: panel.current,
+                start: isDesktop ? 'top 85%' : 'top bottom',
+                end: isDesktop ? 'bottom 70%' : 'bottom bottom',
+                scrub: 1,
+              },
+            })
+            .fromTo(
+              '.for-your-dog',
+              { y: 10, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+                stagger: 0.1,
+              },
+            )
+            .fromTo(
+              '.for-you',
+              { y: 10, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+                stagger: 0.1,
+              },
+              '<=',
+            );
+        },
+      );
     }); // <- scopes all selector text to the root element
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={panel} className="panel flex w-full flex-1 items-start px-[4%]">
-      <div
-        ref={elm_1}
-        className="flex flex-1 items-center rounded-[4rem] p-[5.33rem]"
-        style={{
-          background:
-            'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
-          backgroundBlendMode: 'overlay, normal, normal',
-          boxShadow: '0px 0px 14px 3px rgba(0, 0, 0, 0.3)',
-          backdropFilter: 'blur(20px)',
-        }}
-      >
-        <div className="text-[#3A1982]">
-          <h3 className="text-[6.133rem] leading-none">Ready to Enroll?</h3>
-          <div className="mb-[4rem] mt-[2.5rem] text-[3.6rem] leading-snug">
-            Click the link here to complete the TRIAD Rapid Eligibility
-            Assessment.
+    <div
+      ref={panel}
+      className="panel flex w-full flex-1 flex-wrap items-start px-5 pb-10 md:pb-6 lg:flex-nowrap lg:px-[4%] lg:pb-[10rem]"
+    >
+      <div className="mb-10 w-full lg:mb-0 lg:w-[30%]">
+        <h3 className="text-4xl leading-none text-[#F7F3FF] md:text-5xl lg:text-[6.4rem] lg:leading-none">
+          Requirements:
+        </h3>
+      </div>
+      <div className="w-full md:w-1/2 lg:w-[35%] lg:pr-[5%]">
+        <h3 className="text-3xl leading-none text-[#F7F3FF] lg:text-[6.4rem] lg:leading-none">
+          For your dog
+        </h3>
+        <div className="mt-6 flex flex-col gap-y-3 text-lg text-[#500000] md:mt-10 lg:mt-[4rem] lg:gap-y-[2rem] lg:text-[2.8rem] lg:leading-snug">
+          <div className="for-your-dog flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex w-20 shrink-0 items-center rounded-full bg-[#500000] px-3 py-2 text-xs uppercase text-white lg:w-[13.4rem] lg:px-[2.3rem] lg:py-[0.667rem] lg:text-[2.133rem] lg:leading-none">
+              Age:
+            </span>
+            <span>At least 7 years old</span>
           </div>
-
-          <Link
-            className="inline-block rounded-full bg-[#9169E8] px-[4rem] py-[2.133rem] text-[2.4rem] font-bold leading-none text-white shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.6)] hover:bg-[#250A60] hover:text-[#F7F3FF]"
-            href="/#"
-          >
-            View Requirements
-          </Link>
+          <div className="for-your-dog flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex w-20 shrink-0 items-center rounded-full bg-[#500000] px-3 py-2 text-xs uppercase text-white lg:w-[13.4rem] lg:px-[2.3rem] lg:py-[0.667rem] lg:text-[2.133rem] lg:leading-none">
+              Weight:
+            </span>
+            <span>Between 44 and 120 lbs</span>
+          </div>
+          <div className="for-your-dog flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex w-20 shrink-0 items-center rounded-full bg-[#500000] px-3 py-2 text-xs uppercase text-white lg:w-[13.4rem] lg:px-[2.3rem] lg:py-[0.667rem] lg:text-[2.133rem] lg:leading-none">
+              Mood:
+            </span>
+            <span>Calm during vet visits</span>
+          </div>
+          <div className="for-your-dog flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex w-20 shrink-0 items-center rounded-full bg-[#500000] px-3 py-2 text-xs uppercase text-white lg:w-[13.4rem] lg:px-[2.3rem] lg:py-[0.667rem] lg:text-[2.133rem] lg:leading-none">
+              Fixed:
+            </span>
+            <span>Spayed or Neutered</span>
+          </div>
+          <div className="for-your-dog flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex w-20 shrink-0 items-center rounded-full bg-[#500000] px-3 py-2 text-xs uppercase text-white lg:w-[13.4rem] lg:px-[2.3rem] lg:py-[0.667rem] lg:text-[2.133rem] lg:leading-none">
+              DAP:
+            </span>
+            <span>Able to pass our Health & Behavior criteria</span>
+          </div>
+        </div>
+      </div>
+      <div className="mt-10 w-full md:mt-0 md:w-1/2 lg:w-[35%]">
+        <h3 className="text-3xl leading-none text-[#F7F3FF] lg:text-[6.4rem] lg:leading-none">
+          For you
+        </h3>
+        <div className="mt-6 flex flex-col gap-y-3 text-lg text-[#500000] md:mt-10 lg:mt-[4rem] lg:gap-y-[2rem] lg:text-[2.8rem] lg:leading-snug">
+          <div className="for-you flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#500000] text-sm uppercase text-white lg:h-[3.6rem] lg:w-[3.6rem] lg:text-[2.133rem] lg:leading-none">
+              1
+            </span>
+            <span>Provide your dog’s medical records</span>
+          </div>
+          <div className="for-you flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#500000] text-sm uppercase text-white lg:h-[3.6rem] lg:w-[3.6rem] lg:text-[2.133rem] lg:leading-none">
+              2
+            </span>
+            <span>Visit a clinical site every 6 months</span>
+          </div>
+          <div className="for-you flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#500000] text-sm uppercase text-white lg:h-[3.6rem] lg:w-[3.6rem] lg:text-[2.133rem] lg:leading-none">
+              3
+            </span>
+            <span>Participate for a total of 3 years</span>
+          </div>
+          <div className="for-you flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#500000] text-sm uppercase text-white lg:h-[3.6rem] lg:w-[3.6rem] lg:text-[2.133rem] lg:leading-none">
+              4
+            </span>
+            <span>Give your dog a heartworm preventive</span>
+          </div>
+          <div className="for-you flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#500000] text-sm uppercase text-white lg:h-[3.6rem] lg:w-[3.6rem] lg:text-[2.133rem] lg:leading-none">
+              5
+            </span>
+            <span>Keep your dog up-to-date on vaccines</span>
+          </div>
+          <div className="for-you flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#500000] text-sm uppercase text-white lg:h-[3.6rem] lg:w-[3.6rem] lg:text-[2.133rem] lg:leading-none">
+              6
+            </span>
+            <span>Administer the study medication weekly</span>
+          </div>
+          <div className="for-you flex items-start gap-x-3 lg:gap-x-[2rem]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#500000] text-sm uppercase text-white lg:h-[3.6rem] lg:w-[3.6rem] lg:text-[2.133rem] lg:leading-none">
+              7
+            </span>
+            <span>Complete all surveys and activities</span>
+          </div>
         </div>
       </div>
     </div>

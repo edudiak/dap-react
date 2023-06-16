@@ -24,7 +24,7 @@ export default function SmoothScroll({ children }) {
   }, []);
 
   return (
-    <div className="page-container">
+    <div className="page-container overflow-hidden">
       <MobileHeader />
       <div ref={root} id="smooth-wrapper">
         <div id="smooth-content">

@@ -42,6 +42,78 @@ svg {
   }
 }
 
+.mobile-header {
+  .nav {
+    .nav-btn {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      flex: 0;
+      padding: 5px;
+    }
+    .nav-btn .btn-bar {
+      position: relative;
+      width: 1.34em;
+      height: 3px;
+      border-radius: 5px;
+      background: #444;
+    }
+    .nav-btn .btn-bar.menu:not(:first-child) {
+      margin-top: 3px;
+    }
+    .nav-btn .btn-bar.close {
+      transform-origin: center center;
+      position: absolute;
+      margin-top: -1.5px;
+      opacity: 0;
+      top: 50%;
+    }
+    .btn-bar.menu:nth-child(even) {
+      width: 1.8em;
+    }
+    .btn-bar.close:not(:last-child) {
+      transform: rotate(45deg) translateX(-250%);
+    }
+    .btn-bar.close:last-child {
+      transform: rotate(-45deg) translateX(250%);
+    }
+    .btn-bar.menu {
+      transition: transform 0.3s ease-in-out 0.2s,
+        opacity 0.15s ease-in-out 0.2s;
+    }
+    .btn-bar.close {
+      transition: transform 0.2s ease-in-out, opacity 0.05s ease-in-out 0.2s;
+    }
+    &.open .nav-btn .btn-bar.menu {
+      opacity: 0;
+    }
+    &.open .nav-btn .btn-bar.close {
+      opacity: 1;
+    }
+    &.open .nav-btn .btn-bar.menu:nth-child(odd) {
+      transform: translateX(-400%);
+    }
+    &.open .nav-btn .btn-bar.menu:nth-child(even) {
+      transform: translateX(200%);
+    }
+    &.open .nav-btn .btn-bar.close:not(:last-child) {
+      transform: rotate(45deg);
+    }
+    &.open .nav-btn .btn-bar.close:last-child {
+      transform: rotate(-45deg);
+    }
+    &.open .btn-bar.menu {
+      transition: transform 0.3s ease-in-out, opacity 0.15s ease-in-out 0.15s;
+    }
+    &.open .btn-bar.close {
+      transition: transform 0.2s ease-in-out 0.3s,
+        opacity 0.05s ease-in-out 0.3s;
+    }
+  }
+}
+
 footer {
   input[type='checkbox'] {
     position: relative;
