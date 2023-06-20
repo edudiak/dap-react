@@ -167,7 +167,7 @@ export default function HomePanelNine() {
 
   return (
     <div
-      className="bg-[#6543A5] px-[4%] py-[10%]"
+      className="bg-[#6543A5] px-5 py-[10%] lg:px-[4%]"
       style={{
         backgroundImage: 'url(/images/dap-bg-noise-20.png)',
         backgroundBlendMode: 'overlay, normal, normal',
