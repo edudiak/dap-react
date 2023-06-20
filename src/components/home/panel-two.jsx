@@ -32,26 +32,21 @@ export default function HomePanelTwo() {
             .timeline({
               scrollTrigger: {
                 trigger: panel.current,
-                start: isDesktop ? 'top 85%' : 'top bottom',
-                end: isDesktop ? 'bottom 70%' : 'bottom 80%',
+                start: isDesktop ? 'top 95%' : 'top bottom',
+                end: isDesktop ? 'bottom 80%' : 'bottom 90%',
                 scrub: 1,
               },
             })
             .fromTo(
               elm_1.current,
-              { y: 100, opacity: 0 },
+              { opacity: 0 },
               {
                 y: 0,
                 opacity: 1,
               },
               '<=',
             )
-            .fromTo(
-              elm_2.current,
-              { y: 100, opacity: 0 },
-              { y: 0, opacity: 1 },
-              '<=',
-            );
+            .fromTo(elm_2.current, { opacity: 0 }, { y: 0, opacity: 1 }, '<=');
         },
       );
     }); // <- scopes all selector text to the root element

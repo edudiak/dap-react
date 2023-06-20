@@ -159,6 +159,20 @@ footer {
   }
 }
 
+#gradient-canvas {
+  --gradient-color-1: #8255d1;
+  --gradient-color-2: #875ad2;
+  --gradient-color-3: #8052ce;
+  --gradient-color-4: #9366d9;
+}
+
+#footer-gradient-canvas {
+  --gradient-color-1: #6543a3;
+  --gradient-color-2: #7e366a;
+  --gradient-color-3: #734597;
+  --gradient-color-4: #7f3f7d;
+}
+
 // @media screen and (min-width: 480px) and (max-width: 1023px) {
 //   html {
 //     font-size: 10px;
