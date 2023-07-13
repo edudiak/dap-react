@@ -1,5 +1,5 @@
 import { ViewportProvider } from '@/context/ViewPortContext';
-import { DM_Sans } from 'next/font/google';
+import { DM_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Head from 'next/head';
 
 import Layout from '@/components/layout';
@@ -12,6 +12,12 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
 });
 
+const plexMono = IBM_Plex_Mono({
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+});
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -19,6 +25,9 @@ export default function App({ Component, pageProps }) {
         {`
           html {
             font-family: ${dmSans.style.fontFamily};
+          }
+          .plex-mono {
+            font-family: ${plexMono.style.fontFamily};
           }
         `}
       </style>

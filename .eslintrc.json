@@ -23,6 +23,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "import/extensions": "off",
     "import/order": "off",
-    "implicit-arrow-linebreak": "off"
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }
