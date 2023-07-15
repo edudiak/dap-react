@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
           html {
             font-family: ${dmSans.style.fontFamily};
           }
-          .plex-mono {
+          .font-plex-mono {
             font-family: ${plexMono.style.fontFamily};
           }
         `}

@@ -1,12 +1,10 @@
 import HomePanelEight from '@/components/home/panel-eight';
-import HomePanelFive from '@/components/home/panel-five';
 import HomePanelFour from '@/components/home/panel-four';
 import HomePanelNine from '@/components/home/panel-nine';
 import HomePanelSeven from '@/components/home/panel-seven';
 import HomePanelSix from '@/components/home/panel-six';
-import HomePanelThree from '@/components/home/panel-three';
-import HomePanelTwo from '@/components/home/panel-two';
 import PanelOne from '@/components/project-details/panel-one';
+import PanelTwo from '@/components/project-details/panel-two';
 
 export default function ProjectDetails() {
   return (
@@ -20,14 +18,10 @@ export default function ProjectDetails() {
       >
         <PanelOne />
 
-        <HomePanelTwo />
-
-        <HomePanelThree />
+        <PanelTwo />
       </div>
 
       <HomePanelFour />
-
-      <HomePanelFive />
 
       <div
         className="pb-20 pt-20 lg:pb-[21.333rem] lg:pt-[33.333rem]"
