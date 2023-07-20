@@ -64,7 +64,7 @@ export default function Header() {
               href="/triad-fast-track"
               text="Project Overview"
             />
-            <DropdownMenuItem href="#" text="Veterinarians" />
+            <DropdownMenuItem href="/veterinarians" text="Veterinarians" />
             <DropdownMenuItem href="#" text="Our Supporters" />
             <DropdownMenuItem href="#" text="Our Team" />
             <DropdownMenuItem href="#" text="Contact Us" />
