@@ -66,7 +66,7 @@ export default function Header() {
             />
             <DropdownMenuItem href="/veterinarians" text="Veterinarians" />
             <DropdownMenuItem href="#" text="Our Supporters" />
-            <DropdownMenuItem href="#" text="Our Team" />
+            <DropdownMenuItem href="/our-team" text="Our Team" />
             <DropdownMenuItem href="#" text="Contact Us" />
           </MenuWithDropdown>
 
