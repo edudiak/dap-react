@@ -65,7 +65,7 @@ export default function Header() {
               text="Project Overview"
             />
             <DropdownMenuItem href="/veterinarians" text="Veterinarians" />
-            <DropdownMenuItem href="#" text="Our Supporters" />
+            <DropdownMenuItem href="/our-supporters" text="Our Supporters" />
             <DropdownMenuItem href="/our-team" text="Our Team" />
             <DropdownMenuItem href="#" text="Contact Us" />
           </MenuWithDropdown>

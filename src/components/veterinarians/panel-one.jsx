@@ -55,10 +55,10 @@ export default function PanelOne() {
           <div className="relative p-14">
             <div className="absolute left-0 top-0 h-full w-full rotate-[120deg] transform rounded-full border-[7px] border-[#250A60] border-b-transparent" />
             <Image
-              src="/images/veterinary-geroscience.png"
+              src="/images/veterinary-geroscience.jpg"
               alt="dog-13"
-              width={480}
-              height={480}
+              width={2000}
+              height={2000}
               className="overflow-hidden rounded-full"
             />
           </div>
