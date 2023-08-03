@@ -60,7 +60,7 @@ export default function HomePanelSeven() {
                 : 'translate-y-8 md:-mr-[20%] md:translate-y-16 lg:translate-y-[14rem]'
             }`}
           >
-            <div className="pointer-events-none absolute left-0 top-0 h-full w-full shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)]" />
+            <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[4rem]" />
             <div className="p-5 lg:p-[2.667rem]">
               <div className="flex justify-between text-xs uppercase text-[#532EA4] lg:text-[1.867rem]">
                 <div>09.12.2022</div>

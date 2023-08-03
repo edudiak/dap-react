@@ -81,13 +81,31 @@ export default function Header() {
             <DropdownMenuItem href="/press-resources" text="Press Resources" />
           </MenuWithDropdown>
 
-          <MenuWithDropdown href="#" text="Blog">
-            <DropdownMenuItem href="#" text="Scientific Results" />
-            <DropdownMenuItem href="#" text="Inside Science" />
-            <DropdownMenuItem href="#" text="Inside Cognition" />
-            <DropdownMenuItem href="#" text="Inside Foundation" />
-            <DropdownMenuItem href="#" text="Inside Precision" />
-            <DropdownMenuItem href="#" text="Aging Dog Care" />
+          <MenuWithDropdown href="/blog" text="Blog">
+            <DropdownMenuItem
+              href="/blog/category/scientific-results"
+              text="Scientific Results"
+            />
+            <DropdownMenuItem
+              href="/blog/category/inside-science"
+              text="Inside Science"
+            />
+            <DropdownMenuItem
+              href="/blog/category/inside-cognition"
+              text="Inside Cognition"
+            />
+            <DropdownMenuItem
+              href="/blog/category/inside-foundation"
+              text="Inside Foundation"
+            />
+            <DropdownMenuItem
+              href="/blog/category/inside-precision"
+              text="Inside Precision"
+            />
+            <DropdownMenuItem
+              href="/blog/category/aging-dog-care"
+              text="Aging Dog Care"
+            />
           </MenuWithDropdown>
 
           <MenuWithDropdown href="#" text="FAQ">
