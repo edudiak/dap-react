@@ -76,9 +76,9 @@ export default function Header() {
             <DropdownMenuItem href="/careers" text="Careers" />
           </MenuWithDropdown>
 
-          <MenuWithDropdown href="#" text="Media">
+          <MenuWithDropdown href="/media" text="Media">
             <DropdownMenuItem href="#" text="News Coverage" />
-            <DropdownMenuItem href="#" text="Press Resources" />
+            <DropdownMenuItem href="/press-resources" text="Press Resources" />
           </MenuWithDropdown>
 
           <MenuWithDropdown href="#" text="Blog">
