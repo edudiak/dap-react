@@ -34,7 +34,7 @@ export default function PanelThree() {
   ];
   return (
     <div className="px-5 lg:px-[4%]">
-      <div className="mb-10 flex lg:mb-[13.333rem]">
+      <div className="mb-10 flex flex-wrap lg:flex-nowrap lg:mb-[13.333rem]">
         <div className="w-full lg:w-1/2">
           <h3 className="mb-8 text-4xl leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
             Support Our Research
@@ -52,7 +52,7 @@ export default function PanelThree() {
         </div>
       </div>
 
-      <div className="flex">
+      <div className="flex flex-wrap md:flex-nowrap">
         {support.map((item, index) => (
           <div
             key={item.title}
@@ -63,12 +63,12 @@ export default function PanelThree() {
                 className={`${
                   index % 2
                     ? 'mt-[10px] rotate-[135deg]'
-                    : '-mt-[10px] -rotate-45'
+                    : 'mt-[10px] rotate-[135deg] md:-mt-[10px] md:-rotate-45'
                 } absolute left-0 top-0 h-full w-full transform rounded-full border-[6px] border-[#250A60] border-b-transparent border-l-transparent lg:border-[.77rem]`}
               />
               <img src={item.image} alt="Platinum" className="w-full" />
             </div>
-            <div className="mt-4 lg:mt-[3rem]">
+            <div className="mt-8 lg:mt-[8rem]">
               <h4 className="mb-3 text-lg font-bold leading-none lg:text-[4.8rem]">
                 {item.title}
               </h4>

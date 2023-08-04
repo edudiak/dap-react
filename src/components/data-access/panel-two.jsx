@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function PanelTwo() {
   return (
     <div className="relative pb-20 lg:pb-[30rem]">
-      <div className="mb-16 flex flex-wrap items-center px-5 lg:mb-[12rem] lg:px-[8%]">
-        <div className="ml-auto w-1/2 lg:-mb-[32rem]">
+      <div className="mb-16 flex flex-wrap lg:flex-nowrap items-center px-5 lg:mb-[12rem] lg:px-[8%]">
+        <div className="ml-auto w-full lg:w-1/2 mb-8 lg:-mb-[32rem]">
           <h2 className="mb-6 max-w-[300px] text-4xl leading-none text-[#250A60] lg:mb-[6.667rem] lg:max-w-[60rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
             Overview of the data access process
           </h2>
@@ -58,8 +58,8 @@ export default function PanelTwo() {
             height={1718}
           />
         </div>
-        <div className="w-1/2 lg:-mt-[45rem]">
-          <div className="mb-20 lg:mb-[12rem]">
+        <div className="w-full lg:w-1/2 mt-8 lg:-mt-[45rem] ">
+          <div className="mb-10 md:mb-20 lg:mb-[12rem]">
             <h3 className="mb-6 max-w-[300px] text-4xl leading-none text-[#250A60] lg:mb-[6.667rem] lg:max-w-[70rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
               Corporate Data Access
             </h3>

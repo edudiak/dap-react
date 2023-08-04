@@ -11,8 +11,8 @@ export default function PanelTwo() {
   return (
     <div className="relative px-5 lg:px-[4%]">
       <div>
-        <div className="mb-10 flex items-center justify-end lg:mb-[5.333rem]">
-          <h4 className="text-lg text-[#532EA4] lg:mr-[3rem] lg:text-[4.8rem]">
+        <div className="mb-10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-end lg:mb-[5.333rem]">
+          <h4 className="text-lg text-[#532EA4] p-4 lg:mr-[3rem] lg:text-[4.8rem]">
             Search publications
           </h4>
           <div className="relative">
@@ -23,7 +23,7 @@ export default function PanelTwo() {
             />
             <button
               type="submit"
-              className="svg_icon top-15 absolute right-5 w-6 text-[#9169E8] lg:right-[2.667rem] lg:top-[1.5rem] lg:w-[3.2rem]"
+              className="svg_icon top-4 absolute right-5 w-6 text-[#9169E8] lg:right-[2.667rem] lg:top-[1.5rem] lg:w-[3.2rem]"
             >
               <SearchIcon />
             </button>
@@ -43,7 +43,7 @@ export default function PanelTwo() {
           {[...Array(10)].map((item) => (
             <article
               key={item}
-              className="mb-20 border-b-2 border-b-[#C0A4FF] pb-5 lg:mb-[10.667rem] lg:border-b-[0.267rem] lg:pb-[5.333rem]"
+              className="mb-4 sm:mb-10 border-b-2 border-b-[#C0A4FF] p-4 pb-5 lg:mb-[10.667rem] lg:border-b-[0.267rem] lg:pb-[5.333rem]"
             >
               <Link
                 href="#"
@@ -55,20 +55,20 @@ export default function PanelTwo() {
               <p className="text-lg leading-snug text-[#532EA4] lg:py-[2rem] lg:text-[2.8rem] lg:leading-snug">
                 Mouttham L, Castelhano MG, Dog Aging Project Consortium
               </p>
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between pt-4 gap-y-4 gap-x-2">
                 <p className="text-[#790F0F] lg:text-[2.8rem]">
                   Biomarker Insights (2022)
                 </p>
                 <div className="flex gap-x-4">
                   <Link
                     href="#"
-                    className="rounded-full bg-[#790F0F] px-4 py-2 text-[2.4rem] text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] lg:px-[2.667rem] lg:py-[1.33rem]"
+                    className="rounded-full bg-[#790F0F] px-4 py-2 text-base md:text-xl lg:text-[2.4rem] text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] lg:px-[2.667rem] lg:py-[1.33rem]"
                   >
                     PubMed
                   </Link>
                   <Link
                     href="#"
-                    className="rounded-full bg-[#790F0F] px-4 py-2 text-[2.4rem] text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] lg:px-[2.667rem] lg:py-[1.33rem]"
+                    className="rounded-full bg-[#790F0F] px-4 py-2 text-base md:text-xl lg:text-[2.4rem] text-white shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] lg:px-[2.667rem] lg:py-[1.33rem]"
                   >
                     DOI
                   </Link>

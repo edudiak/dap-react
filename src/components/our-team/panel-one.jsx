@@ -38,8 +38,8 @@ export default function PanelOne() {
           className="rounded-xl lg:rounded-[4rem]"
         />
       </div>
-      <div className="mt-5 flex lg:mt-[4rem]">
-        <div className="w-1/2">
+      <div className="mt-5 flex flex-wrap lg:flex-nowrap lg:mt-[4rem]">
+        <div className="w-full lg:w-1/2">
           <h1
             ref={elm_1}
             className="text-4xl leading-tight text-[#F7F3FF] md:text-5xl lg:text-[10.667rem] lg:leading-none"
@@ -47,8 +47,8 @@ export default function PanelOne() {
             Our Mission
           </h1>
         </div>
-        <div className="w-1/2">
-          <div className="text-xl leading-snug text-[#F8F4FF] md:text-2xl lg:text-[3.6rem] lg:leading-snug">
+        <div className="w-full lg:w-1/2">
+          <div className=" mt-6 text-xl leading-snug text-[#F8F4FF] md:text-2xl lg:text-[3.6rem] lg:leading-snug">
             Our team includes expert researchers from diverse disciplines who
             are global leaders in their fields. Our robust culture of
             collaboration fosters creative partnerships and attracts top

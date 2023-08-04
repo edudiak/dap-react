@@ -66,11 +66,11 @@ export default function PanelOne() {
       </div>
 
       <div className="relative mb-14 px-5 md:mb-20 lg:mb-[16rem] lg:px-[8%]">
-        <h2 className="mb-8 text-lg leading-snug text-[#F7F3FF] md:text-xl lg:mb-[6.667rem] lg:w-1/2 lg:text-[6.267rem] lg:leading-snug">
+        <h2 className="mb-8 text-3xl leading-snug text-[#F7F3FF] md:text-4xl lg:mb-[6.667rem] lg:w-1/2 lg:text-[6.267rem] lg:leading-snug">
           Supporting clients in the Dog Aging Project
         </h2>
-        <div className="flex">
-          <div className="w-1/2">
+        <div className="flex flex-wrap lg:flex-nowrap">
+          <div className="w-full lg:w-1/2">
             <div className="text-lg leading-snug text-[#250A60] lg:text-[2.8rem] lg:leading-relaxed">
               <p className="mb-4 lg:mb-[2.8rem]">
                 If you are a primary care veterinarian and your client is part
@@ -85,10 +85,10 @@ export default function PanelOne() {
               </p>
             </div>
           </div>
-          <div className="w-1/2 lg:pl-[5%]">
+          <div className="w-full lg:w-1/2 lg:pl-[5%]">
             <div
               ref={elm_1}
-              className="mt-20 rounded-3xl p-6 lg:mt-[25.333rem] lg:rounded-[4rem] lg:p-[5.33rem]"
+              className=" mt-8 md:mt-20 rounded-3xl p-6 lg:mt-[25.333rem] lg:rounded-[4rem] lg:p-[5.33rem]"
               style={{
                 background:
                   'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
@@ -97,7 +97,7 @@ export default function PanelOne() {
                 backdropFilter: 'blur(20px)',
               }}
             >
-              <div className="leading-snug text-[#250A60] md:text-xl lg:text-[3.6rem] lg:leading-normal">
+              <div className="leading-snug text-[#250A60]  text-lg md:text-2xl lg:text-[3.6rem] lg:leading-normal">
                 We consider veterinary professionals like yourself key partners
                 in our scientific study.
               </div>
@@ -106,8 +106,8 @@ export default function PanelOne() {
         </div>
       </div>
 
-      <div className="my:mb-20 relative my-14 flex flex-wrap-reverse items-center px-5 lg:my-[10rem] lg:flex-nowrap lg:pl-[6%] lg:pr-[8%]">
-        <div className="w-1/2 lg:pr-[5%]">
+      <div className="md:mb-20 relative my-14 flex flex-wrap gap-y-9 items-center px-5 lg:my-[10rem] lg:flex-nowrap lg:pl-[6%] lg:pr-[8%]">
+        <div className="w-full lg:w-1/2 lg:pr-[5%]">
           <div className="flex items-center justify-center">
             <div className="relative">
               <Image
@@ -119,7 +119,7 @@ export default function PanelOne() {
             </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <h3 className="font-plex-mono mb-4 text-xl font-medium uppercase leading-snug text-[#F7F3FF] md:text-2xl lg:mb-[4rem] lg:text-[3.6rem] lg:leading-snug">
             What to Expect
           </h3>
@@ -155,7 +155,7 @@ export default function PanelOne() {
       </div>
 
       <div className="relative px-5 lg:pl-[6%] lg:pr-[8%]">
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <h3 className="font-plex-mono text-xl font-medium uppercase leading-snug text-[#F7F3FF] md:text-2xl lg:text-[3.6rem] lg:leading-snug">
             Want to Know More?
           </h3>

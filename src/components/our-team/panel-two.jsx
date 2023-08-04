@@ -154,7 +154,7 @@ export default function PanelTwo() {
         <h2 className="mb-8 text-4xl leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           Our Founders
         </h2>
-        <div className="grid grid-cols-2 gap-10 lg:gap-x-[6.667rem] lg:gap-y-[5.333rem]">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-x-[6.667rem] lg:gap-y-[5.333rem]">
           {team.founders.map((member) => (
             <div
               key={member.name}
@@ -167,7 +167,7 @@ export default function PanelTwo() {
                 backdropFilter: 'blur(20px)',
               }}
             >
-              <div className="flex w-2/3 flex-col justify-between lg:p-[4rem]">
+              <div className="flex w-2/3 flex-col justify-around gap-y-8 p-4 md:justify-between lg:p-[4rem]">
                 <h4 className="text-2xl font-medium leading-tight lg:text-[4.8rem] lg:leading-tight lg:-tracking-[0.144rem]">
                   {member.name}
                 </h4>
@@ -191,7 +191,7 @@ export default function PanelTwo() {
         <h2 className="mb-8 text-4xl leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           Executive Leadership Team
         </h2>
-        <div className="grid grid-cols-2 gap-10 lg:gap-x-[6.667rem] lg:gap-y-[5.333rem]">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-x-[6.667rem] lg:gap-y-[5.333rem]">
           {team.executives.map((member) => (
             <div
               key={member.name}
@@ -204,7 +204,7 @@ export default function PanelTwo() {
                 backdropFilter: 'blur(20px)',
               }}
             >
-              <div className="flex w-2/3 flex-col justify-between lg:p-[4rem] lg:pr-0">
+              <div className="flex w-2/3 flex-col justify-around gap-y-8 p-4 md:justify-between lg:p-[4rem] lg:pr-0">
                 <h4 className="text-2xl font-medium leading-tight lg:text-[4.8rem] lg:leading-tight lg:-tracking-[0.144rem]">
                   {member.name}
                 </h4>
@@ -224,11 +224,11 @@ export default function PanelTwo() {
         </div>
       </div>
 
-      <div>
+      <div className="pb-32 md:pb-0">
         <h2 className="mb-8 text-4xl leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           Dog Aging Project Team
         </h2>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-[5.333rem] lg:gap-y-[8rem]">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-[5.333rem] lg:gap-y-[8rem]">
           {team.dapTeam.map((member) => (
             <div
               key={member.name}
@@ -248,7 +248,7 @@ export default function PanelTwo() {
                   className="w-full object-cover lg:h-[33.333rem]"
                 />
               </div>
-              <div className="flex flex-col justify-between lg:h-[20rem] lg:px-[2.667rem] lg:py-[3rem]">
+              <div className="flex flex-col justify-between gap-y-8 p-4 lg:h-[20rem] lg:px-[2.667rem] lg:py-[3rem]">
                 <h4 className="text-2xl font-medium leading-tight lg:text-[3.6rem] lg:leading-tight lg:-tracking-[0.144rem]">
                   {member.name}
                 </h4>

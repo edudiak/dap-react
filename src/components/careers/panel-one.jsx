@@ -72,8 +72,8 @@ export default function PanelOne() {
         </div>
       </div>
       <div className="px-5 lg:px-[8%]">
-        <div className="flex text-lg leading-snug text-[#250A60] md:text-xl lg:text-[3.6rem] lg:leading-snug">
-          <div className="w-1/2 lg:pr-[2%]">
+        <div className="flex flex-wrap lg:flex-nowrap gap-y-4 text-lg leading-snug text-[#250A60] md:text-xl lg:text-[3.6rem] lg:leading-snug">
+          <div className="w-full md:w-1/2 lg:pr-[2%]">
             <div>
               At the Dog Aging Project, we value diversity in identity and
               perspective. Our ability to achieve our scientific goals is
@@ -82,7 +82,7 @@ export default function PanelOne() {
               strengths to the project.
             </div>
           </div>
-          <div className="w-1/2 lg:pl-[2%]">
+          <div className="w-full md:w-1/2 lg:pl-[2%]">
             <div>
               We are committed to equity and inclusion in our hiring practices
               and encourage applicants who are people of color, LGBTQIA+

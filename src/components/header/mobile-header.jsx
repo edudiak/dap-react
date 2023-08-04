@@ -175,7 +175,7 @@ export default function MobileHeader() {
 
         <div className="flex min-h-[calc(100vh-70px)] w-full items-center justify-center">
           <div className="flex flex-col gap-y-5 font-bold text-black">
-            <MenuWithDropdown href="#" text="Project Details">
+            <MenuWithDropdown href="/project-details" text="Project Details">
               <Link
                 onClick={() => {
                   setReversed(true);
@@ -185,13 +185,13 @@ export default function MobileHeader() {
               >
                 Project Overview
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/veterinarians">
                 Veterinarians
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/our-supporters">
                 Our Supporters
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/our-team">
                 Our Team
               </Link>
               <Link onClick={() => setReversed(true)} href="#">
@@ -200,43 +200,61 @@ export default function MobileHeader() {
             </MenuWithDropdown>
 
             <MenuWithDropdown href="#" text="Research">
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/publications">
                 Publications
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/data-access">
                 Data Access
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/careers">
                 Careers
               </Link>
             </MenuWithDropdown>
 
             <MenuWithDropdown href="#" text="Media">
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/media">
                 News Coverage
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/press-resources">
                 Press Resources
               </Link>
             </MenuWithDropdown>
 
-            <MenuWithDropdown href="#" text="Blog">
-              <Link onClick={() => setReversed(true)} href="#">
+            <MenuWithDropdown href="/blog" text="Blog">
+              <Link
+                onClick={() => setReversed(true)}
+                href="/blog/category/scientific-results"
+              >
                 Scientific Results
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link
+                onClick={() => setReversed(true)}
+                href="/blog/category/inside-science"
+              >
                 Inside Science
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link
+                onClick={() => setReversed(true)}
+                href="/blog/category/inside-cognition"
+              >
                 Inside Cognition
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link
+                onClick={() => setReversed(true)}
+                href="/blog/category/inside-foundation"
+              >
                 Inside Foundation
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link
+                onClick={() => setReversed(true)}
+                href="/blog/category/inside-precision"
+              >
                 Inside Precision
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link
+                onClick={() => setReversed(true)}
+                href="/blog/category/senior-dog-care"
+              >
                 Aging Dog Care
               </Link>
             </MenuWithDropdown>

@@ -70,14 +70,14 @@ export default function Header() {
             <DropdownMenuItem href="#" text="Contact Us" />
           </MenuWithDropdown>
 
-          <MenuWithDropdown href="#" text="Research">
+          <MenuWithDropdown href="/publications" text="Research">
             <DropdownMenuItem href="/publications" text="Publications" />
             <DropdownMenuItem href="/data-access" text="Data Access" />
             <DropdownMenuItem href="/careers" text="Careers" />
           </MenuWithDropdown>
 
-          <MenuWithDropdown href="/media" text="Media">
-            <DropdownMenuItem href="#" text="News Coverage" />
+          <MenuWithDropdown href="#" text="Media">
+            <DropdownMenuItem href="/media" text="News Coverage" />
             <DropdownMenuItem href="/press-resources" text="Press Resources" />
           </MenuWithDropdown>
 
