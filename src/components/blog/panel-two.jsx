@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 
 import ArrowRight from '@assets/images/icons/arrow-right.svg';
+import CategoryList from './category-list';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,65 +17,38 @@ export default function PanelTwo() {
     category: 'Scientific Results',
     date: '09.12.2022',
     url: '/blog/article-1',
-    image: '/images/blog/blog-grid-1.jpg',
+    image: '/images/blog/blog-grid-2.jpg',
   };
 
   const popularArticles = [
     {
-      image: '/images/media/scnow.jpg',
+      image: '/images/dogs/dog-1-min.jpg',
       title:
         'Dr. Universe: Is it true that seven human years equals one dog year?',
       date: '09.12.2022',
       category: 'SCNOW',
-      url: '/media/featured-media-stories/dr-universe-is-it-true-that-seven-human-years-equals-one-dog-year',
+      url: '/blog/article-1',
     },
     {
-      image: '/images/media/discover.jpg',
+      image: '/images/dogs/dog-2-min.jpg',
       title: 'What Old Dogs Can Teach Us About Aging',
       date: '09.12.2022',
       category: 'Discovery',
-      url: '/media/featured-media-stories/dr-universe-is-it-true-that-seven-human-years-equals-one-dog-year',
+      url: '/blog/article-1',
     },
     {
-      image: '/images/media/uw-medicine.jpg',
+      image: '/images/dogs/dog-3-min.jpg',
       title: 'Dog Aging Project, a resource for scientists in many fields',
       date: '09.12.2022',
       category: 'UW Medicine Newsroom',
-      url: '/media/featured-media-stories/dr-universe-is-it-true-that-seven-human-years-equals-one-dog-year',
+      url: '/blog/article-1',
     },
     {
-      image: '/images/media/the-telegraph.jpg',
+      image: '/images/dogs/dog-4-min.jpg',
       title: 'The secret to helping your dog live longer',
       date: '09.12.2022',
       category: 'Telegraph',
-      url: '/media/featured-media-stories/dr-universe-is-it-true-that-seven-human-years-equals-one-dog-year',
-    },
-  ];
-
-  const categories = [
-    {
-      title: 'Scientific Results',
-      slug: 'scientific-results',
-    },
-    {
-      title: 'Inside Science',
-      slug: 'inside-science',
-    },
-    {
-      title: 'Inside Foundation',
-      slug: 'inside-foundation',
-    },
-    {
-      title: 'Inside Precision',
-      slug: 'inside-precision',
-    },
-    {
-      title: 'Canine Cognition',
-      slug: 'canine-cognition',
-    },
-    {
-      title: 'Senior Dog Care',
-      slug: 'senior-dog-care',
+      url: '/blog/article-1',
     },
   ];
 
@@ -89,13 +63,16 @@ export default function PanelTwo() {
           <div className="relative w-full shrink-0 transform overflow-hidden rounded-[20px] bg-white md:flex-1 lg:rounded-[4rem]">
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[4rem]" />
             <div className="p-5 lg:p-[4rem]">
-              <div className="font-plex-mono flex justify-between text-xs uppercase text-[#532EA4] lg:text-[1.867rem]">
-                <div>{featuredArticle.date}</div>
-                <div>{featuredArticle.category}</div>
+              <div className="font-plex-mono flex justify-between text-xs uppercase leading-none text-[#532EA4] lg:text-[1.867rem]">
+                <p>{featuredArticle.date}</p>
+                <p>{featuredArticle.category}</p>
               </div>
-              <h4 className="mb-3 mt-3 text-xl font-medium leading-tight text-[#250A60] lg:mb-[3rem] lg:mt-[2rem] lg:text-[3.6rem]">
+              <Link
+                href={featuredArticle.url}
+                className="mb-3 mt-3 block text-xl font-medium leading-tight text-[#250A60] lg:mb-[2rem] lg:mt-[2rem] lg:text-[3.6rem]"
+              >
                 {featuredArticle.title}
-              </h4>
+              </Link>
               <div className="mb-3 leading-tight text-[#7B7B7B] lg:mb-[4rem] lg:text-[2.133rem]">
                 {featuredArticle.excerpt}
               </div>
@@ -129,15 +106,18 @@ export default function PanelTwo() {
                 className="relative w-full shrink-0 overflow-hidden rounded-[20px] bg-white md:flex-1 lg:rounded-[2.667rem]"
               >
                 <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[2.667rem]" />
-                <div className="flex items-stretch justify-center overflow-hidden rounded-3xl text-[#250A60] lg:min-h-[20.6rem] lg:rounded-[2.667rem]">
-                  <div className="flex w-2/3 flex-col justify-between lg:p-[3rem]">
+                <div className="flex items-stretch justify-center overflow-hidden rounded-3xl text-[#250A60] lg:rounded-[2.667rem]">
+                  <div className="flex w-2/3 flex-col justify-between lg:p-[2.667rem]">
                     <div>
-                      <p className="font-plex-mono mb-2 text-xs uppercase leading-tight text-[#532EA4] lg:mb-[1.333rem] lg:text-[1.867rem]">
+                      <p className="font-plex-mono mb-1 text-xs uppercase leading-tight text-[#532EA4] lg:mb-[.8rem] lg:text-[1.867rem]">
                         {article.category}
                       </p>
-                      <h4 className="font-medium leading-normal text-[#250A60] lg:text-[2.4rem] lg:leading-normal lg:-tracking-[0.048rem]">
+                      <Link
+                        href={article.url}
+                        className="font-medium leading-normal text-[#250A60] lg:text-[2.4rem] lg:leading-snug lg:-tracking-[0.048rem]"
+                      >
                         {article.title}
-                      </h4>
+                      </Link>
                     </div>
                     <div className="flex items-center justify-between">
                       <p className="font-plex-mono text-xs uppercase leading-none text-[#532EA4] lg:text-[1.867rem]">
@@ -157,7 +137,7 @@ export default function PanelTwo() {
                     <img
                       src={article.image}
                       alt={article.title}
-                      className="h-full w-full rounded-bl-full rounded-tl-full object-cover"
+                      className="max-h-[20.5rem] w-full rounded-bl-full rounded-tl-full object-cover"
                     />
                   </div>
                 </div>
@@ -167,24 +147,7 @@ export default function PanelTwo() {
         </div>
 
         <div className="col-span-1">
-          <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
-            Filter
-          </h2>
-
-          <div className="flex flex-col gap-y-2 lg:gap-y-[1.333rem]">
-            {categories.map((category) => (
-              <Link
-                href={`/blog/category/${category.slug}`}
-                key={category.title}
-                className="relative flex w-full shrink-0 items-center overflow-hidden rounded-full rounded-br-none rounded-tr-none bg-[#6543A5] p-4 md:flex-1 lg:p-[2rem]"
-              >
-                <div className="mr-4 h-2 w-2 rounded-full border-2 border-white lg:mr-[1.6rem] lg:h-[2rem] lg:w-[2rem]" />
-                <div className="font-plex-mono text-sm font-medium uppercase text-white lg:text-[1.867rem]">
-                  {category.title}
-                </div>
-              </Link>
-            ))}
-          </div>
+          <CategoryList />
         </div>
       </div>
     </div>

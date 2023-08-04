@@ -1,8 +1,8 @@
-import PanelOne from '@/components/blog/panel-one';
-import PanelTwo from '@/components/blog/panel-two';
 import PanelThree from '@/components/blog/panel-three';
+import PanelTwo from '@/components/blog/category/panel-two';
+import PanelOne from '@/components/blog/panel-one';
 
-export default function Blog() {
+export default function BlogArchive() {
   return (
     <div>
       <div

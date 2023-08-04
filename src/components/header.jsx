@@ -103,8 +103,8 @@ export default function Header() {
               text="Inside Precision"
             />
             <DropdownMenuItem
-              href="/blog/category/aging-dog-care"
-              text="Aging Dog Care"
+              href="/blog/category/senior-dog-care"
+              text="Senior Dog Care"
             />
           </MenuWithDropdown>
 

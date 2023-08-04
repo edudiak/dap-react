@@ -37,7 +37,10 @@ export default function PanelOne() {
         >
           Our Science Explained
         </h1>
-        <div className="mt-6 text-lg leading-snug text-[#250A60] md:text-xl lg:mt-[5.333rem] lg:max-w-[112rem] lg:text-[3.6rem] lg:leading-snug">
+        <div
+          ref={elm_2}
+          className="mt-6 text-lg leading-snug text-[#250A60] md:text-xl lg:mt-[5.333rem] lg:max-w-[112rem] lg:text-[3.6rem] lg:leading-snug"
+        >
           Our participants and their dogs make our science possible. The
           articles here explain our research design and scientific discoveries
           in clear, concise language that is accessible to all.
