@@ -10,11 +10,11 @@ export default function PanelThree() {
   return (
     <div className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-white pb-20 text-[#250A60] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:pb-[30rem]">
       <div className="px-5 pb-10 pt-20 lg:px-[8%] lg:pb-[10rem] lg:pt-[21.333rem]">
-        <h2 className="mb-8 max-w-[300px] text-4xl leading-none lg:mb-[8rem] lg:max-w-[73rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
+        <h2 className="mb-8 text-4xl leading-none md:max-w-[300px] lg:mb-[8rem] lg:max-w-[73rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           The world’s largest companion dog dataset
         </h2>
 
-        <h3 className="font-plex-mono mb-5 text-2xl font-medium uppercase leading-none -tracking-[0.036rem] md:text-3xl lg:mb-[4rem] lg:text-[4.8rem]">
+        <h3 className="font-plex-mono mb-5 text-2xl font-medium uppercase leading-tight -tracking-[0.036rem] sm:leading-none md:text-3xl lg:mb-[4rem] lg:text-[4.8rem]">
           The Terra Platform
         </h3>
 
@@ -26,8 +26,8 @@ export default function PanelThree() {
           genomic sequence data).
         </div>
       </div>
-      <div className="mb-16 flex items-center px-5 pl-[4%] pr-[8%] lg:mb-[12rem]">
-        <div className="w-1/2 md:pr-[3%]">
+      <div className="mb-16 flex flex-wrap items-center px-5 pl-[4%] pr-[8%] lg:mb-[12rem] lg:flex-nowrap">
+        <div className="md:pr-[3%] lg:w-1/2">
           <div className="relative">
             <Image
               src="/images/data-access-map.png"
@@ -38,7 +38,7 @@ export default function PanelThree() {
             />
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="mt-14 md:mt-20 lg:mt-0 lg:w-1/2">
           <div>
             <h3 className="font-plex-mono mb-5 text-xl font-medium uppercase leading-none -tracking-[0.036rem] md:text-2xl lg:mb-[4rem] lg:text-[3.6rem]">
               Data Access
@@ -59,10 +59,10 @@ export default function PanelThree() {
           </div>
         </div>
       </div>
-      <div className="flex items-center px-5 pl-[8%] pr-[4%]">
-        <div className="w-1/2">
+      <div className="flex flex-wrap-reverse items-center px-5 pl-[8%] pr-[4%] lg:flex-nowrap">
+        <div className="mt-14 w-full md:mt-20 lg:mt-0 lg:w-1/2">
           <div>
-            <h3 className="font-plex-mono mb-5 text-xl font-medium uppercase leading-none -tracking-[0.036rem] md:text-2xl lg:mb-[4rem] lg:text-[3.6rem]">
+            <h3 className="font-plex-mono mb-5 text-xl font-medium uppercase leading-tight -tracking-[0.036rem] sm:leading-none md:text-2xl lg:mb-[4rem] lg:text-[3.6rem]">
               Dog Aging Project Biobank
             </h3>
             <div className="mb-8 text-lg leading-snug lg:mb-[6rem] lg:text-[2.8rem]">
@@ -76,7 +76,7 @@ export default function PanelThree() {
             </div>
           </div>
         </div>
-        <div className="w-1/2 md:pl-[3%]">
+        <div className="w-full md:pl-[3%] lg:w-1/2">
           <div className="relative">
             <Image
               src="/images/bio-bank.png"

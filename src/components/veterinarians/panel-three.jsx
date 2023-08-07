@@ -78,7 +78,7 @@ export default function PanelThree() {
 
   return (
     <div
-      className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-white pb-20 pt-20 lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:pb-[50rem] lg:pt-[21.333rem] "
+      className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-white pt-20 lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:pb-[50rem] lg:pt-[21.333rem] "
       style={{
         background:
           'url(/images/dap-bg-noise-20.png), linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%), linear-gradient(180deg, #250A60 0%, #250A60 0.01%, #9169E8 100%, #F37676 100%), linear-gradient(0deg, #FFDADA 0%, #FFDADA 100%), #FFF',

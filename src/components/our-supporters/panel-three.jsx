@@ -34,7 +34,7 @@ export default function PanelThree() {
   ];
   return (
     <div className="px-5 lg:px-[4%]">
-      <div className="mb-10 flex flex-wrap lg:flex-nowrap lg:mb-[13.333rem]">
+      <div className="mb-10 flex flex-wrap lg:mb-[13.333rem] lg:flex-nowrap">
         <div className="w-full lg:w-1/2">
           <h3 className="mb-8 text-4xl leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
             Support Our Research
@@ -58,7 +58,7 @@ export default function PanelThree() {
             key={item.title}
             className="w-full text-center md:w-1/2 lg:w-1/4"
           >
-            <div className="relative p-[3.4rem]">
+            <div className="relative p-4 lg:p-[3.4rem]">
               <div
                 className={`${
                   index % 2

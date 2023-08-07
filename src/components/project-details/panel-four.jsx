@@ -62,7 +62,7 @@ export default function PanelFour() {
           </div>
         </div>
 
-        <div className="flex gap-x-[5.333rem]">
+        <div className="flex flex-wrap gap-x-[5.333rem] md:flex-nowrap">
           <div
             className="mb-16 mt-8 w-full rounded-[20px] p-5 md:mt-12 lg:mb-[13.333rem] lg:mt-[10rem] lg:w-1/2 lg:rounded-[4rem] lg:p-[5.333rem]"
             style={{

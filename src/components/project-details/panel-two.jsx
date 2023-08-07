@@ -39,9 +39,9 @@ export default function PanelTwo() {
   return (
     <div
       ref={panel}
-      className="relative flex px-5 pt-[10%] md:pt-[15%] lg:flex-nowrap lg:pl-[4%] lg:pr-[8%]"
+      className="relative flex flex-wrap-reverse  px-5 pt-[10%] md:pt-[15%] lg:flex-nowrap lg:pl-[4%] lg:pr-[8%]"
     >
-      <div className="w-1/2">
+      <div className="mt-14 w-full md:mt-20 lg:mt-0 lg:w-1/2">
         <h2 className="mb-16 text-lg leading-snug tracking-normal text-[#F7F3FF] md:text-2xl lg:mb-[21.333rem] lg:text-[14rem] lg:leading-none lg:tracking-[0.42rem]">
           TRIAD Clinical Trial
         </h2>
@@ -101,8 +101,8 @@ export default function PanelTwo() {
           </Link>
         </div>
       </div>
-      <div className="w-1/2 pl-[2%]">
-        <div ref={elm_1} className="flex justify-end">
+      <div className="w-full pl-[2%] lg:w-1/2">
+        <div ref={elm_1} className="flex justify-center lg:justify-end">
           <div className="relative">
             <Image
               src="/images/molecule.png"

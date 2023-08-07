@@ -48,7 +48,7 @@ export default function PanelOne() {
         </div>
       </div>
       <div className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:mx-0 lg:max-w-[75rem] xl:absolute xl:-top-[5%] xl:right-[4%]">
-        <div className="relative p-14">
+        <div className="relative p-4 lg:p-14">
           <div className="absolute left-0 top-0 h-full w-full rotate-[120deg] transform rounded-full border-[7px] border-[#250A60] border-b-transparent" />
           <Image
             src="/images/our-supporters.jpg"

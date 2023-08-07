@@ -54,8 +54,8 @@ export default function PanelTwo() {
 
   return (
     <div className="px-5 pb-10 md:pb-16 lg:px-[2%] lg:pb-[8rem]">
-      <div className="grid grid-cols-1 gap-x-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-[2rem]">
-        <div className="col-span-2 pr-5 lg:pr-[3.333rem]">
+      <div className="grid grid-cols-1 gap-x-3 gap-y-8 md:grid-cols-4 md:gap-y-16 lg:grid-cols-5 lg:gap-x-[2rem]">
+        <div className="col-span-2 pr-5 lg:col-span-2 lg:pr-[3.333rem]">
           <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
             Featured article
           </h2>
@@ -63,9 +63,9 @@ export default function PanelTwo() {
           <div className="relative w-full shrink-0 transform overflow-hidden rounded-[20px] bg-white md:flex-1 lg:rounded-[4rem]">
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[4rem]" />
             <div className="p-5 lg:p-[4rem]">
-              <div className="font-plex-mono flex justify-between text-xs uppercase leading-none text-[#532EA4] lg:text-[1.867rem]">
+              <div className="font-plex-mono flex flex-wrap justify-between gap-y-4 text-xs uppercase leading-none text-[#532EA4] md:flex-nowrap lg:text-[1.867rem]">
                 <p>{featuredArticle.date}</p>
-                <p>{featuredArticle.category}</p>
+                <p className="leading-tight">{featuredArticle.category}</p>
               </div>
               <Link
                 href={featuredArticle.url}
@@ -94,7 +94,7 @@ export default function PanelTwo() {
           </div>
         </div>
 
-        <div className="col-span-2">
+        <div className=" col-span-2 mt-8 md:mt-14 lg:col-span-2 lg:mt-0">
           <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
             Popular articles
           </h2>
@@ -107,7 +107,7 @@ export default function PanelTwo() {
               >
                 <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[2.667rem]" />
                 <div className="flex items-stretch justify-center overflow-hidden rounded-3xl text-[#250A60] lg:rounded-[2.667rem]">
-                  <div className="flex w-2/3 flex-col justify-between lg:p-[2.667rem]">
+                  <div className="flex w-2/3 flex-col justify-between p-4 lg:p-[2.667rem]">
                     <div>
                       <p className="font-plex-mono mb-1 text-xs uppercase leading-tight text-[#532EA4] lg:mb-[.8rem] lg:text-[1.867rem]">
                         {article.category}
@@ -119,7 +119,7 @@ export default function PanelTwo() {
                         {article.title}
                       </Link>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="mt-2 flex items-center justify-between">
                       <p className="font-plex-mono text-xs uppercase leading-none text-[#532EA4] lg:text-[1.867rem]">
                         {article.date}
                       </p>
@@ -146,7 +146,7 @@ export default function PanelTwo() {
           </div>
         </div>
 
-        <div className="col-span-1">
+        <div className="col-span-full mt-8 md:mt-14 lg:col-span-1 lg:mt-0">
           <CategoryList />
         </div>
       </div>

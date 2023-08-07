@@ -245,7 +245,7 @@ export default function PanelTwo() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full object-cover lg:h-[33.333rem]"
+                  className="h-auto w-full object-cover sm:h-80 md:h-96 lg:h-[33.333rem]"
                 />
               </div>
               <div className="flex flex-col justify-between gap-y-8 p-4 lg:h-[20rem] lg:px-[2.667rem] lg:py-[3rem]">

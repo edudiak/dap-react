@@ -8,10 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function PanelTwo() {
   return (
-    <div className="relative pb-20 lg:pb-[30rem]">
-      <div className="mb-16 flex flex-wrap lg:flex-nowrap items-center px-5 lg:mb-[12rem] lg:px-[8%]">
-        <div className="ml-auto w-full lg:w-1/2 mb-8 lg:-mb-[32rem]">
-          <h2 className="mb-6 max-w-[300px] text-4xl leading-none text-[#250A60] lg:mb-[6.667rem] lg:max-w-[60rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
+    <div className="relative md:pb-0 lg:pb-[30rem]">
+      <div className="flex flex-wrap items-center px-5 md:mb-0 lg:mb-[12rem] lg:flex-nowrap lg:px-[8%]">
+        <div className="mb-8 ml-auto w-full lg:-mb-[32rem] lg:w-1/2">
+          <h2 className="mb-6 text-4xl leading-none text-[#250A60] md:max-w-[700px] lg:mb-[6.667rem] lg:max-w-[60rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
             Overview of the data access process
           </h2>
           <ul class="flex list-none flex-col gap-y-3 text-xl leading-snug text-[#250A60] lg:gap-y-[2.667rem] lg:text-[2.8rem]">
@@ -58,9 +58,9 @@ export default function PanelTwo() {
             height={1718}
           />
         </div>
-        <div className="w-full lg:w-1/2 mt-8 lg:-mt-[45rem] ">
+        <div className="mt-8 w-full lg:-mt-[45rem] lg:w-1/2 ">
           <div className="mb-10 md:mb-20 lg:mb-[12rem]">
-            <h3 className="mb-6 max-w-[300px] text-4xl leading-none text-[#250A60] lg:mb-[6.667rem] lg:max-w-[70rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
+            <h3 className="mb-6 text-4xl leading-none text-[#250A60] md:max-w-[700px] lg:mb-[6.667rem] lg:max-w-[70rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
               Corporate Data Access
             </h3>
             <div className="text-lg leading-snug text-[#250A60] lg:text-[2.8rem]">
@@ -72,7 +72,7 @@ export default function PanelTwo() {
             </div>
           </div>
           <div>
-            <h3 className="mb-6 max-w-[300px] text-4xl leading-none text-[#250A60] lg:mb-[6.667rem] lg:max-w-[70rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
+            <h3 className="mb-6 text-4xl leading-none text-[#250A60] md:max-w-[700px] lg:mb-[6.667rem] lg:max-w-[70rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
               Collaboration
             </h3>
             <div className="text-lg leading-snug text-[#250A60] lg:text-[2.8rem]">

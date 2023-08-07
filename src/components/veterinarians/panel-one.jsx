@@ -52,7 +52,7 @@ export default function PanelOne() {
           </div>
         </div>
         <div className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:mx-0 lg:max-w-[75rem] xl:absolute xl:-top-[5%] xl:right-[4%]">
-          <div className="relative p-14">
+          <div className="relative p-4 lg:p-14">
             <div className="absolute left-0 top-0 h-full w-full rotate-[120deg] transform rounded-full border-[7px] border-[#250A60] border-b-transparent" />
             <Image
               src="/images/veterinary-geroscience.jpg"
@@ -88,7 +88,7 @@ export default function PanelOne() {
           <div className="w-full lg:w-1/2 lg:pl-[5%]">
             <div
               ref={elm_1}
-              className=" mt-8 md:mt-20 rounded-3xl p-6 lg:mt-[25.333rem] lg:rounded-[4rem] lg:p-[5.33rem]"
+              className=" mt-8 rounded-3xl p-6 md:mt-20 lg:mt-[25.333rem] lg:rounded-[4rem] lg:p-[5.33rem]"
               style={{
                 background:
                   'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
@@ -97,7 +97,7 @@ export default function PanelOne() {
                 backdropFilter: 'blur(20px)',
               }}
             >
-              <div className="leading-snug text-[#250A60]  text-lg md:text-2xl lg:text-[3.6rem] lg:leading-normal">
+              <div className="text-lg leading-snug  text-[#250A60] md:text-2xl lg:text-[3.6rem] lg:leading-normal">
                 We consider veterinary professionals like yourself key partners
                 in our scientific study.
               </div>
@@ -106,7 +106,7 @@ export default function PanelOne() {
         </div>
       </div>
 
-      <div className="md:mb-20 relative my-14 flex flex-wrap gap-y-9 items-center px-5 lg:my-[10rem] lg:flex-nowrap lg:pl-[6%] lg:pr-[8%]">
+      <div className="relative my-14 flex flex-wrap items-center px-5 md:mb-20 lg:my-[10rem] lg:flex-nowrap lg:pl-[6%] lg:pr-[8%]">
         <div className="w-full lg:w-1/2 lg:pr-[5%]">
           <div className="flex items-center justify-center">
             <div className="relative">
@@ -119,7 +119,7 @@ export default function PanelOne() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="mt-14 w-full md:mt-20 lg:mt-0 lg:w-1/2">
           <h3 className="font-plex-mono mb-4 text-xl font-medium uppercase leading-snug text-[#F7F3FF] md:text-2xl lg:mb-[4rem] lg:text-[3.6rem] lg:leading-snug">
             What to Expect
           </h3>

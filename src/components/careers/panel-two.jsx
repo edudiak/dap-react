@@ -45,11 +45,11 @@ export default function PanelTwo() {
         Current Open Positions
       </h2>
 
-      <div className="overflow-x-scroll md:overflow-x-hidden">
+      <div className="overflow-auto">
         {openPositions.map((position) => (
-          <div
+          <tab
             key={position.title}
-            className="mb-4 flex min-w-[720px] border-b-2 border-b-[#6543A5] pb-2 text-lg font-medium leading-snug text-[#250A60] lg:mb-[4rem] lg:border-b-[0.267rem] lg:pb-[1rem] lg:text-[2.8rem]"
+            className="mb-4 flex min-w-[800px] border-b-2 border-b-[#6543A5] pb-2 text-lg font-medium leading-snug text-[#250A60] lg:mb-[4rem] lg:border-b-[0.267rem] lg:pb-[1rem] lg:text-[2.8rem]"
           >
             <div className="w-1/4">{position.title}</div>
             <div className="flex w-1/4 gap-x-[2.667rem]">
@@ -63,7 +63,7 @@ export default function PanelTwo() {
                 <ArrowWithCircle />
               </div>
             </div>
-          </div>
+          </tab>
         ))}
       </div>
     </div>

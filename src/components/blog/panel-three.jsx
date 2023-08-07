@@ -134,7 +134,7 @@ export default function PanelThree() {
   ];
 
   return (
-    <div className="px-5 lg:px-[2%]">
+    <div className="mt-8 px-5 md:mt-14 lg:mt-0 lg:px-[2%]">
       <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
         Popular articles
       </h2>
@@ -147,11 +147,11 @@ export default function PanelThree() {
           >
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[2.667rem]" />
             <div className="flex h-full items-stretch justify-center overflow-hidden rounded-3xl text-[#250A60] lg:min-h-[20.6rem] lg:rounded-[2.667rem]">
-              <div className="flex w-7/12 flex-col justify-between lg:p-[3rem]">
+              <div className="flex w-7/12 flex-col justify-between p-4 lg:p-[3rem]">
                 <div>
-                  <div className="font-plex-mono mb-4 flex justify-between text-xs uppercase leading-none text-[#532EA4] lg:mb-[2.667rem] lg:text-[1.867rem]">
+                  <div className="font-plex-mono mb-4 flex flex-wrap justify-between gap-y-4 text-xs uppercase leading-none text-[#532EA4] md:flex-nowrap lg:mb-[2.667rem] lg:text-[1.867rem]">
                     <p>{article.date}</p>
-                    <p>{article.category}</p>
+                    <p className="leading-tight">{article.category}</p>
                   </div>
                   <Link
                     href={article.url}

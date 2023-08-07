@@ -9,7 +9,7 @@ export default function PanelSeven() {
   return (
     <div className="relative overflow-hidden bg-white pb-20 pt-20 lg:pb-[18.66rem] lg:pt-[18.667rem]">
       <div className="px-5 pb-10 lg:px-[8%] lg:pb-[10rem]">
-        <h2 className="mb-8 ml-auto max-w-[300px] text-4xl leading-none text-[#6543A5] lg:mb-[8rem] lg:max-w-[73rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
+        <h2 className="mb-8 ml-auto text-4xl leading-none text-[#6543A5] md:max-w-[700px] lg:mb-[8rem] lg:max-w-[73rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           Our research data privacy agreement
         </h2>
 
@@ -19,7 +19,7 @@ export default function PanelSeven() {
           privacy policy is available HERE. Our research data privacy commitment
           is summarized below.
         </div>
-        <ul className="mb-8 grid list-outside list-disc grid-cols-2 flex-wrap gap-y-5 text-xl leading-snug text-[#250A60] lg:mb-[8rem] lg:gap-y-[8rem] lg:text-[2.8rem]">
+        <ul className="mb-8 grid list-outside list-disc grid-cols-1 flex-wrap gap-y-5 text-xl leading-snug text-[#250A60] md:grid-cols-2 lg:mb-[8rem] lg:gap-y-[8rem] lg:text-[2.8rem]">
           <li className="mx-5 px-2 lg:mx-[5rem] lg:px-[1rem]">
             We respect the privacy of everyone associated with the Dog Aging
             Project and recognize that our research participants have

@@ -24,9 +24,9 @@ export default function PanelTwo() {
   return (
     <div className="px-5 pb-10 md:pb-16 lg:px-[2%] lg:pb-[8rem]">
       <div className="grid grid-cols-1 gap-x-6 md:grid-cols-7 lg:gap-x-[5.333rem]">
-        <div className="col-span-5">
+        <div className="col-span-full lg:col-span-5">
           <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
-            Featured article
+            Featured article00
           </h2>
 
           <article
@@ -35,11 +35,11 @@ export default function PanelTwo() {
           >
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[2.667rem]" />
             <div className="flex h-full items-stretch justify-center overflow-hidden rounded-3xl text-[#250A60] lg:min-h-[20.6rem] lg:rounded-[2.667rem]">
-              <div className="flex w-7/12 flex-col justify-between lg:p-[3rem]">
+              <div className="flex w-7/12 flex-col justify-between p-5 lg:p-[3rem]">
                 <div>
-                  <div className="font-plex-mono mb-4 flex justify-between text-xs uppercase leading-none text-[#532EA4] lg:mb-[2.667rem] lg:text-[1.867rem]">
+                  <div className="font-plex-mono mb-4 flex flex-wrap justify-between gap-y-4 text-xs uppercase leading-none text-[#532EA4] md:flex-nowrap lg:mb-[2.667rem] lg:text-[1.867rem]">
                     <p>{featuredArticle.date}</p>
-                    <p>{featuredArticle.category}</p>
+                    <p className="leading-tight">{featuredArticle.category}</p>
                   </div>
                   <Link
                     href={featuredArticle.url}
@@ -74,7 +74,7 @@ export default function PanelTwo() {
           </article>
         </div>
 
-        <div className="col-span-2">
+        <div className="col-span-full mt-14 md:mt-20 lg:col-span-2 lg:mt-0">
           <CategoryList />
         </div>
       </div>
