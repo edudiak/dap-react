@@ -194,7 +194,7 @@ export default function MobileHeader() {
               <Link onClick={() => setReversed(true)} href="/our-team">
                 Our Team
               </Link>
-              <Link onClick={() => setReversed(true)} href="#">
+              <Link onClick={() => setReversed(true)} href="/contact-us">
                 Contact Us
               </Link>
             </MenuWithDropdown>
