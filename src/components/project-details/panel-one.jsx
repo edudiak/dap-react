@@ -61,7 +61,7 @@ export default function PanelOne() {
 
       <div className="relative mb-14 flex flex-wrap-reverse items-center px-5 md:mb-20 lg:mb-[10rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
         <div className="mt-14 w-full md:mt-20 lg:mt-0 lg:w-1/2">
-          <h2 className="text-lg leading-snug text-[#250a60] md:text-xl lg:text-[6.267rem] lg:leading-snug">
+          <h2 className="text-3xl leading-snug text-[#250a60] md:text-4xl lg:text-[6.267rem] lg:leading-snug">
             Science’s Best Friend
           </h2>
           <h3 className="font-plex-mono mb-4 mt-6 text-xl font-medium uppercase leading-snug md:text-2xl lg:mb-[2rem] lg:mt-[4rem] lg:text-[3.6rem] lg:leading-snug">

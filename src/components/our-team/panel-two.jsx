@@ -225,10 +225,10 @@ export default function PanelTwo() {
       </div>
 
       <div className="pb-32 md:pb-0">
-        <h2 className="mb-8 text-4xl leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
+        <h2 className="mb-8 text-4xl leading-tight sm:leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           Dog Aging Project Team
         </h2>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-[5.333rem] lg:gap-y-[8rem]">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[5.333rem] lg:gap-y-[8rem]">
           {team.dapTeam.map((member) => (
             <div
               key={member.name}
@@ -245,7 +245,7 @@ export default function PanelTwo() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="h-auto w-full object-cover sm:h-80 md:h-96 lg:h-[33.333rem]"
+                  className="w-full object-cover h-96 lg:h-[33.333rem]"
                 />
               </div>
               <div className="flex flex-col justify-between gap-y-8 p-4 lg:h-[20rem] lg:px-[2.667rem] lg:py-[3rem]">

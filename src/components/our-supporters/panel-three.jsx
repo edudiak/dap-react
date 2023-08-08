@@ -52,7 +52,7 @@ export default function PanelThree() {
         </div>
       </div>
 
-      <div className="flex flex-wrap md:flex-nowrap">
+      <div className="flex flex-wrap md:flex-nowrap gap-y-16">
         {support.map((item, index) => (
           <div
             key={item.title}

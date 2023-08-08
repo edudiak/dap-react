@@ -10,7 +10,7 @@ export default function PanelThree() {
   return (
     <div className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-white pb-20 text-[#250A60] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:pb-[30rem]">
       <div className="px-5 pb-10 pt-20 lg:px-[8%] lg:pb-[10rem] lg:pt-[21.333rem]">
-        <h2 className="mb-8 text-4xl leading-none md:max-w-[300px] lg:mb-[8rem] lg:max-w-[73rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
+        <h2 className="mb-8 text-4xl leading-none lg:mb-[8rem] lg:max-w-[73rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           The world’s largest companion dog dataset
         </h2>
 

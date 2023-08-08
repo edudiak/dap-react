@@ -55,7 +55,7 @@ export default function PanelTwo() {
   return (
     <div className="px-5 pb-10 md:pb-16 lg:px-[2%] lg:pb-[8rem]">
       <div className="grid grid-cols-1 gap-x-3 gap-y-8 md:grid-cols-4 md:gap-y-16 lg:grid-cols-5 lg:gap-x-[2rem]">
-        <div className="col-span-2 pr-5 lg:col-span-2 lg:pr-[3.333rem]">
+        <div className="col-span-full pr-5 lg:col-span-2 lg:pr-[3.333rem]">
           <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
             Featured article
           </h2>
@@ -89,12 +89,12 @@ export default function PanelTwo() {
               </Link>
             </div>
             <div className="pointer-events-none overflow-hidden rounded-tl-full rounded-tr-full lg:-mt-[4rem]">
-              <img src={featuredArticle.image} alt={featuredArticle.title} />
+              <img src={featuredArticle.image} className="w-full object-cover" alt={featuredArticle.title} />
             </div>
           </div>
         </div>
 
-        <div className=" col-span-2 mt-8 md:mt-14 lg:col-span-2 lg:mt-0">
+        <div className="col-span-full mt-8 md:mt-14 lg:col-span-2 lg:mt-0">
           <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
             Popular articles
           </h2>

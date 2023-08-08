@@ -26,7 +26,7 @@ export default function PanelTwo() {
       <div className="grid grid-cols-1 gap-x-6 md:grid-cols-7 lg:gap-x-[5.333rem]">
         <div className="col-span-full lg:col-span-5">
           <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
-            Featured article00
+            Featured article
           </h2>
 
           <article

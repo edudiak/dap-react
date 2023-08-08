@@ -45,9 +45,9 @@ export default function PanelTwo() {
         Current Open Positions
       </h2>
 
-      <div className="overflow-auto">
+      <div className="overflow-auto careers-table-scrollbar">
         {openPositions.map((position) => (
-          <tab
+          <div
             key={position.title}
             className="mb-4 flex min-w-[800px] border-b-2 border-b-[#6543A5] pb-2 text-lg font-medium leading-snug text-[#250A60] lg:mb-[4rem] lg:border-b-[0.267rem] lg:pb-[1rem] lg:text-[2.8rem]"
           >
@@ -63,7 +63,7 @@ export default function PanelTwo() {
                 <ArrowWithCircle />
               </div>
             </div>
-          </tab>
+          </div>
         ))}
       </div>
     </div>
