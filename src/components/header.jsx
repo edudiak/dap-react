@@ -118,39 +118,43 @@ export default function Header() {
         <div>
           <ul className="flex items-center rounded-bl-full rounded-tl-full bg-[#6543A5] text-[2.4rem] font-bold text-white">
             <li>
-              <Link
-                href="#"
+              <a
+                href="https://portal.dogagingproject.org/"
+                target="_blank"
                 className="group relative flex items-center overflow-hidden rounded-bl-full rounded-tl-full bg-[#6543A5] px-[3rem] py-[3.5rem] leading-none text-white transition-all duration-300"
+                rel="noreferrer"
               >
                 <div className="pointer-events-none absolute left-0 h-full w-full bg-black opacity-0 group-hover:opacity-100" />
                 <div className="pointer-events-none absolute -right-[2.2rem] h-[86%] w-[3.4rem] rounded-bl-full rounded-tl-full bg-[#6543A5] opacity-0 group-hover:opacity-100" />
                 <span className="relative before:pointer-events-none before:absolute before:-bottom-[.87rem] before:left-0 before:h-[2px] before:w-0 before:bg-white before:transition-all before:duration-300 group-hover:before:w-full">
                   Portal Login
                 </span>
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="#"
+              <a
+                href="https://dogpark.dogagingproject.org/"
+                target="_blank"
                 className="group relative -ml-[1.1rem] flex items-center overflow-hidden rounded-bl-full rounded-tl-full bg-[#6543A5] px-[3rem] py-[3.5rem] leading-none text-white transition-all duration-300"
+                rel="noreferrer"
               >
                 <div className="pointer-events-none absolute left-0 h-full w-full bg-black opacity-0 group-hover:opacity-100" />
                 <div className="pointer-events-none absolute -right-[2.2rem] h-[86%] w-[3.4rem] rounded-bl-full rounded-tl-full bg-[#6543A5] opacity-0 group-hover:opacity-100" />
                 <span className="relative before:pointer-events-none before:absolute before:-bottom-[.87rem] before:left-0 before:h-[2px] before:w-0 before:bg-white before:transition-all before:duration-300 group-hover:before:w-full">
                   Dog Park
                 </span>
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="#"
+              <a
+                href="https://portal.dogagingproject.org/nomination"
                 className="group relative -ml-[1.1rem] flex items-center overflow-hidden rounded-bl-full rounded-tl-full bg-[#6543A5] px-[3rem] py-[3.5rem] leading-none text-white transition-all duration-300"
               >
                 <div className="pointer-events-none absolute left-0 h-full w-full bg-black opacity-0 group-hover:opacity-100" />
                 <span className="relative before:pointer-events-none before:absolute before:-bottom-[.87rem] before:left-0 before:h-[2px] before:w-0 before:bg-white before:transition-all before:duration-300 group-hover:before:w-full">
                   Enroll Your Dog
                 </span>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

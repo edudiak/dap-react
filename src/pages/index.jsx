@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div>
       <div
-        className="relative pb-36 pt-36 md:pb-52 lg:pb-[30rem] lg:pt-[28rem]"
+        className="relative pb-36 pt-36 md:pb-52 md:pt-20 lg:pb-[30rem] lg:pt-[28rem]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #8A5DD2 7.93%, #250A60 100%)',
@@ -45,10 +45,10 @@ export default function Home() {
       <HomePanelFive />
 
       <div
-        className="pb-20 pt-20 lg:pb-[21.333rem] lg:pt-[33.333rem]"
+        className="pb-16 pt-20 lg:pb-[10rem] lg:pt-[33.333rem]"
         style={{
           background:
-            'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #6543A5 5.37%, rgba(100, 66, 164, 0.85) 34.94%, rgba(100, 66, 164, 0.28) 70.41%, rgba(255, 255, 255, 0) 96.74%), #FFFFFF',
+            'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #6543A5 0%, #B894FF 53.65%, #FFF 93.75%), #FFF',
           backgroundBlendMode: 'overlay, normal, normal',
         }}
       >

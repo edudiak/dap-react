@@ -1,11 +1,6 @@
-/* eslint @next/next/no-img-element: "off" */
-/* eslint no-nested-ternary: "off" */
-/* eslint indent: "off" */
-/* eslint react/no-array-index-key: "off" */
-import Link from 'next/link';
-import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useLayoutEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +59,7 @@ export default function HomePanelEight() {
         })
         .fromTo(
           elm_3.current,
-          { scale: 0.7, opacity: 0 },
+          { scale: 0.7, opacity: 0, transformOrigin: '0 0' },
           {
             scale: 1,
             opacity: 1,
@@ -77,17 +72,17 @@ export default function HomePanelEight() {
 
   return (
     <div className="flex flex-wrap-reverse lg:flex-nowrap">
-      <div className="flex w-full items-center bg-[#AF4A40] px-5 lg:w-1/2 lg:px-[4%]">
+      <div className="flex w-full items-center bg-[#500000] px-5 lg:w-1/2 lg:px-[8%]">
         <div className="py-10 md:py-16 lg:py-[6rem]">
           <h2
             ref={elm_1}
-            className="text-4xl leading-tight tracking-tight text-[#FFDADA] md:text-5xl lg:text-[8rem] lg:leading-none"
+            className="text-4xl leading-tight tracking-tight text-[#FF9494] md:text-5xl lg:text-[8.133rem] lg:leading-tight"
           >
-            Join the effort to extend the lifespan of pets and their owners.
+            Support Our Science
           </h2>
           <div
             ref={elm_2}
-            className="pb-10 text-lg leading-normal text-[#FFDADA] md:pt-6 md:text-xl lg:pb-[10rem] lg:pt-[7rem] lg:text-[2.4rem] lg:leading-tight"
+            className="pb-6 text-lg leading-normal text-[#FF9494] md:pt-6 lg:mt-[7rem] lg:pb-[6rem] lg:text-[2.8rem] lg:leading-normal"
           >
             We have established the Dog Aging Project as an engine for
             innovation. While core research activities are supported by the
@@ -96,13 +91,15 @@ export default function HomePanelEight() {
             expand our existing initiatives and to develop new, cutting-edge
             programs that will benefit dogs and people too.
           </div>
-          <div ref={elm_3} className="text-center">
-            <Link
-              href="#"
-              className="inline-block rounded-full bg-[#F7F3FF] px-8 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+          <div ref={elm_3} className="">
+            <a
+              href="https://dogagingproject.org/donate"
+              target="_blank"
+              className="inline-block rounded-full bg-[#F7F3FF] px-8 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#6543A5] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+              rel="noreferrer"
             >
               Donate Now
-            </Link>
+            </a>
           </div>
         </div>
       </div>

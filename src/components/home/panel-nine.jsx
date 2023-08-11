@@ -1,6 +1,6 @@
-import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useLayoutEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +13,15 @@ export default function HomePanelNine() {
   const elm_6 = useRef(null);
   const elm_7 = useRef(null);
   const elm_8 = useRef(null);
+  const elm_9 = useRef(null);
+  const elm_10 = useRef(null);
+  const elm_11 = useRef(null);
+  const elm_12 = useRef(null);
+  const elm_13 = useRef(null);
+  const elm_14 = useRef(null);
+  const elm_15 = useRef(null);
+  const elm_16 = useRef(null);
+  const elm_17 = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -27,9 +36,9 @@ export default function HomePanelNine() {
         })
         .fromTo(
           elm_1.current,
-          { y: 40, scale: 1.05, opacity: 0 },
+          { x: 40, scale: 1.05, opacity: 0 },
           {
-            y: 0,
+            x: 0,
             scale: 1,
             opacity: 1,
           },
@@ -160,6 +169,168 @@ export default function HomePanelNine() {
             opacity: 1,
           },
         );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_9.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_9.current,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_10.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_10.current,
+          { x: -140, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_11.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_11.current,
+          { x: 140, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_12.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_12.current,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_13.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_13.current,
+          { x: -140, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_14.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_14.current,
+          { x: 140, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_15.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_15.current,
+          { x: -140, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_16.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_16.current,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+          },
+        );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_17.current,
+            start: 'top 90%',
+            end: 'bottom+=200 bottom',
+            scrub: true,
+          },
+        })
+        .fromTo(
+          elm_17.current,
+          { x: 140, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+          },
+        );
     }); // <- scopes all selector text to the root element
 
     return () => ctx.revert();
@@ -175,41 +346,40 @@ export default function HomePanelNine() {
     >
       <h2
         ref={elm_1}
-        className="mb-14 ml-auto max-w-[585px] text-4xl tracking-tight text-[#D8C4FF] md:text-5xl lg:mb-[10rem] lg:mr-[5%] lg:max-w-[98rem] lg:text-[8rem]"
+        className="mb-14 max-w-[585px] text-4xl tracking-tight text-[#D8C4FF] md:text-5xl lg:mb-[10rem] lg:max-w-[77rem] lg:text-[8.133rem] lg:-tracking-[0.244rem]"
       >
-        Our Stats Show the Scale & Scope of Our Project
+        The scope & scale of our research
       </h2>
       <div ref={elm_2} className="flex flex-wrap items-start md:flex-nowrap">
         <p className="mr-4 text-[70px] font-medium leading-none text-[#D1BD8F] md:text-[100px] lg:mr-[7rem] lg:text-[24rem]">
-          65,000K+
+          45,000+
         </p>
-        <p className="mt-2 max-w-[180px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[40rem] lg:text-[2.8rem]">
-          Dogs currently enrolled in our studies
+        <p className="mt-2 max-w-[180px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[48rem] lg:text-[2.8rem]">
+          Dogs currently enrolled in the Pack
         </p>
       </div>
       <div ref={elm_3} className="ml-auto mt-8 max-w-fit lg:mt-0">
         <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
-          240+
+          30K+
         </p>
         <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
-          Research projects using data from the Dog Aging Project Terra Platform
+          Dog with multiyear data
         </p>
       </div>
       <div ref={elm_4} className="mx-auto mt-8 max-w-fit lg:mt-0">
         <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
-          5 Years
+          23K+
         </p>
         <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
-          Of collecting data from our Community Scientists to grow our results
+          Veterinary records submitted
         </p>
       </div>
       <div ref={elm_5} className="mt-8 max-w-fit lg:mt-0">
         <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
-          700+
+          22K+
         </p>
         <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
-          Dog breeds enrolled in our studies (and we always need more! Maybe
-          yours?)
+          Purebred dogs in the Pack
         </p>
       </div>
       <div
@@ -217,28 +387,101 @@ export default function HomePanelNine() {
         className="my-8 flex flex-wrap items-start justify-end md:flex-nowrap lg:my-[4rem]"
       >
         <p className="mr-4 text-[70px] font-medium leading-none text-[#D1BD8F] md:text-[100px] lg:mr-[7rem] lg:text-[24rem]">
-          6000+
+          22,000+
         </p>
         <p className="mt-2 max-w-[240px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[40rem] lg:text-[2.8rem]">
-          Dogs who have been part of the project into their very senior years
-          (11-22)
+          Mixed breed dogs in the Pack
         </p>
       </div>
       <div ref={elm_7} className="max-w-fit">
         <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
-          Over 12
+          11K+
         </p>
         <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[44rem] lg:text-[2.8rem]">
-          Different primary activity categories for Dog Pack members (companion,
-          service, assistance, working, agility, show, breeding, rescue, etc.)
+          Senior dogs in the Pack
         </p>
       </div>
       <div ref={elm_8} className="ml-auto mt-8 max-w-fit lg:mt-0">
         <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
-          10K+
+          11K+
         </p>
         <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
-          Dogs who have been adopted from shelter, enrolled in our project
+          Dog Park subscribers
+        </p>
+      </div>
+      <div ref={elm_9} className="mx-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
+          72,000+
+        </p>
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[50rem] lg:text-[2.8rem]">
+          Dogs enrolled in cohort studies
+        </p>
+      </div>
+      <div
+        ref={elm_10}
+        className="mt-5 flex flex-wrap items-start md:flex-nowrap lg:mt-[10rem]"
+      >
+        <p className="mr-4 text-[70px] font-medium leading-none text-[#D1BD8F] md:text-[100px] lg:mr-[7rem] lg:text-[24rem]">
+          35,000+
+        </p>
+        <p className="mt-2 max-w-[180px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[48rem] lg:text-[2.8rem]">
+          Unique mixed breed combinations represented
+        </p>
+      </div>
+      <div ref={elm_11} className="ml-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
+          300+
+        </p>
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[50rem] lg:text-[2.8rem]">
+          Unique AKC breeds represented
+        </p>
+      </div>
+      <div ref={elm_12} className="mx-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
+          200+
+        </p>
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[50rem] lg:text-[2.8rem]">
+          Researchers using our data
+        </p>
+      </div>
+      <div ref={elm_13} className="mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
+          100+
+        </p>
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[40rem] lg:text-[2.8rem]">
+          Team members
+        </p>
+      </div>
+      <div ref={elm_14} className="ml-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
+          50+
+        </p>
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[50rem] lg:text-[2.8rem]">
+          Research publications
+        </p>
+      </div>
+      <div ref={elm_15} className="flex flex-wrap items-start md:flex-nowrap">
+        <p className="mr-4 text-[70px] font-medium leading-none text-[#D1BD8F] md:text-[100px] lg:mr-[7rem] lg:text-[24rem]">
+          40+
+        </p>
+        <p className="mt-2 max-w-[180px] font-medium leading-normal text-[#FFF3D8] lg:mt-[3rem] lg:max-w-[48rem] lg:text-[2.8rem]">
+          Participating institutions & clinical studies
+        </p>
+      </div>
+      <div ref={elm_16} className="mx-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
+          18+
+        </p>
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[50rem] lg:text-[2.8rem]">
+          Participant appreciation events
+        </p>
+      </div>
+      <div ref={elm_17} className="ml-auto mt-8 max-w-fit lg:mt-0">
+        <p className="text-[80px] font-medium leading-none text-[#D1BD8F] lg:text-[14rem]">
+          10+
+        </p>
+        <p className="mt-2 max-w-[250px] font-medium leading-normal text-[#FFF3D8] lg:mt-[1.5rem] lg:max-w-[50rem] lg:text-[2.8rem]">
+          Project lifespan in years
         </p>
       </div>
     </div>

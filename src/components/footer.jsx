@@ -1,14 +1,14 @@
-/* eslint jsx-a11y/label-has-associated-control: "off" */
 /* eslint @next/next/no-img-element: "off" */
-import { useEffect } from 'react';
 import { Gradient } from '@/lib/Gradient';
+import { useEffect } from 'react';
 
 import FacebookIcon from '@assets/images/icons/facebook.svg';
+import InstagramIcon from '@assets/images/icons/instagram.svg';
+import LinkedInIcon from '@assets/images/icons/linkedin.svg';
+import TiktokIcon from '@assets/images/icons/tiktok.svg';
 import TwitterIcon from '@assets/images/icons/twitter.svg';
 import YoutubeIcon from '@assets/images/icons/youtube.svg';
-import LinkedInIcon from '@assets/images/icons/linkedin.svg';
-import InstagramIcon from '@assets/images/icons/instagram.svg';
-import TiktokIcon from '@assets/images/icons/tiktok.svg';
+import Link from 'next/link';
 
 export default function Footer() {
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="footer relative bg-cover bg-left-top bg-no-repeat px-5 pb-[2%] pt-[10%] lg:px-[4%]"
+      className="footer relative -mt-20 overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-cover bg-left-top bg-no-repeat px-5 pb-[2%] pt-40 lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:px-[4%] lg:pt-[21.333rem]"
       style={{
         background:
           'url(/images/dap-bg-noise-20.png), url(/images/footer-bg.png), #6543A5',
@@ -39,6 +39,8 @@ export default function Footer() {
               'url(/images/dap-bg-noise-20.png), linear-gradient(80.98deg, rgba(255, 255, 255, 0) 6.08%, rgba(255, 255, 255, 0.13) 45.05%, rgba(255, 255, 255, 0.09) 77.02%, rgba(255, 255, 255, 0) 96.22%), linear-gradient(94.77deg, rgba(255, 255, 255, 0.28) 0.31%, rgba(255, 255, 255, 0.22) 0.32%, rgba(255, 255, 255, 0.08) 25.37%, rgba(255, 255, 255, 0.04) 52.95%, rgba(255, 255, 255, 0.09) 73.8%, rgba(255, 255, 255, 0.17) 97.85%)',
             backgroundBlendMode: 'overlay, normal, normal',
             backdropFilter: 'blur(40px)',
+            boxShadow:
+              '0px 0px 0px 0px rgba(0, 0, 0, 0.10), 2px 3px 8px 0px rgba(0, 0, 0, 0.10), 8px 12px 14px 0px rgba(0, 0, 0, 0.09), 18px 26px 19px 0px rgba(0, 0, 0, 0.05), 31px 46px 22px 0px rgba(0, 0, 0, 0.01), 49px 73px 25px 0px rgba(0, 0, 0, 0.00)',
           }}
         >
           <div className="flex flex-wrap gap-y-6 md:flex-nowrap md:gap-x-10 md:gap-y-0 lg:gap-x-[5.333rem]">
@@ -87,7 +89,7 @@ export default function Footer() {
                   <input
                     type="text"
                     placeholder="your.address@email.com"
-                    className="h-[50px] w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg text-[#7048C6] placeholder:opacity-50 focus:outline-none focus-visible:border-b-[#7048C6] md:text-xl lg:h-[6.667rem] lg:text-[3.6rem]"
+                    className="h-[50px] w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg text-[#7048C6] placeholder:text-[#7048C6] focus:outline-none focus-visible:border-b-[#7048C6] md:text-xl lg:h-[6.667rem] lg:text-[3.6rem]"
                   />
                 </div>
               </form>
@@ -98,132 +100,150 @@ export default function Footer() {
         <div className="mt-16 w-full lg:ml-auto lg:mt-[8rem] lg:w-1/2 lg:pl-[2.667rem]">
           <div className="flex flex-wrap justify-between gap-y-8 md:flex-nowrap md:gap-y-0">
             <div className="w-1/2 md:w-auto">
-              <h4 className="mb-4 text-xl font-bold text-[#D2BEFF] lg:mb-[2rem] lg:text-[2.133rem]">
+              <h4 className="mb-4 text-xl font-bold text-[#EEEEEE] lg:mb-[2rem] lg:text-[2.133rem]">
                 The Project
               </h4>
               <ul className="flex flex-col gap-y-3 text-white md:gap-y-4 lg:gap-y-[1.333rem] lg:text-[1.867rem]">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/triad-fast-track" className="hover:underline">
                     Overview
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/veterinarians" className="hover:underline">
                     Veterinarians
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/our-supporters" className="hover:underline">
                     Supporters
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/our-team" className="hover:underline">
                     Our Team
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/contact-us" className="hover:underline">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="w-1/2 md:w-auto">
-              <h4 className="mb-4 text-xl font-bold text-[#D2BEFF] lg:mb-[2rem] lg:text-[2.133rem]">
+              <h4 className="mb-4 text-xl font-bold text-[#EEEEEE] lg:mb-[2rem] lg:text-[2.133rem]">
                 Research
               </h4>
               <ul className="flex flex-col gap-y-3 text-white md:gap-y-4 lg:gap-y-[1.333rem] lg:text-[1.867rem]">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/publications" className="hover:underline">
                     Publications
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/data-access" className="hover:underline">
                     Data Access
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/careers" className="hover:underline">
                     Careers
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="w-1/2 md:w-auto">
-              <h4 className="mb-4 text-xl font-bold text-[#D2BEFF] lg:mb-[2rem] lg:text-[2.133rem]">
+              <h4 className="mb-4 text-xl font-bold text-[#EEEEEE] lg:mb-[2rem] lg:text-[2.133rem]">
                 Blog
               </h4>
               <ul className="flex flex-col gap-y-3 text-white md:gap-y-4 lg:gap-y-[1.333rem] lg:text-[1.867rem]">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link
+                    href="/blog/category/scientific-results"
+                    className="hover:underline"
+                  >
                     Scientific Results
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link
+                    href="/blog/category/inside-science"
+                    className="hover:underline"
+                  >
                     Inside Science
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link
+                    href="/blog/category/inside-cognition"
+                    className="hover:underline"
+                  >
                     Inside Cognition
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link
+                    href="/blog/category/inside-foundation"
+                    className="hover:underline"
+                  >
                     Inside Foundation
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link
+                    href="/blog/category/inside-precision"
+                    className="hover:underline"
+                  >
                     Inside Precision
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
-                    Aging Dog Care
-                  </a>
+                  <Link
+                    href="/blog/category/senior-dog-care"
+                    className="hover:underline"
+                  >
+                    Senior Dog Care
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="w-1/2 md:w-auto">
-              <h4 className="mb-4 text-xl font-bold text-[#D2BEFF] lg:mb-[2rem] lg:text-[2.133rem]">
+              <h4 className="mb-4 text-xl font-bold text-[#EEEEEE] lg:mb-[2rem] lg:text-[2.133rem]">
                 Media
               </h4>
               <ul className="flex flex-col gap-y-3 text-white md:gap-y-4 lg:gap-y-[1.333rem] lg:text-[1.867rem]">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/media" className="hover:underline">
                     News coverage
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="/press-resources" className="hover:underline">
                     Press Resources
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="w-1/2 md:w-auto">
-              <h4 className="mb-4 text-xl font-bold text-[#D2BEFF] lg:mb-[2rem] lg:text-[2.133rem]">
+              <h4 className="mb-4 text-xl font-bold text-[#EEEEEE] lg:mb-[2rem] lg:text-[2.133rem]">
                 FAQ
               </h4>
               <ul className="flex flex-col gap-y-3 text-white md:gap-y-4 lg:gap-y-[1.333rem] lg:text-[1.867rem]">
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Project FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Owner FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Veterinarian FAQ
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -237,7 +257,7 @@ export default function Footer() {
             </h4>
             <div className="mt-2 border-t border-t-[#B894FF] pt-2 md:mt-3 md:pt-3 lg:mt-[1.5rem] lg:pt-[3rem]">
               <a
-                href="#"
+                href="https://portal.dogagingproject.org/nomination"
                 className="text-xl font-bold text-[#D1BD8F] lg:text-[2.4rem]"
               >
                 Enroll Your Dog
@@ -251,7 +271,7 @@ export default function Footer() {
             <div className="mt-2 border-t border-t-[#B894FF] pt-2 md:mt-3 md:pt-3 lg:mt-[1.5rem] lg:pt-[3rem]">
               <div className="flex items-center justify-between lg:pr-[4rem]">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/dogagingproject/"
                   className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#D1BD8F] text-[#D1BD8F] hover:bg-[#D1BD8F] hover:text-white lg:h-[4.4rem] lg:w-[4.4rem]"
                 >
                   <div className="svg_icon w-[11px] lg:w-[1.6rem]">
@@ -259,40 +279,50 @@ export default function Footer() {
                   </div>
                 </a>
                 <a
-                  href="#"
+                  href="https://twitter.com/dogagingproject"
+                  target="_blank"
                   className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#D1BD8F] text-[#D1BD8F] hover:bg-[#D1BD8F] hover:text-white lg:h-[4.4rem] lg:w-[4.4rem]"
+                  rel="noreferrer"
                 >
                   <div className="svg_icon w-[14px] lg:w-[1.9rem]">
                     <TwitterIcon />
                   </div>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/channel/UCprnBPHZ8VYgzVfIkP1H7dQ/videos"
+                  target="_blank"
                   className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#D1BD8F] text-[#D1BD8F] hover:bg-[#D1BD8F] hover:text-white lg:h-[4.4rem] lg:w-[4.4rem]"
+                  rel="noreferrer"
                 >
                   <div className="svg_icon w-[14px] lg:w-[1.9rem]">
                     <YoutubeIcon />
                   </div>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/dogagingproject"
+                  target="_blank"
                   className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#D1BD8F] text-[#D1BD8F] hover:bg-[#D1BD8F] hover:text-white lg:h-[4.4rem] lg:w-[4.4rem]"
+                  rel="noreferrer"
                 >
                   <div className="svg_icon w-[14px] lg:w-[1.9rem]">
                     <LinkedInIcon />
                   </div>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/dogagingproject/"
+                  target="_blank"
                   className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#D1BD8F] text-[#D1BD8F] hover:bg-[#D1BD8F] hover:text-white lg:h-[4.4rem] lg:w-[4.4rem]"
+                  rel="noreferrer"
                 >
                   <div className="svg_icon w-[14px] lg:w-[1.9rem]">
                     <InstagramIcon />
                   </div>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@dogagingproject"
+                  target="_blank"
                   className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#D1BD8F] text-[#D1BD8F] hover:bg-[#D1BD8F] hover:text-white lg:h-[4.4rem] lg:w-[4.4rem]"
+                  rel="noreferrer"
                 >
                   <div className="svg_icon w-[14px] lg:w-[1.9rem]">
                     <TiktokIcon />
@@ -303,13 +333,26 @@ export default function Footer() {
           </div>
           <div className="w-full md:w-1/3 lg:w-1/2">
             <div className="mt-4 flex flex-wrap gap-y-2 border-t border-t-[#B894FF] pt-3 text-sm font-bold text-[#D1BD8F] md:mt-11 lg:mt-[6rem] lg:flex-nowrap lg:gap-x-[4rem] lg:gap-y-0 lg:pt-[3rem] lg:text-[2.13rem]">
-              <a href="#" className="block w-full lg:inline lg:w-auto">
+              <a
+                href="https://dogpark.dogagingproject.org/"
+                target="_blank"
+                className="block w-full lg:inline lg:w-auto"
+                rel="noreferrer"
+              >
                 The Dog Park
               </a>
-              <a href="#" className="block w-full lg:inline lg:w-auto">
+              <a
+                href="https://portal.dogagingproject.org/"
+                target="_blank"
+                className="block w-full lg:inline lg:w-auto"
+                rel="noreferrer"
+              >
                 Portal Access
               </a>
-              <a href="#" className="block w-full lg:inline lg:w-auto">
+              <a
+                href="https://portal.dogagingproject.org/nomination"
+                className="block w-full lg:inline lg:w-auto"
+              >
                 Enroll Your Dog
               </a>
             </div>
@@ -344,18 +387,16 @@ export default function Footer() {
             <div className="flex items-center gap-x-[3rem] lg:items-stretch">
               <div className="w-3/4 lg:border-t lg:border-t-[#B894FF]">
                 <p className="text-sm leading-snug text-[#C0A3FE] lg:mt-[4.4rem] lg:text-[2rem] lg:leading-snug">
-                  Copyright © 2018 - 2028 The Dog Aging
-                  <a href="#" className="block">
+                  Copyright © 2018 - 2028 The Dog Aging Project
+                  <Link href="/privacy-policy" className="block">
                     Project Privacy Policy
-                  </a>
+                  </Link>
                 </p>
               </div>
               <div className="w-1/4">
-                <img
-                  src="/images/dap-logo-white.png"
-                  alt="Texas A&M"
-                  className=""
-                />
+                <Link href="/">
+                  <img src="/images/dap-logo-white.png" alt="Texas A&M" />
+                </Link>
               </div>
             </div>
           </div>

@@ -80,7 +80,7 @@ export default function HomePanelFive() {
           { backgroundColor: '#5DC0FD' },
           '<=',
         );
-      // // Box 2 Animation
+      // Box 2 Animation
       gsap
         .timeline({
           scrollTrigger: {
@@ -152,7 +152,7 @@ export default function HomePanelFive() {
           { backgroundColor: '#FEC652' },
           '<=',
         );
-      // // Box 4 Animation
+      // Box 4 Animation
       gsap
         .timeline({
           scrollTrigger: {
@@ -270,7 +270,7 @@ export default function HomePanelFive() {
       <div className="section4_sticky_panels relative h-screen">
         <div
           ref={panel_1}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-24rem)]"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -302,7 +302,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_2}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-24rem)]"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -335,7 +335,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_3}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-24rem)]"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -369,7 +369,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_4}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-24rem)]"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -398,7 +398,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_5}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-24rem)]"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -429,7 +429,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_6}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-24rem)]"
+          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -461,17 +461,17 @@ export default function HomePanelFive() {
           ref={panel_7}
           className="absolute left-0 top-0 z-[-1] h-full w-full bg-[#6543A5]"
         >
-          <div className="mx-auto flex h-[calc(100%-105px)] w-full items-center px-5 md:h-[calc(100%-115px)] lg:h-[calc(100%-24rem)] lg:max-w-[70%]">
+          <div className="mx-auto flex h-[calc(100%-105px)] w-full items-center px-5 md:h-[calc(100%-115px)] lg:h-[calc(100%-26rem)] lg:pl-[16%] lg:pr-[4%]">
             <div className="w-full text-[#E8DCFF]">
-              <div className="lg:max-w-[70rem]">
+              <div className="lg:max-w-[77rem]">
                 <h4 className="text-3xl leading-tight tracking-tighter md:text-4xl lg:text-[7.2rem] lg:leading-none">
-                  Accelerating Scientific Discovery & Innovation for Dogs and
-                  Humans
+                  Accelerating scientific discovery & innovation for dogs and
+                  humans
                 </h4>
-                <p className="my-4 text-xl uppercase leading-snug md:my-6 md:text-2xl lg:mb-[2rem] lg:mt-[4rem] lg:text-[3.6rem] lg:leading-snug">
+                <p className="font-plex-mono my-4 text-xl font-medium uppercase leading-snug md:my-6 md:text-2xl lg:mb-[2rem] lg:mt-[4rem] lg:text-[3.6rem] lg:leading-snug">
                   Our Research Goals
                 </p>
-                <p className="leading-snug md:text-lg lg:text-[2.4rem] lg:leading-snug">
+                <p className="leading-snug lg:text-[2.4rem] lg:leading-snug">
                   The goal of the Dog Aging Project is to understand how genes,
                   lifestyle, and environment influence health and aging. Our
                   research program is designed to collect—and connect—critical
@@ -482,7 +482,7 @@ export default function HomePanelFive() {
                   community and the public.
                 </p>
               </div>
-              <div className="ml-auto mt-4 font-medium leading-snug md:mt-8 lg:mt-[4rem] lg:lg:max-w-[70rem] lg:text-[1.867rem] lg:leading-snug">
+              <div className="ml-auto mt-4 leading-snug md:mt-8 lg:-mt-[10rem] lg:lg:max-w-[70rem] lg:text-[2.4rem] lg:leading-snug">
                 From within the Dog Aging Project Pack, we enroll subsets of
                 dogs into cohorts based on specific scientific criteria. These
                 cohorts include Foundation, a genomics study; Precision, a
@@ -494,8 +494,10 @@ export default function HomePanelFive() {
         </div>
       </div>
 
-      <div className="absolute bottom-2 left-0 z-[2] px-2 md:w-full lg:bottom-[2rem] lg:px-[5%]">
-        <div className="flex w-[1200px] gap-2 md:w-full md:justify-center lg:gap-[2rem]">
+      <div className="absolute bottom-1 left-0 z-[2] px-2 md:w-full lg:bottom-[1rem] lg:px-[5%]">
+        <div className="relative flex w-[1200px] gap-2 py-4 md:w-full md:justify-center lg:gap-[2rem] lg:py-[2rem]">
+          <div className="absolute left-[5%] top-0 bg-[#9169E8] lg:h-[0.667rem] lg:w-[90%]" />
+          <div className="absolute bottom-0 left-[5%] bg-[#9169E8] lg:h-[0.667rem] lg:w-[90%]" />
           <div className="relative w-[130px] lg:w-auto">
             <div
               ref={panel_box_1_dot}
@@ -604,7 +606,7 @@ export default function HomePanelFive() {
                 <p className="mb-2 text-base leading-none lg:mb-[2rem] lg:text-[3rem]">
                   Activity
                 </p>
-                <p className="inline-block rounded-full border border-white px-3 text-xs lg:text-[1.333rem]">
+                <p className="inline-block rounded-full border border-white px-3 py-1 text-[10px] lg:text-[1.333rem]">
                   explore
                 </p>
               </div>

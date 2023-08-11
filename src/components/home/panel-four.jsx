@@ -29,16 +29,16 @@ export default function HomePanelFour() {
       ref={panel}
       className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem]"
     >
-      <div ref={panel_bg} className="absolute min-h-screen w-full">
+      <div ref={panel_bg} className="absolute h-full w-full lg:min-h-screen">
         <img
-          src="/images/dap-section-3-bg.jpeg"
+          src="/images/community-scientist.jpeg"
           alt="Section 3"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center"
         />
       </div>
 
       <div className="panel relative px-5 py-20 lg:px-[4%] lg:py-[21.333rem]">
-        <h2 className="max-w-[300px] text-4xl leading-none text-white lg:max-w-[60rem] lg:text-5xl lg:text-[10.667rem]">
+        <h2 className="max-w-[300px] text-4xl leading-none -tracking-[3px] text-white lg:max-w-[80rem] lg:text-5xl lg:text-[14rem] lg:-tracking-[0.42rem]">
           Become a community scientist
         </h2>
 
@@ -52,7 +52,7 @@ export default function HomePanelFour() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <h4 className="mb-3 text-2xl uppercase text-[#FFF2F2] md:mb-5 md:text-4xl lg:mb-[3rem] lg:text-[4.5rem]">
+          <h4 className="font-plex-mono mb-3 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-4 md:text-2xl lg:mb-[2.66rem] lg:text-[3.6rem] lg:leading-tight">
             General Requirements
           </h4>
           <div className="leading-snug text-[#FFDADA] md:text-lg lg:text-[2.8rem] lg:leading-snug">
@@ -73,7 +73,7 @@ export default function HomePanelFour() {
         </div>
 
         <div
-          className="ml-auto mt-16 rounded-[20px] p-5 md:mt-32 lg:mt-[18rem] lg:max-w-[56rem] lg:rounded-[4rem] lg:p-[5.333rem]"
+          className="ml-auto mt-16 rounded-[20px] p-5 md:mt-32 lg:mt-[18rem] lg:max-w-[73rem] lg:rounded-[4rem] lg:p-[5.333rem]"
           style={{
             background:
               'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
@@ -82,7 +82,10 @@ export default function HomePanelFour() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <p className="leading-snug text-[#FFDADA] md:text-xl lg:text-[2.4rem] lg:leading-snug">
+          <h4 className="font-plex-mono mb-3 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-5 md:text-2xl lg:mb-[2.66rem] lg:text-[3.6rem] lg:leading-tight">
+            Benefits of Community
+          </h4>
+          <p className="leading-snug text-[#FFDADA] md:text-lg lg:text-[2.8rem] lg:leading-snug">
             Everyone whose dog is a member of the Pack is invited to join the
             Dog Park, a private, online community where dog owners can interact
             with other participants, join clubs, post cute dog pics, attend
@@ -103,11 +106,11 @@ export default function HomePanelFour() {
         >
           <div className="flex flex-wrap lg:flex-nowrap">
             <div className="w-full lg:w-[60%]">
-              <h4 className="mb-5 text-2xl uppercase text-[#FFF2F2] md:text-4xl lg:mb-[3.5rem] lg:text-[4.5rem]">
+              <h4 className="font-plex-mono mb-5 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-7 md:text-2xl lg:mb-[6rem] lg:text-[3.6rem] lg:leading-tight">
                 What to Expect
               </h4>
 
-              <ul className="flex list-none flex-col gap-y-3 leading-snug text-[#FFDADA] md:text-lg lg:gap-y-[5rem] lg:text-[3.6rem] lg:leading-tight">
+              <ul className="flex list-none flex-col gap-y-3 leading-snug text-[#FFDADA] md:text-lg lg:gap-y-[5rem] lg:text-[3.6rem] lg:leading-snug">
                 <li className="flex pr-2 md:pr-[8rem]">
                   <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
                     1
@@ -223,7 +226,7 @@ export default function HomePanelFour() {
         </div>
 
         <div
-          className="mt-20 w-full rounded-[20px] p-5 md:mt-28 lg:mt-[18rem] lg:max-w-[52rem] lg:rounded-[4rem] lg:p-[5.333rem]"
+          className="mt-20 w-full rounded-[20px] p-5 md:mt-28 lg:mt-[18rem] lg:max-w-[91rem] lg:rounded-[4rem] lg:p-[5.333rem]"
           style={{
             background:
               'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
@@ -232,7 +235,7 @@ export default function HomePanelFour() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <p className="text-sm leading-snug text-[#FFDADA] md:text-lg lg:text-[2.8rem] lg:leading-snug">
+          <p className="text-sm leading-snug text-[#FFDADA] md:text-lg lg:text-[4.8rem] lg:leading-snug">
             Once you’ve completed the Health and Life Experience Survey, your
             dog will be an official member of the Dog Aging Project Pack!
           </p>
