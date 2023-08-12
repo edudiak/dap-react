@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function TFTPanelFour() {
+export default function PanelFour() {
   const elm_1 = useRef(null);
   const panel = useRef(null);
 

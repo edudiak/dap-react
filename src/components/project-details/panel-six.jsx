@@ -1,11 +1,6 @@
-/* eslint @next/next/no-img-element: "off" */
-/* eslint no-nested-ternary: "off" */
-/* eslint indent: "off" */
-/* eslint react/no-array-index-key: "off" */
-import Link from 'next/link';
-import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useLayoutEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +16,7 @@ export default function PanelSix() {
           scrollTrigger: {
             trigger: elm_1.current,
             start: 'top 90%',
-            end: 'bottom+=100 bottom',
+            end: 'bottom bottom',
             scrub: true,
           },
         })
@@ -58,7 +53,7 @@ export default function PanelSix() {
           scrollTrigger: {
             trigger: elm_3.current,
             start: 'top 90%',
-            end: 'bottom+=200 bottom',
+            end: 'bottom+=100 bottom',
             scrub: true,
           },
         })
@@ -97,12 +92,12 @@ export default function PanelSix() {
             programs that will benefit dogs and people too.
           </div>
           <div ref={elm_3}>
-            <Link
-              href="#"
+            <a
+              href="https://dogagingproject.org/donate"
               className="inline-block rounded-full bg-[#F7F3FF] px-8 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
             >
               Donate Now
-            </Link>
+            </a>
           </div>
         </div>
       </div>

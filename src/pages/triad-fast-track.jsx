@@ -1,7 +1,7 @@
-import TFTPanelOne from '@/components/tft/panel-one';
-import TFTPanelFour from '@/components/tft/panel-four';
-import TFTPanelTwo from '@/components/tft/panel-two';
-import TFTPanelThree from '@/components/tft/panel-three';
+import PanelOne from '@/components/tft/panel-one';
+import PanelFour from '@/components/tft/panel-four';
+import PanelTwo from '@/components/tft/panel-two';
+import PanelThree from '@/components/tft/panel-three';
 
 export default function TriadFastTrack() {
   return (
@@ -13,13 +13,13 @@ export default function TriadFastTrack() {
             'url(/images/dap-bg-noise-20.png), url(/images/dap-bg-purple.png), linear-gradient(0deg, #7048C6, #7048C6)',
         }}
       >
-        <TFTPanelOne />
+        <PanelOne />
 
-        <TFTPanelTwo />
+        <PanelTwo />
 
-        <TFTPanelThree />
+        <PanelThree />
 
-        <TFTPanelFour />
+        <PanelFour />
       </div>
     </div>
   );

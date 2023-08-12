@@ -31,7 +31,7 @@ export default function PanelFour() {
     >
       <div ref={panel_bg} className="absolute min-h-screen w-full">
         <img
-          src="/images/collaboration-bg.jpg"
+          src="/images/collaboration-bg.jpeg"
           alt="Section 3"
           className="h-full w-full object-cover"
         />

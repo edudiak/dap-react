@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function TFTPanelTwo() {
+export default function PanelTwo() {
   const panel = useRef(null);
   const elm_1 = useRef(null);
   const elm_2 = useRef(null);

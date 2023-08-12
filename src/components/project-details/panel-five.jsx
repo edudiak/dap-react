@@ -1,17 +1,52 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
+import { useLayoutEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PanelFive() {
+  const elm_1 = useRef(null);
+  const elm_2 = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_1.current,
+            start: 'top 90%',
+            end: 'bottom 80%',
+            scrub: true,
+          },
+        })
+        .fromTo(elm_1.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 }, 0)
+        .fromTo(elm_2.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 }, 0);
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_2.current,
+            start: 'top 90%',
+            end: 'bottom 80%',
+            scrub: true,
+          },
+        })
+        .fromTo(elm_2.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 }, 0);
+    }); // <- scopes all selector text to the root element
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="pb-26 relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-[#FFDADA] text-[#500000] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:pb-[20rem]">
       <div className="mb-16 mt-20 flex flex-wrap-reverse items-center gap-y-8 pl-5 lg:mb-[12rem] lg:mt-[21.33rem] lg:flex-nowrap lg:pl-[8%]">
         <div className="w-full lg:w-1/2">
           <div>
-            <h2 className="mb-4 text-4xl leading-tight md:mb-8 md:text-5xl lg:mb-[8rem] lg:max-w-[86rem] lg:text-[10.267rem] lg:leading-tight lg:tracking-[0.114rem]">
+            <h2
+              ref={elm_1}
+              className="mb-4 text-4xl leading-tight md:mb-8 md:text-5xl lg:mb-[8rem] lg:max-w-[86rem] lg:text-[10.267rem] lg:leading-tight lg:tracking-[0.114rem]"
+            >
               Building diversity, equity, inclusion & belonging
             </h2>
           </div>
@@ -39,7 +74,10 @@ export default function PanelFive() {
           </div>
         </div>
         <div className="w-full px-5 md:pl-[6%] lg:w-1/2">
-          <div className="mb-8 text-lg leading-snug lg:mb-[6rem] lg:text-[2.8rem]">
+          <div
+            ref={elm_2}
+            className="mb-8 text-lg leading-snug lg:mb-[6rem] lg:text-[2.8rem]"
+          >
             <p className="mb-5 lg:mb-[4rem]">
               Vestibulum eu quam nec neque pellentesque efficitur id eget nisl.
               Proin porta est convallis lacus blandit pretium sed non enim.

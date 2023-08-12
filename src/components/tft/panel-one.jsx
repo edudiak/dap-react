@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Link from 'next/link';
 
-export default function TFTPanelOne() {
+export default function PanelOne() {
   const elm_1 = useRef(null);
   const elm_2 = useRef(null);
   const elm_3 = useRef(null);

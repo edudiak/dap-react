@@ -8,8 +8,9 @@ import { useLayoutEffect, useRef } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PanelTwo() {
-  const elm_1 = useRef(null);
   const panel = useRef(null);
+  const elm_1 = useRef(null);
+  const elm_2 = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -31,6 +32,18 @@ export default function PanelTwo() {
           });
         },
       );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_2.current,
+            start: 'top 90%',
+            end: 'bottom 80%',
+            scrub: true,
+          },
+        })
+        .fromTo(elm_2.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 }, 0)
+        .fromTo(elm_1.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 }, 0);
     }); // <- scopes all selector text to the root element
 
     return () => ctx.revert();
@@ -42,7 +55,10 @@ export default function PanelTwo() {
       className="relative flex flex-wrap-reverse  px-5 pt-[10%] md:pt-[15%] lg:flex-nowrap lg:pl-[4%] lg:pr-[8%]"
     >
       <div className="mt-14 w-full md:mt-20 lg:mt-0 lg:w-1/2">
-        <h2 className="mb-16 text-4xl leading-tight md:leading-snug tracking-normal text-[#F7F3FF] md:text-5xl lg:mb-[21.333rem] lg:text-[14rem] lg:leading-none lg:tracking-[0.42rem]">
+        <h2
+          ref={elm_2}
+          className="mb-16 text-4xl leading-tight tracking-normal text-[#F7F3FF] md:text-5xl md:leading-snug lg:mb-[21.333rem] lg:text-[14rem] lg:leading-none lg:tracking-[0.42rem]"
+        >
           TRIAD Clinical Trial
         </h2>
         <div
@@ -56,7 +72,7 @@ export default function PanelTwo() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <h3 className="font-plex-mono text-2xl font-medium uppercase leading-tight sm:leading-none -tracking-[0.036rem] text-[#250A60] md:text-3xl lg:text-[3.6rem]">
+          <h3 className="font-plex-mono text-2xl font-medium uppercase leading-tight -tracking-[0.036rem] text-[#250A60] sm:leading-none md:text-3xl lg:text-[3.6rem]">
             About the study
           </h3>
           <div className="mt-2 leading-snug text-[#F7F3FF] md:text-xl lg:mt-[3.2rem] lg:text-[2.8rem] lg:leading-normal">

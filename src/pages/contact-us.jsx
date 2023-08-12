@@ -57,7 +57,7 @@ export default function ContactUs() {
             </div>
           </div>
           <div
-            className="rounded-3xl px-6 py-8 lg:rounded-[5.333rem] lg:px-[4rem] lg:py-[5.333rem]"
+            className="rounded-3xl px-3 sm:px-6 mx-5 py-8 lg:rounded-[5.333rem] lg:px-[4rem] lg:py-[5.333rem]"
             style={{
               boxShadow:
                 '0px 0px 0px 0px rgba(0, 0, 0, 0.10), 2px 3px 8px 0px rgba(0, 0, 0, 0.10), 8px 12px 14px 0px rgba(0, 0, 0, 0.09), 18px 26px 19px 0px rgba(0, 0, 0, 0.05), 31px 46px 22px 0px rgba(0, 0, 0, 0.01), 49px 73px 25px 0px rgba(0, 0, 0, 0.00)',
@@ -68,7 +68,7 @@ export default function ContactUs() {
             }}
           >
             <div className="grid grid-cols-1 gap-x-5 gap-y-8 lg:grid-cols-4 lg:gap-x-[5.333rem] lg:gap-y-[8rem]">
-              <div className="relative col-span-2">
+              <div className="relative col-span-4 sm:col-span-3 lg:col-span-2">
                 <input
                   type="text"
                   id="firstName"
@@ -77,13 +77,13 @@ export default function ContactUs() {
                   required
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
-                <div className="absolute right-0 top-[25%] flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
-                  <span className="h-[20px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
+                <div className="absolute right-0 top-[25%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
+                  <span className="h-[12px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
                     *
                   </span>
                 </div>
               </div>
-              <div className="relative col-span-2">
+              <div className="relative col-span-4 sm:col-span-3 lg:col-span-2">
                 <input
                   type="text"
                   id="lastName"
@@ -93,7 +93,7 @@ export default function ContactUs() {
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
               </div>
-              <div className="relative col-span-3">
+              <div className="relative col-span-4 sm:col-span-3">
                 <input
                   type="text"
                   id="email"
@@ -102,13 +102,13 @@ export default function ContactUs() {
                   required
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
-                <div className="absolute right-0 top-[25%] flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
-                  <span className="h-[20px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
+                <div className="absolute right-0 top-[25%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
+                  <span className="h-[12px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
                     *
                   </span>
                 </div>
               </div>
-              <div className="relative col-span-3">
+              <div className="relative col-span-4 sm:col-span-3">
                 <input
                   type="text"
                   id="email"
@@ -117,8 +117,8 @@ export default function ContactUs() {
                   required
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
-                <div className="absolute right-0 top-[25%] flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
-                  <span className="h-[20px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
+                <div className="absolute right-0 top-[25%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
+                  <span className="h-[12px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
                     *
                   </span>
                 </div>
@@ -132,8 +132,8 @@ export default function ContactUs() {
                   required
                   className="h-40 w-full rounded-lg border-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium leading-snug text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-[#7048C6] focus-visible:outline-none lg:h-[41rem] lg:rounded-[1.333rem] lg:border-[0.267rem] lg:p-[2rem] lg:text-[3.6rem]"
                 />
-                <div className="absolute bottom-4 right-4 flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:bottom-[2rem] lg:right-[2rem] lg:h-[3.333rem] lg:w-[3.333rem]">
-                  <span className="h-[20px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
+                <div className="absolute bottom-4 right-4 flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:bottom-[2rem] lg:right-[2rem] lg:h-[3.333rem] lg:w-[3.333rem]">
+                  <span className="h-[12px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
                     *
                   </span>
                 </div>
@@ -149,7 +149,7 @@ export default function ContactUs() {
             </div>
           </div>
 
-          <div className="mt-14 text-white md:mt-24 lg:mt-[20rem]">
+          <div className="mt-14 px-5 text-white md:mt-24 lg:mt-[20rem]">
             <h2 className="mb-4 text-4xl font-medium leading-none lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
               Media Relation Inquiries
             </h2>

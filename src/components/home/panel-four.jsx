@@ -29,7 +29,7 @@ export default function HomePanelFour() {
       ref={panel}
       className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem]"
     >
-      <div ref={panel_bg} className="absolute h-full w-full lg:min-h-screen">
+      <div ref={panel_bg} className="absolute w-full lg:min-h-screen">
         <img
           src="/images/community-scientist.jpeg"
           alt="Section 3"

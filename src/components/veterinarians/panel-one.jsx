@@ -6,6 +6,7 @@ import { useLayoutEffect, useRef } from 'react';
 export default function PanelOne() {
   const elm_1 = useRef(null);
   const elm_2 = useRef(null);
+  const elm_3 = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -23,6 +24,12 @@ export default function PanelOne() {
           { y: 100, opacity: 0 },
           { y: 0, opacity: 1 },
           'section1_Start+=0.1',
+        )
+        .fromTo(
+          elm_3.current,
+          { y: 100, opacity: 0 },
+          { y: 10, opacity: 1 },
+          'section1_Start+=0.1',
         );
     }); // <- scopes all selector text to the root element
 
@@ -31,7 +38,7 @@ export default function PanelOne() {
 
   return (
     <div className="panel">
-      <div className="relative mb-16 flex flex-wrap-reverse items-center px-5 md:mb-20 lg:mb-[30rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
+      <div className="relative mb-16 flex flex-wrap-reverse items-center px-5 md:mb-20 lg:mb-[30rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[4%]">
         <div className="z-[1] mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
           <h1
             ref={elm_1}
@@ -51,27 +58,29 @@ export default function PanelOne() {
             late in life.
           </div>
         </div>
-        <div className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:mx-0 lg:max-w-[75rem] xl:absolute xl:-top-[5%] xl:right-[4%]">
-          <div className="relative p-4 lg:p-14">
-            <div className="absolute left-0 top-0 h-full w-full rotate-[120deg] transform rounded-full border-[7px] border-[#250A60] border-b-transparent" />
-            <Image
-              src="/images/veterinary-geroscience.jpg"
-              alt="dog-13"
-              width={2000}
-              height={2000}
-              className="overflow-hidden rounded-full"
-            />
+        <div className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:absolute lg:-top-[24%] lg:right-[4%] lg:mx-0 lg:max-w-[85rem]">
+          <div ref={elm_3} className="relative p-4 lg:p-14">
+            <div className="absolute left-0 top-0 h-full w-full rotate-[90deg] transform rounded-full border-[7px] border-[#250A60] border-b-transparent" />
+            <div className="overflow-hidden rounded-full shadow-[inset_0px_0px_7px_rgba(0,0,0,0.7)]">
+              <Image
+                src="/images/veterinary-geroscience.jpg"
+                alt="dog-13"
+                width={2000}
+                height={2000}
+                className="overflow-hidden rounded-full"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       <div className="relative mb-14 px-5 md:mb-20 lg:mb-[16rem] lg:px-[8%]">
-        <h2 className="mb-8 text-3xl leading-snug text-[#F7F3FF] md:text-4xl lg:mb-[6.667rem] lg:w-1/2 lg:text-[6.267rem] lg:leading-snug">
+        <h2 className="mb-8 text-3xl leading-snug text-[#F7F3FF] md:text-4xl lg:mb-[6.667rem] lg:w-1/2 lg:text-[6.267rem] lg:leading-tight">
           Supporting clients in the Dog Aging Project
         </h2>
         <div className="flex flex-wrap lg:flex-nowrap">
           <div className="w-full lg:w-1/2">
-            <div className="text-lg leading-snug text-[#250A60] lg:text-[2.8rem] lg:leading-relaxed">
+            <div className="text-lg leading-snug text-[#250A60] lg:text-[2.8rem] lg:leading-snug">
               <p className="mb-4 lg:mb-[2.8rem]">
                 If you are a primary care veterinarian and your client is part
                 of our research study, we will be relying on you to help provide
@@ -87,8 +96,7 @@ export default function PanelOne() {
           </div>
           <div className="w-full lg:w-1/2 lg:pl-[5%]">
             <div
-              ref={elm_1}
-              className=" mt-8 rounded-3xl p-6 md:mt-20 lg:mt-[25.333rem] lg:rounded-[4rem] lg:p-[5.33rem]"
+              className="mt-8 rounded-3xl p-6 md:mt-20 lg:mt-[25.333rem] lg:rounded-[4rem] lg:p-[5.33rem]"
               style={{
                 background:
                   'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
