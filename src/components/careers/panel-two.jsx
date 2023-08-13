@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
@@ -45,7 +44,7 @@ export default function PanelTwo() {
         Current Open Positions
       </h2>
 
-      <div className="overflow-auto careers-table-scrollbar">
+      <div className="careers-table-scrollbar overflow-auto">
         {openPositions.map((position) => (
           <div
             key={position.title}

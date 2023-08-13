@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Link from 'next/link';
@@ -60,7 +59,7 @@ export default function PanelFour() {
       >
         <div className="text-[#3A1982]">
           <h3 className="text-4xl leading-none md:text-5xl lg:text-[6.133rem]">
-            Ready to Enroll?
+            Ready to Apply?
           </h3>
           <div className="mb-5 mt-5 text-xl leading-snug lg:mb-[4rem] lg:mt-[2.5rem] lg:text-[3.6rem]">
             Click the link here to complete the TRIAD Rapid Eligibility
@@ -68,10 +67,10 @@ export default function PanelFour() {
           </div>
 
           <Link
-            className="inline-block rounded-full bg-[#9169E8] px-6 py-4 font-bold leading-none text-white shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.6)] hover:bg-[#250A60] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+            className="inline-block rounded-full bg-[#9169E8] px-6 py-4 font-medium leading-none text-white shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.6)] hover:bg-[#FFDADA] hover:text-[#A22727] hover:shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
             href="/#"
           >
-            View Requirements
+            Begin TRIAD Assessment
           </Link>
         </div>
       </div>

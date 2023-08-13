@@ -5,6 +5,7 @@ import { useLayoutEffect, useRef } from 'react';
 export default function PanelOne() {
   const elm_1 = useRef(null);
   const elm_2 = useRef(null);
+  const elm_3 = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -12,16 +13,22 @@ export default function PanelOne() {
         .timeline()
         .addLabel('section1_Start')
         .fromTo(
-          elm_1.current,
-          { y: 100, opacity: 0 },
-          { y: 0, opacity: 1 },
+          elm_3.current,
+          { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6 },
           'section1_Start',
         )
         .fromTo(
-          elm_2.current,
-          { y: 100, opacity: 0 },
+          elm_1.current,
+          { y: 60, opacity: 0 },
           { y: 0, opacity: 1 },
           'section1_Start+=0.1',
+        )
+        .fromTo(
+          elm_2.current,
+          { y: 60, opacity: 0 },
+          { y: 0, opacity: 1 },
+          'section1_Start+=0.2',
         );
     }); // <- scopes all selector text to the root element
 
@@ -30,7 +37,7 @@ export default function PanelOne() {
 
   return (
     <div className="panel relative mb-8 mt-16 px-5 md:mb-10 md:mt-20 lg:mb-[10.667rem] lg:mt-0 lg:px-[4%]">
-      <div>
+      <div ref={elm_3}>
         <Image
           src="/images/our-team-group.jpeg"
           width={1324 * 2}
@@ -42,13 +49,13 @@ export default function PanelOne() {
         <div className="w-full lg:w-1/2">
           <h1
             ref={elm_1}
-            className="text-4xl leading-tight text-[#F7F3FF] md:text-5xl lg:text-[10.667rem] lg:leading-none"
+            className="text-4xl leading-tight -tracking-[2.4px] text-[#F7F3FF] md:text-5xl lg:text-[10.667rem] lg:leading-none lg:-tracking-[0.32rem]"
           >
-            Our Mission
+            Our Team
           </h1>
         </div>
-        <div className="w-full lg:w-1/2">
-          <div className=" mt-6 text-xl leading-snug text-[#F8F4FF] md:text-2xl lg:text-[3.6rem] lg:leading-snug">
+        <div ref={elm_2} className="w-full lg:w-1/2">
+          <div className=" mt-6 text-xl leading-snug -tracking-[1.35px] text-[#F8F4FF] md:text-2xl lg:text-[3.6rem] lg:leading-snug lg:-tracking-[0.18rem]">
             Our team includes expert researchers from diverse disciplines who
             are global leaders in their fields. Our robust culture of
             collaboration fosters creative partnerships and attracts top

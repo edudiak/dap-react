@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
@@ -89,7 +88,11 @@ export default function PanelTwo() {
               </Link>
             </div>
             <div className="pointer-events-none overflow-hidden rounded-tl-full rounded-tr-full lg:-mt-[4rem]">
-              <img src={featuredArticle.image} className="w-full object-cover" alt={featuredArticle.title} />
+              <img
+                src={featuredArticle.image}
+                className="w-full object-cover"
+                alt={featuredArticle.title}
+              />
             </div>
           </div>
         </div>

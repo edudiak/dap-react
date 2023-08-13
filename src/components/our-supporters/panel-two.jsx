@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
@@ -6,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function PanelTwo() {
   return (
-    <div className="relative mb-20 md:mb-40 px-5 lg:mb-[33.333rem] lg:px-[4%]">
+    <div className="relative mb-20 px-5 md:mb-40 lg:mb-[33.333rem] lg:px-[4%]">
       <div className="mb-20 lg:mb-[20rem]">
         <h2 className="mb-8 text-4xl font-medium leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]">
           Our Founders
@@ -22,14 +21,14 @@ export default function PanelTwo() {
               backdropFilter: 'blur(20px)',
             }}
           >
-            <div className="w-1/4 md:w-4/12 p-2 lg:pr-[2rem]">
+            <div className="w-1/4 p-2 md:w-4/12 lg:pr-[2rem]">
               <img
                 src="/images/logos/nia-logo.png"
                 alt="NIA"
                 className="w-full"
               />
             </div>
-            <div className="w-3/4 md:w-8/12 p-2 text-sm sm:text-lg md:text-xl leading-normal lg:text-[3.6rem] lg:leading-normal">
+            <div className="w-3/4 p-2 text-sm leading-normal sm:text-lg md:w-8/12 md:text-xl lg:text-[3.6rem] lg:leading-normal">
               The Dog Aging Project is primarily supported by U19 grant AG057377
               (PI: Dr. Daniel Promislow) from the National Institute on Aging, a
               part of the National Institutes of Health.

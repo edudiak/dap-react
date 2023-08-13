@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import Link from 'next/link';
 import { useLayoutEffect, useRef } from 'react';

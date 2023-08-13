@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useLayoutEffect, useRef } from 'react';

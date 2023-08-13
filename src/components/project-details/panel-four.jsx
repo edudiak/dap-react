@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useLayoutEffect, useRef } from 'react';
@@ -29,7 +28,10 @@ export default function PanelFour() {
       ref={panel}
       className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem]"
     >
-      <div ref={panel_bg} className="absolute min-h-screen w-full">
+      <div
+        ref={panel_bg}
+        className="absolute min-h-[calc(100vh+30px)] w-full lg:min-h-[calc(100vh+10.667rem)]"
+      >
         <img
           src="/images/collaboration-bg.jpeg"
           alt="Section 3"

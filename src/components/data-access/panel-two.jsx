@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
@@ -9,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function PanelTwo() {
   return (
     <div className="relative md:pb-0 lg:pb-[30rem]">
-      <div className="flex flex-wrap gap-y-8 md:gap-y-16 items-center px-5 md:mb-0 lg:mb-[12rem] lg:flex-nowrap lg:px-[8%]">
+      <div className="flex flex-wrap items-center gap-y-8 px-5 md:mb-0 md:gap-y-16 lg:mb-[12rem] lg:flex-nowrap lg:px-[8%]">
         <div className="mb-8 ml-auto w-full lg:-mb-[32rem] lg:w-1/2">
           <h2 className="mb-6 text-4xl leading-none text-[#250A60] md:max-w-[700px] lg:mb-[6.667rem] lg:max-w-[60rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
             Overview of the data access process

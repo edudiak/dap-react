@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { Gradient } from '@/lib/Gradient';
 import { useEffect } from 'react';
 

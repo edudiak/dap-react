@@ -1,5 +1,5 @@
 /* eslint operator-linebreak: "off" */
-/* eslint @next/next/no-img-element: "off" */
+
 import Link from 'next/link';
 
 import ArrowDownIcon from '@assets/images/icons/arrow-down-small.svg';

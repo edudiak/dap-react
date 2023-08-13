@@ -1,5 +1,5 @@
 /* eslint no-unused-expressions : "off" */
-/* eslint @next/next/no-img-element: "off" */
+
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 

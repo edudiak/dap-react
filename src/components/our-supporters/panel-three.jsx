@@ -1,4 +1,3 @@
-/* eslint @next/next/no-img-element: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
@@ -52,7 +51,7 @@ export default function PanelThree() {
         </div>
       </div>
 
-      <div className="flex flex-wrap md:flex-nowrap gap-y-16">
+      <div className="flex flex-wrap gap-y-16 md:flex-nowrap">
         {support.map((item, index) => (
           <div
             key={item.title}

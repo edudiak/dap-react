@@ -7,6 +7,15 @@ export default function PanelOne() {
   const elm_1 = useRef(null);
   const elm_2 = useRef(null);
   const elm_3 = useRef(null);
+  const panel_1 = useRef(null);
+  const elm_4 = useRef(null);
+  const elm_5 = useRef(null);
+  const elm_6 = useRef(null);
+  const panel_2 = useRef(null);
+  const elm_7 = useRef(null);
+  const elm_8 = useRef(null);
+  const elm_9 = useRef(null);
+  const elm_10 = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -31,6 +40,38 @@ export default function PanelOne() {
           { y: 10, opacity: 1 },
           'section1_Start+=0.1',
         );
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: panel_1.current,
+            start: 'top 80%',
+            end: 'bottom 80%',
+            scrub: true,
+          },
+        })
+        .fromTo(elm_4.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 })
+        .fromTo(elm_5.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1 })
+        .fromTo(elm_6.current, { x: 40, opacity: 0 }, { x: 0, opacity: 1 });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: panel_2.current,
+            start: 'top 80%',
+            end: 'bottom 80%',
+            scrub: true,
+          },
+        })
+        .fromTo(elm_7.current, { x: -20, opacity: 0 }, { x: 0, opacity: 1 })
+        .fromTo(elm_8.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1 })
+        .fromTo(elm_9.current, { x: 40, opacity: 0 }, { x: 0, opacity: 1 })
+        .fromTo(
+          '.what-to-expect-list',
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.2 },
+        )
+        .fromTo(elm_10.current, { x: 40, opacity: 0 }, { x: 0, opacity: 1 });
     }); // <- scopes all selector text to the root element
 
     return () => ctx.revert();
@@ -74,13 +115,22 @@ export default function PanelOne() {
         </div>
       </div>
 
-      <div className="relative mb-14 px-5 md:mb-20 lg:mb-[16rem] lg:px-[8%]">
-        <h2 className="mb-8 text-3xl leading-snug text-[#F7F3FF] md:text-4xl lg:mb-[6.667rem] lg:w-1/2 lg:text-[6.267rem] lg:leading-tight">
+      <div
+        ref={panel_1}
+        className="relative mb-14 px-5 md:mb-20 lg:mb-[16rem] lg:px-[8%]"
+      >
+        <h2
+          ref={elm_4}
+          className="mb-8 text-3xl leading-snug text-[#F7F3FF] md:text-4xl lg:mb-[6.667rem] lg:w-1/2 lg:text-[6.267rem] lg:leading-tight"
+        >
           Supporting clients in the Dog Aging Project
         </h2>
         <div className="flex flex-wrap lg:flex-nowrap">
           <div className="w-full lg:w-1/2">
-            <div className="text-lg leading-snug text-[#250A60] lg:text-[2.8rem] lg:leading-snug">
+            <div
+              ref={elm_5}
+              className="text-lg leading-snug text-[#250A60] lg:text-[2.8rem] lg:leading-snug"
+            >
               <p className="mb-4 lg:mb-[2.8rem]">
                 If you are a primary care veterinarian and your client is part
                 of our research study, we will be relying on you to help provide
@@ -96,6 +146,7 @@ export default function PanelOne() {
           </div>
           <div className="w-full lg:w-1/2 lg:pl-[5%]">
             <div
+              ref={elm_6}
               className="mt-8 rounded-3xl p-6 md:mt-20 lg:mt-[25.333rem] lg:rounded-[4rem] lg:p-[5.33rem]"
               style={{
                 background:
@@ -114,10 +165,13 @@ export default function PanelOne() {
         </div>
       </div>
 
-      <div className="relative my-14 flex flex-wrap items-center px-5 md:mb-20 lg:my-[10rem] lg:flex-nowrap lg:pl-[6%] lg:pr-[8%]">
+      <div
+        ref={panel_2}
+        className="relative my-14 flex flex-wrap items-center px-5 md:mb-20 lg:my-[10rem] lg:flex-nowrap lg:pl-[6%] lg:pr-[8%]"
+      >
         <div className="w-full lg:w-1/2 lg:pr-[5%]">
           <div className="flex items-center justify-center">
-            <div className="relative">
+            <div ref={elm_7} className="relative">
               <Image
                 src="/images/what-to-expect.png"
                 alt="what-to-expect"
@@ -128,42 +182,75 @@ export default function PanelOne() {
           </div>
         </div>
         <div className="mt-14 w-full md:mt-20 lg:mt-0 lg:w-1/2">
-          <h3 className="font-plex-mono mb-4 text-xl font-medium uppercase leading-snug text-[#F7F3FF] md:text-2xl lg:mb-[4rem] lg:text-[3.6rem] lg:leading-snug">
+          <h3
+            ref={elm_8}
+            className="font-plex-mono mb-4 text-xl font-medium uppercase leading-snug text-[#F7F3FF] md:text-2xl lg:mb-[4rem] lg:text-[3.6rem] lg:leading-snug"
+          >
             What to Expect
           </h3>
-          <ul className="ml-5 flex list-outside list-disc flex-col flex-wrap gap-y-5 leading-snug text-[#250A60] lg:ml-[3rem] lg:gap-y-[4rem] lg:text-[2.4rem]">
-            <li>
+          <ul
+            ref={elm_9}
+            className="flex flex-col flex-wrap gap-y-5 leading-snug text-[#250A60] lg:gap-y-[4rem] lg:text-[2.4rem]"
+          >
+            <li className="what-to-expect-list flex items-start">
+              <div className="mr-2 mt-2 flex h-2 w-2 shrink-0 items-center justify-center rounded-full border-2 border-[#250A60] lg:mr-[1.333rem] lg:mt-[.8rem] lg:h-[1.8rem] lg:w-[1.8rem]">
+                <div className="h-[.6rem] w-[.6rem] rounded-full bg-[#250A60]" />
+              </div>
               Your client will ask you to provide veterinary electronic medical
               records, which they will upload themselves into their personal
               research portal at the Dog Aging Project.
             </li>
-            <li>
+            <li className="what-to-expect-list flex items-start">
+              <div className="mr-2 mt-2 flex h-2 w-2 shrink-0 items-center justify-center rounded-full border-2 border-[#250A60] lg:mr-[1.333rem] lg:mt-[.8rem] lg:h-[1.8rem] lg:w-[1.8rem]" />
               If your clinic is IDEXX-connected, we will send you an email
               requesting your consent to share veterinary records. Please follow
               the directions in that email to do so.
             </li>
-            <li>
-              Depending on the specific study cohort in which your client is
-              enrolled, they may ask you for help collecting biological samples
-              for analysis in Dog Aging Project labs. For more detailed
-              information, please refer to our FAQ for veterinarians.
+            <li className="what-to-expect-list flex items-start">
+              <div className="mr-2 mt-2 flex h-2 w-2 shrink-0 items-center justify-center rounded-full border-2 border-[#250A60] lg:mr-[1.333rem] lg:mt-[.8rem] lg:h-[1.8rem] lg:w-[1.8rem]">
+                <div className="h-[.6rem] w-[.6rem] rounded-full bg-[#250A60]" />
+              </div>
+              <div>
+                Depending on the specific study cohort in which your client is
+                enrolled, they may ask you for help collecting biological
+                samples for analysis in Dog Aging Project labs. For more
+                detailed information, please refer to our{' '}
+                <a href="#" className="underline">
+                  FAQ for veterinarians
+                </a>
+                .
+              </div>
             </li>
-            <li>
+            <li className="what-to-expect-list flex items-start">
+              <div className="mr-2 mt-2 flex h-2 w-2 shrink-0 items-center justify-center rounded-full border-2 border-[#250A60] lg:mr-[1.333rem] lg:mt-[.8rem] lg:h-[1.8rem] lg:w-[1.8rem]">
+                <div className="h-[.6rem] w-[.6rem] rounded-full bg-[#250A60]" />
+              </div>
               Your client may ask you to help complete a Chronic Disease
               Inventory. This survey collects information about chronic health
               conditions experienced by the dog. Our team uses this information
               to construct a multimorbidity index.
             </li>
-            <li>
-              If you have questions for our team or need assistance with any of
-              these tasks, please contact us
+            <li className="what-to-expect-list flex items-start">
+              <div className="mr-2 mt-2 flex h-2 w-2 shrink-0 items-center justify-center rounded-full border-2 border-[#250A60] lg:mr-[1.333rem] lg:mt-[.8rem] lg:h-[1.8rem] lg:w-[1.8rem]">
+                <div className="h-[.6rem] w-[.6rem] rounded-full bg-[#250A60]" />
+              </div>
+              <div>
+                If you have questions for our team or need assistance with any
+                of these tasks, please contact us
+                <Link
+                  href="/contact-us"
+                  className="mt-2 block font-bold lg:mt-[1rem]"
+                >
+                  Contact the Team
+                </Link>
+              </div>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="relative px-5 lg:pl-[6%] lg:pr-[8%]">
-        <div className="w-full lg:w-1/2">
+        <div ref={elm_10} className="w-full lg:w-1/2">
           <h3 className="font-plex-mono text-xl font-medium uppercase leading-snug text-[#F7F3FF] md:text-2xl lg:text-[3.6rem] lg:leading-snug">
             Want to Know More?
           </h3>
