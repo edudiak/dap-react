@@ -16,7 +16,6 @@ export default function SmoothScroll({ children }) {
       ScrollSmoother.create({
         smooth: 2,
         effects: true,
-        smoothTouch: 0.1,
       });
     }, root); // <- scopes all selector text to the root element
     return () => ctx.revert();
