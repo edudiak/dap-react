@@ -67,7 +67,7 @@ export default function HomePanelTwo() {
           className="absolute -top-[10%] left-0 w-full md:-top-1/4 lg:-top-[90%]"
         >
           <source src="/videos/dna-video.webm" type="video/webm" />
-          <source src="/videos/dna-video.mp4" type="video/mp4" />
+          <source src="/videos/dna-video.mp4" type='video/mp4; codecs="hvc1"' />
         </video>
         <div
           ref={elm_1}
