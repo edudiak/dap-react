@@ -11,18 +11,12 @@ export default function PanelOne() {
     const ctx = gsap.context(() => {
       gsap
         .timeline()
-        .addLabel('section1_Start')
-        .fromTo(
-          elm_1.current,
-          { y: 100, opacity: 0 },
-          { y: 0, opacity: 1 },
-          'section1_Start',
-        )
+        .fromTo(elm_1.current, { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
         .fromTo(
           elm_2.current,
           { y: 100, opacity: 0 },
           { y: 0, opacity: 1 },
-          'section1_Start+=0.1',
+          '<+=0.1',
         );
     }); // <- scopes all selector text to the root element
 
@@ -101,12 +95,18 @@ export default function PanelOne() {
   return (
     <>
       <div className="relative flex flex-wrap-reverse items-center px-5 pb-16 md:pb-24 lg:flex-nowrap lg:pb-[20rem] lg:pl-[8%] lg:pr-[2%]">
-        <div className="mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
+        <div className="mt-16 w-full md:mt-20 lg:mt-0">
           <h1
             ref={elm_1}
-            className="text-4xl leading-tight text-[#514730] md:text-5xl lg:max-w-[92rem] lg:text-[10.667rem] lg:leading-none"
+            className="flex items-center text-4xl leading-tight text-[#514730] md:text-5xl lg:text-[10.667rem] lg:leading-none"
           >
-            Press Resources
+            DAP Resources{' '}
+            <a
+              href="#"
+              className="inline-block rounded-full bg-[#F7F3FF] px-6 py-3 text-center font-medium leading-none text-[#847553] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white hover:shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] md:ml-[2.6rem] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+            >
+              Contact Media Relations
+            </a>
           </h1>
           <div
             ref={elm_2}
@@ -117,15 +117,14 @@ export default function PanelOne() {
             interviews with topic experts and spokespersons, background
             information, fact-checking, records requests, filming access,
             official statements and other communications. Please reach the Media
-            Relations team at:{' '}
-            <a href="mailto:mediarelations@uw.edu">mediarelations@uw.edu</a>.
+            Relations team.
           </div>
         </div>
       </div>
       <div className="px-5 pb-24 md:pb-40 lg:px-[8%] lg:pb-[20rem]">
         <div className="grid grid-cols-1 gap-y-5 lg:grid-cols-2 lg:gap-x-[10rem] lg:gap-y-[8rem]">
           <div className="w-full">
-            <h2 className="mb-4 text-4xl font-medium leading-none text-[#514730] lg:mb-[4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
+            <h2 className="mb-4 text-4xl leading-none text-[#514730] lg:mb-[4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
               The DAP Logo
             </h2>
             <div className="leading-normal text-[#514730] lg:text-[2.4rem]">

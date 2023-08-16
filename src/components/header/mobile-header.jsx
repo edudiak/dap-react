@@ -215,8 +215,8 @@ export default function MobileHeader() {
               <Link onClick={() => setReversed(true)} href="/media">
                 News Coverage
               </Link>
-              <Link onClick={() => setReversed(true)} href="/press-resources">
-                Press Resources
+              <Link onClick={() => setReversed(true)} href="/press-enquiries">
+                Press Enquiries
               </Link>
             </MenuWithDropdown>
 

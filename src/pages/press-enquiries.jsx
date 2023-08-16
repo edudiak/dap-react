@@ -1,5 +1,5 @@
-import PanelOne from '@/components/press-resources/panel-one';
-import PanelTwo from '@/components/press-resources/panel-two';
+import PanelOne from '@/components/press-enquiries/panel-one';
+import PanelTwo from '@/components/press-enquiries/panel-two';
 
 export default function PressResources() {
   return (

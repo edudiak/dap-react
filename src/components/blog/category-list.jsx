@@ -11,6 +11,20 @@ export default function CategoryList() {
 
   const categories = [
     {
+      title: 'General',
+      slug: 'general',
+      description:
+        'Posts in this series introduce recent papers published in the scientific literature by members of the Dog Aging Project research team.',
+      active: true,
+    },
+    {
+      title: 'Community Science',
+      slug: 'community-science',
+      description:
+        'Posts in this series introduce recent papers published in the scientific literature by members of the Dog Aging Project research team.',
+      active: true,
+    },
+    {
       title: 'Scientific Results',
       slug: 'scientific-results',
       description:
@@ -39,6 +53,13 @@ export default function CategoryList() {
       active: false,
     },
     {
+      title: 'Dog Geroscience',
+      slug: 'dog-geroscience',
+      description:
+        'Posts in this series take a deep dive into the physiological and biochemical research being conducted in the  Precision Cohort study to provide a precise investigation of the physiological processes that underlie health and aging in a wide range of dogs.',
+      active: false,
+    },
+    {
       title: 'Canine Cognition',
       slug: 'canine-cognition',
       description:
@@ -46,8 +67,15 @@ export default function CategoryList() {
       active: false,
     },
     {
-      title: 'Senior Dog Care',
-      slug: 'senior-dog-care',
+      title: 'Senior Dogs',
+      slug: 'senior-dogs',
+      description:
+        'Posts in this series focus on common challenges that older dogs face and provide tools to help your senior dog maintain an optimal quality of life for as long as possible.',
+      active: false,
+    },
+    {
+      title: 'Inside TRIAD',
+      slug: 'inside-triad',
       description:
         'Posts in this series focus on common challenges that older dogs face and provide tools to help your senior dog maintain an optimal quality of life for as long as possible.',
       active: false,

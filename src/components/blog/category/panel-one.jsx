@@ -1,14 +1,14 @@
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
-
+import { useLayoutEffect, useRef } from 'react';
 import CategoryList from '../category-list';
 
 import ArrowRight from '@assets/images/icons/arrow-right.svg';
 
-gsap.registerPlugin(ScrollTrigger);
+export default function PanelOne() {
+  const elm_1 = useRef(null);
+  const elm_2 = useRef(null);
 
-export default function PanelTwo() {
   const featuredArticle = {
     title:
       'Demographic factor associated with joint supplement use in dogs from the Dog Aging Project',
@@ -20,10 +20,49 @@ export default function PanelTwo() {
     image: '/images/blog/blog-grid-2.jpg',
   };
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline()
+        .addLabel('section1_Start')
+        .fromTo(
+          elm_1.current,
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1 },
+          'section1_Start',
+        )
+        .fromTo(
+          elm_2.current,
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1 },
+          'section1_Start+=0.1',
+        );
+    }); // <- scopes all selector text to the root element
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="px-5 pb-10 md:pb-16 lg:px-[2%] lg:pb-[8rem]">
-      <div className="grid grid-cols-1 gap-x-6 md:grid-cols-7 lg:gap-x-[5.333rem]">
-        <div className="col-span-full lg:col-span-5">
+    <div className="relative flex justify-between px-5 pb-16 md:pb-20 lg:flex-nowrap lg:pb-[10rem] lg:pl-[4%] lg:pr-[4%]">
+      <div className="mt-20 w-full lg:mt-[5rem]">
+        <div className="mb-20 lg:mb-[12rem] lg:pl-[4%]">
+          <h1
+            ref={elm_1}
+            className="text-4xl leading-tight text-[#532EA4] md:text-5xl lg:max-w-[112rem] lg:text-[10.667rem] lg:leading-none"
+          >
+            Our Science Explained
+          </h1>
+          <div
+            ref={elm_2}
+            className="mt-6 text-lg leading-snug text-[#250A60] md:text-xl lg:mt-[3rem] lg:max-w-[112rem] lg:text-[3.6rem] lg:leading-snug"
+          >
+            Our participants and their dogs make our science possible. The
+            articles here explain our research design and scientific discoveries
+            in clear, concise language that is accessible to all.
+          </div>
+        </div>
+
+        <div className="">
           <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
             Featured article
           </h2>
@@ -72,10 +111,10 @@ export default function PanelTwo() {
             </div>
           </article>
         </div>
+      </div>
 
-        <div className="col-span-full mt-14 md:mt-20 lg:col-span-2 lg:mt-0">
-          <CategoryList />
-        </div>
+      <div className="w-full shrink-0 lg:ml-[2.667rem] lg:max-w-[40rem]">
+        <CategoryList />
       </div>
     </div>
   );

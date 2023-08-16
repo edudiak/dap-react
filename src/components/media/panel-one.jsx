@@ -1,3 +1,4 @@
+/* eslint react/no-array-index-key: "off" */
 import { gsap } from 'gsap';
 import Link from 'next/link';
 import { useLayoutEffect, useRef } from 'react';
@@ -95,7 +96,7 @@ export default function PanelOne() {
           </h1>
         </div>
       </div>
-      <div className="px-5 pb-24 md:pb-40 lg:px-[2%] lg:pb-[20rem]">
+      <div className="px-5 pb-24 md:pb-40 lg:px-[4%] lg:pb-[20rem]">
         <h2
           ref={elm_2}
           className="mb-6 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[6.4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]"
@@ -107,9 +108,9 @@ export default function PanelOne() {
             ref={panel_1}
             className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-[5.333rem]"
           >
-            {featuredMediaStories.map((story) => (
+            {featuredMediaStories.map((story, index) => (
               <div
-                key={story.title}
+                key={index}
                 className="featured-story relative flex w-full flex-col items-stretch overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem]"
               >
                 <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[0px_0px_7px_0px_rgba(0,0,0,0.70)_inset] lg:rounded-[4rem]" />
@@ -131,9 +132,9 @@ export default function PanelOne() {
                     </p>
                     <p className="flex w-1/2 items-center justify-end gap-x-3 text-sm font-medium lg:gap-x-[1.333rem] lg:text-[2.133rem]">
                       <Link href={story.link}>Go to the article</Link>
-                      <div className="svg_icon w-5 text-transparent lg:w-[3.333rem]">
+                      <span className="svg_icon w-5 text-transparent lg:w-[3.333rem]">
                         <ArrowWithCircle />
-                      </div>
+                      </span>
                     </p>
                   </div>
                 </div>

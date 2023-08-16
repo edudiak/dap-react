@@ -1,3 +1,4 @@
+/* eslint react/no-array-index-key: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
@@ -201,12 +202,13 @@ export default function PanelTwo() {
             trigger: panel_1.current,
             start: 'top 70%',
             end: 'bottom bottom',
+            toggleActions: 'restart none none none',
           },
         })
         .fromTo(
           '.recent-story',
           { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, stagger: 0.2 },
+          { y: 0, opacity: 1, stagger: 0.1 },
         );
     }); // <- scopes all selector text to the root element
 
@@ -214,7 +216,7 @@ export default function PanelTwo() {
   }, []);
 
   return (
-    <div className="px-5 lg:px-[2%]">
+    <div className="px-5 lg:px-[4%]">
       <h2
         ref={elm_1}
         className="mb-6 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[6.4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]"
@@ -226,9 +228,9 @@ export default function PanelTwo() {
           ref={panel_1}
           className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:gap-[5.333rem]"
         >
-          {recentMediaStories.map((story) => (
+          {recentMediaStories.map((story, index) => (
             <div
-              key={story.title}
+              key={index}
               className="recent-story relative w-full overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem]"
             >
               <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[0px_0px_7px_0px_rgba(0,0,0,0.70)_inset] lg:rounded-[4rem]" />
@@ -247,9 +249,9 @@ export default function PanelTwo() {
                   </p>
                   <p className="flex w-1/2 items-center justify-end gap-x-3 text-sm font-medium lg:gap-x-[1.333rem] lg:text-[2.133rem]">
                     <Link href={story.link}>Go to the article</Link>
-                    <div className="svg_icon w-5 text-transparent lg:w-[3.333rem]">
+                    <span className="svg_icon w-5 text-transparent lg:w-[3.333rem]">
                       <ArrowWithCircle />
-                    </div>
+                    </span>
                   </p>
                 </div>
               </div>
