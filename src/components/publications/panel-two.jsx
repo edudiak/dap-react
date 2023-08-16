@@ -1,5 +1,7 @@
+/* eslint react/no-array-index-key: "off" */
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useRef } from 'react';
 
 import SearchIcon from '@assets/images/icons/search.svg';
 import Link from 'next/link';
@@ -7,14 +9,52 @@ import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PanelTwo() {
+  const panel_1 = useRef(null);
+  const elm_1 = useRef(null);
+  const elm_2 = useRef(null);
+  const panel_2 = useRef(null);
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: panel_1.current,
+        start: 'top 90%',
+        end: 'bottom bottom',
+        scrub: 1,
+      },
+    })
+    .fromTo(elm_1.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 })
+    .fromTo(elm_2.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 });
+
+  // gsap
+  //   .timeline({
+  //     scrollTrigger: {
+  //       trigger: panel_2.current,
+  //       start: 'top 90%',
+  //       end: 'bottom bottom',
+  //       scrub: 1,
+  //     },
+  //   })
+  //   .fromTo(
+  //     '.publication-post',
+  //     { y: 30, opacity: 0 },
+  //     { y: 0, opacity: 1, stagger: 0.2 },
+  //   );
+
   return (
     <div className="relative px-5 lg:px-[4%]">
       <div>
-        <div className="mb-10 flex flex-wrap items-center justify-center sm:flex-nowrap sm:justify-end lg:mb-[5.333rem]">
-          <h4 className="p-4 text-lg text-[#532EA4] lg:mr-[3rem] lg:text-[4.8rem]">
+        <div
+          ref={panel_1}
+          className="mb-10 flex flex-wrap items-center justify-center sm:flex-nowrap sm:justify-end lg:mb-[5.333rem]"
+        >
+          <h4
+            ref={elm_1}
+            className="p-4 text-lg text-[#532EA4] lg:mr-[3rem] lg:text-[4.8rem]"
+          >
             Search publications
           </h4>
-          <div className="relative">
+          <div ref={elm_2} className="relative">
             <input
               type="text"
               placeholder="Enter search terms here"
@@ -30,6 +70,7 @@ export default function PanelTwo() {
         </div>
 
         <div
+          ref={panel_2}
           className="overflow-hidden rounded-3xl text-[#250A60] lg:rounded-[4rem] lg:p-[5.333rem]"
           style={{
             background:
@@ -39,10 +80,10 @@ export default function PanelTwo() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          {[...Array(10)].map((item) => (
+          {[...Array(10)].map((item, index) => (
             <article
-              key={item}
-              className="mb-4 border-b-2 border-b-[#C0A4FF] p-4 pb-5 sm:mb-10 lg:mb-[10.667rem] lg:border-b-[0.267rem] lg:pb-[5.333rem]"
+              key={index}
+              className="publication-post mb-4 border-b-2 border-b-[#C0A4FF] p-4 pb-5 sm:mb-10 lg:mb-[10.667rem] lg:border-b-[0.267rem] lg:pb-[5.333rem]"
             >
               <Link
                 href="#"
@@ -89,9 +130,11 @@ export default function PanelTwo() {
 
             {[...Array(5)].map((item, index) => (
               <button
-                key={item}
+                key={index}
                 type="button"
-                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#790F0F] transition hover:bg-[#790F0F] hover:text-white lg:h-[4.267rem] lg:w-[4.267rem] lg:border-[0.267rem]"
+                className={`flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#790F0F] transition hover:bg-[#FF9494] ${
+                  index + 1 === 1 ? 'bg-[#FF9494]' : ''
+                } lg:h-[4.267rem] lg:w-[4.267rem] lg:border-[0.267rem]`}
               >
                 {index + 1}
               </button>

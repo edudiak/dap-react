@@ -148,7 +148,7 @@ export default function PanelTwo() {
           scrollTrigger: {
             trigger: panel_1.current,
             start: 'top 90%',
-            end: 'bottom 80%',
+            end: 'bottom 90%',
             scrub: 1,
           },
         })
@@ -178,7 +178,7 @@ export default function PanelTwo() {
           scrollTrigger: {
             trigger: panel_2.current,
             start: 'top 90%',
-            end: 'bottom 80%',
+            end: 'bottom 90%',
             scrub: 1,
           },
         })
@@ -193,7 +193,7 @@ export default function PanelTwo() {
           scrollTrigger: {
             trigger: elm_3.current,
             start: 'top 90%',
-            end: 'bottom 80%',
+            end: 'bottom 90%',
             scrub: 1,
           },
         })
@@ -208,7 +208,7 @@ export default function PanelTwo() {
           scrollTrigger: {
             trigger: panel_3.current,
             start: 'top 90%',
-            end: 'bottom 80%',
+            end: 'bottom 90%',
             scrub: 1,
           },
         })
