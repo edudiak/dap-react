@@ -21,17 +21,18 @@ export default function Home() {
 
   return (
     <div>
-      <div
-        className="relative pb-36 pt-36 md:pb-52 md:pt-20 lg:pb-[30rem] lg:pt-[28rem]"
-        style={{
-          background:
-            'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #8A5DD2 7.93%, #250A60 100%)',
-        }}
-      >
+      <div className="relative pb-36 pt-36 md:pb-52 md:pt-20 lg:pb-[30rem] lg:pt-[28rem]">
         <canvas
           id="gradient-canvas"
           data-transition-in
           className="pointer-events-none absolute left-0 top-0 h-full w-full"
+        />
+
+        <div
+          className="pointer-events-none absolute left-0 top-0 h-full w-full"
+          style={{
+            background: 'url(/images/dap-bg-noise-20.png) repeat',
+          }}
         />
         <HomePanelOne />
 

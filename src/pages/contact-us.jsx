@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLayoutEffect, useRef } from 'react';
 
@@ -39,7 +40,7 @@ export default function ContactUs() {
         }}
       >
         <div className="mx-auto w-full lg:max-w-[122rem]">
-          <div className="md:pb-18 relative flex flex-wrap-reverse items-center px-5 pb-12 text-white lg:flex-nowrap lg:px-0 lg:pb-[13.333rem]">
+          <div className="md:pb-18 relative z-[1] flex flex-wrap-reverse items-center px-5 pb-12 text-white lg:flex-nowrap lg:px-0 lg:pb-[13.333rem]">
             <div className="mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
               <h1
                 ref={elm_1}
@@ -49,15 +50,30 @@ export default function ContactUs() {
               </h1>
               <div
                 ref={elm_2}
-                className="mt-6 text-lg leading-snug md:text-xl lg:mt-[5.333rem] lg:text-[3.6rem] lg:leading-snug"
+                className="mt-6 text-lg leading-snug md:text-xl lg:mt-[4rem] lg:max-w-[67rem] lg:text-[3.6rem] lg:leading-snug"
               >
                 If you have comments, questions, requests or media inquiries,
                 please use the form below to drop us a note!
               </div>
             </div>
           </div>
+          <div className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:absolute lg:right-[2%] lg:top-[6%] lg:mx-0 lg:max-w-[75rem]">
+            <div className="relative p-4 lg:p-14">
+              <div className="absolute left-0 top-0 h-full w-full rotate-[110deg] transform rounded-full border-[7px] border-[#532EA4] border-b-transparent" />
+              <div className="overflow-hidden rounded-full">
+                <Image
+                  src="/images/contact-thumb.png"
+                  alt="dog-13"
+                  width={1000}
+                  height={1000}
+                  priority
+                  className="overflow-hidden rounded-full"
+                />
+              </div>
+            </div>
+          </div>
           <div
-            className="rounded-3xl px-3 sm:px-6 mx-5 py-8 lg:rounded-[5.333rem] lg:px-[4rem] lg:py-[5.333rem]"
+            className="mx-5 rounded-3xl px-3 py-8 sm:px-6 lg:rounded-[5.333rem] lg:px-[4rem] lg:py-[5.333rem]"
             style={{
               boxShadow:
                 '0px 0px 0px 0px rgba(0, 0, 0, 0.10), 2px 3px 8px 0px rgba(0, 0, 0, 0.10), 8px 12px 14px 0px rgba(0, 0, 0, 0.09), 18px 26px 19px 0px rgba(0, 0, 0, 0.05), 31px 46px 22px 0px rgba(0, 0, 0, 0.01), 49px 73px 25px 0px rgba(0, 0, 0, 0.00)',
@@ -149,12 +165,12 @@ export default function ContactUs() {
             </div>
           </div>
 
-          <div className="mt-14 px-5 text-white md:mt-24 lg:mt-[20rem]">
+          <div className="mt-14 px-5 text-white md:mt-24 lg:mt-[20rem] lg:px-[4%]">
             <h2 className="mb-4 text-4xl font-medium leading-none lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
               Media Relation Inquiries
             </h2>
             <div className="leading-normal lg:text-[2.4rem]">
-              <p className="mb-4 lg:mb-[2rem]">
+              <p className="mb-4 lg:mb-[2.667rem]">
                 The UW Medicine Media Relations team handles media inquiries for
                 the Dog Aging Project along with other media requests for UW
                 Medicine, including the University of Washington School of

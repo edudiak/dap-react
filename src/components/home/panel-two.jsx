@@ -31,7 +31,7 @@ export default function HomePanelTwo() {
             .timeline({
               scrollTrigger: {
                 trigger: panel.current,
-                start: isDesktop ? 'top 95%' : 'top bottom',
+                start: isDesktop ? 'top bottom' : 'top bottom',
                 end: isDesktop ? 'bottom 90%' : 'bottom 95%',
                 scrub: 1,
               },
