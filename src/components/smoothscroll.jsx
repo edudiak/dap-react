@@ -15,7 +15,7 @@ export default function SmoothScroll({ children }) {
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
       ScrollSmoother.create({
-        smooth: 2,
+        smooth: 1.7,
         effects: true,
       });
     }, root); // <- scopes all selector text to the root element

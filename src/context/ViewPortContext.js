@@ -25,7 +25,7 @@ export function ViewportProvider({ children }) {
 
   const handleWindowResize = () => {
     clearTimeout(resizeID);
-    resizeID = setTimeout(doneResizing, 10);
+    resizeID = setTimeout(doneResizing, 100);
   };
 
   useIsomorphicLayoutEffect(() => {
