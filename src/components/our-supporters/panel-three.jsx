@@ -46,7 +46,7 @@ export default function PanelThree() {
             trigger: panel_1.current,
             start: 'top 90%',
             end: 'bottom bottom',
-            scrub: 1,
+            scrub: true,
           },
         })
         .fromTo(elm_1.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 })
@@ -58,7 +58,7 @@ export default function PanelThree() {
             trigger: panel_2.current,
             start: 'top 90%',
             end: 'bottom bottom',
-            scrub: 1,
+            scrub: true,
           },
         })
         .fromTo(
@@ -72,7 +72,7 @@ export default function PanelThree() {
             trigger: elm_3.current,
             start: 'top 90%',
             end: 'bottom bottom',
-            scrub: 1,
+            scrub: true,
           },
         })
         .fromTo(elm_3.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1 });

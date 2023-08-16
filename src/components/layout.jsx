@@ -1,11 +1,12 @@
-import gsap from 'gsap';
-import { useLayoutEffect, useRef, useState } from 'react';
-import { SwitchTransition, Transition } from 'react-transition-group';
 import useViewport from '@/hooks/useViewport';
+import gsap from 'gsap';
 import { useRouter } from 'next/router';
+import { useRef, useState } from 'react';
+import { SwitchTransition, Transition } from 'react-transition-group';
 
-import SmoothScroll from './smoothscroll';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import MobileHeader from './header/mobile-header';
+import SmoothScroll from './smoothscroll';
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -17,7 +18,7 @@ export default function Layout({ children }) {
   const { width, height } = useViewport();
   const [isLoading, setIsLoaded] = useState(true);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (width !== 0 && height !== 0) {
       setIsLoaded(false); // This is to fix the hydration issue with the useLayoutEffect.
     }

@@ -1,7 +1,7 @@
 /* eslint no-unused-expressions : "off" */
-
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 
 export default function PageLoader({ loading }) {
   const wrapper = useRef(null);
@@ -11,7 +11,7 @@ export default function PageLoader({ loading }) {
   const pulseCircle = useRef(null);
   const [tl, setTl] = useState();
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const t = gsap
         .timeline()

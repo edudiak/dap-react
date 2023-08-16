@@ -1,7 +1,8 @@
 /* eslint operator-linebreak: "off" */
 /* eslint react/jsx-no-constructed-context-values: "off" */
 /* eslint react-hooks/exhaustive-deps: "off" */
-import { createContext, useEffect, useLayoutEffect, useState } from 'react';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
+import { createContext, useEffect, useState } from 'react';
 
 export const ViewportContext = createContext({});
 
@@ -27,7 +28,7 @@ export function ViewportProvider({ children }) {
     resizeID = setTimeout(doneResizing, 10);
   };
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
     const rem = calculateGlobalRem();

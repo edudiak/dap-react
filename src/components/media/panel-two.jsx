@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
+import { useLayoutEffect, useRef } from 'react';
 
 import ArrowWithCircle from '@assets/images/icons/arrow-with-circle.svg';
 
@@ -177,17 +178,58 @@ export default function PanelTwo() {
       link: '/media/featured-media-stories/dr-universe-is-it-true-that-seven-human-years-equals-one-dog-year',
     },
   ];
+
+  const elm_1 = useRef(null);
+  const panel_1 = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: elm_1.current,
+            start: 'top bottom',
+            end: 'bottom 80%',
+            scrub: true,
+          },
+        })
+        .fromTo(elm_1.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: panel_1.current,
+            start: 'top 70%',
+            end: 'bottom bottom',
+          },
+        })
+        .fromTo(
+          '.recent-story',
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.2 },
+        );
+    }); // <- scopes all selector text to the root element
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="px-5 lg:px-[2%]">
-      <h2 className="mb-6 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[6.4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
+      <h2
+        ref={elm_1}
+        className="mb-6 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[6.4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]"
+      >
         Recent Media Stories
       </h2>
       {recentMediaStories.length > 0 ? (
-        <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:gap-[5.333rem]">
+        <div
+          ref={panel_1}
+          className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:gap-[5.333rem]"
+        >
           {recentMediaStories.map((story) => (
             <div
               key={story.title}
-              className="relative w-full overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem]"
+              className="recent-story relative w-full overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem]"
             >
               <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[0px_0px_7px_0px_rgba(0,0,0,0.70)_inset] lg:rounded-[4rem]" />
               <div className="flex h-full flex-wrap items-stretch p-4 lg:p-[2.667rem]">

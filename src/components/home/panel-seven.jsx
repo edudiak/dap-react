@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Link from 'next/link';
+import { useLayoutEffect, useRef } from 'react';
 
 import ArrowRight from '@assets/images/icons/arrow-right.svg';
 

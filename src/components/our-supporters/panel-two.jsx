@@ -24,13 +24,13 @@ export default function PanelTwo() {
         .timeline({
           scrollTrigger: {
             trigger: panel_1.current,
-            start: 'top 90%',
-            end: 'bottom bottom',
-            scrub: 1,
+            start: 'top bottom',
+            end: 'bottom 80%',
+            scrub: true,
           },
         })
         .fromTo(elm_1.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 })
-        .fromTo(elm_2.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1 });
+        .fromTo(elm_2.current, { y: 60, opacity: 0 }, { y: 0, opacity: 1 });
 
       gsap
         .timeline({
@@ -38,7 +38,7 @@ export default function PanelTwo() {
             trigger: panel_2.current,
             start: 'top 90%',
             end: 'bottom bottom',
-            scrub: 1,
+            scrub: true,
           },
         })
         .fromTo(elm_3.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 })
@@ -50,7 +50,7 @@ export default function PanelTwo() {
             trigger: panel_3.current,
             start: 'top 90%',
             end: 'bottom bottom',
-            scrub: 1,
+            scrub: true,
           },
         })
         .fromTo(elm_5.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 })
@@ -62,7 +62,7 @@ export default function PanelTwo() {
             trigger: panel_4.current,
             start: 'top 90%',
             end: 'bottom bottom',
-            scrub: 1,
+            scrub: true,
           },
         })
         .fromTo(elm_7.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 })
@@ -84,14 +84,7 @@ export default function PanelTwo() {
         <div className="max-w-full lg:max-w-[63%]">
           <div
             ref={elm_2}
-            className="flex items-center overflow-hidden rounded-3xl text-[#250A60] lg:rounded-[4rem] lg:p-[4rem]"
-            style={{
-              background:
-                'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
-              backgroundBlendMode: 'overlay, normal, normal',
-              boxShadow: '0px 0px 14px 3px rgba(0, 0, 0, 0.3)',
-              backdropFilter: 'blur(20px)',
-            }}
+            className="white-gradient-box flex items-center overflow-hidden rounded-3xl text-[#250A60] shadow-[0px_0px_14px_3px_rgba(0,0,0,0.3)] backdrop-blur-[20px] lg:rounded-[4rem] lg:p-[4rem] lg:backdrop-blur-[2.667rem]"
           >
             <div className="w-1/4 p-2 md:w-4/12 lg:pr-[2rem]">
               <img

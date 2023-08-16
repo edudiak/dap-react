@@ -7,6 +7,7 @@ import ArrowWithCircle from '@assets/images/icons/arrow-with-circle.svg';
 export default function PanelOne() {
   const elm_1 = useRef(null);
   const elm_2 = useRef(null);
+  const panel_1 = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -21,9 +22,15 @@ export default function PanelOne() {
         )
         .fromTo(
           elm_2.current,
-          { y: 100, opacity: 0 },
-          { y: 0, opacity: 1 },
-          'section1_Start+=0.1',
+          { x: -60, opacity: 0 },
+          { x: 0, opacity: 1 },
+          'section1_Start',
+        )
+        .fromTo(
+          '.featured-story',
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.2 },
+          'section1_Start+=.2',
         );
     }); // <- scopes all selector text to the root element
 
@@ -89,15 +96,21 @@ export default function PanelOne() {
         </div>
       </div>
       <div className="px-5 pb-24 md:pb-40 lg:px-[2%] lg:pb-[20rem]">
-        <h2 className="mb-6 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[6.4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]">
+        <h2
+          ref={elm_2}
+          className="mb-6 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[6.4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]"
+        >
           Featured Media Stories
         </h2>
         {featuredMediaStories.length > 0 ? (
-          <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-[5.333rem]">
+          <div
+            ref={panel_1}
+            className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-[5.333rem]"
+          >
             {featuredMediaStories.map((story) => (
               <div
                 key={story.title}
-                className="relative flex w-full flex-col items-stretch overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem]"
+                className="featured-story relative flex w-full flex-col items-stretch overflow-hidden rounded-[20px] bg-white lg:rounded-[4rem]"
               >
                 <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[0px_0px_7px_0px_rgba(0,0,0,0.70)_inset] lg:rounded-[4rem]" />
                 <div className="shrink-0 overflow-hidden rounded-[20px] lg:rounded-[4rem]">

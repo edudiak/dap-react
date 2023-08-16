@@ -15,24 +15,23 @@ export default function PanelFive() {
         .timeline({
           scrollTrigger: {
             trigger: elm_1.current,
-            start: 'top 90%',
-            end: 'bottom 80%',
+            start: 'top bottom',
+            end: 'bottom 75%',
             scrub: true,
           },
         })
-        .fromTo(elm_1.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 }, 0)
-        .fromTo(elm_2.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 }, 0);
+        .fromTo(elm_1.current, { x: -60, opacity: 0 }, { x: 0, opacity: 1 }, 0);
 
       gsap
         .timeline({
           scrollTrigger: {
             trigger: elm_2.current,
-            start: 'top 90%',
-            end: 'bottom 80%',
+            start: 'top bottom',
+            end: 'bottom 75%',
             scrub: true,
           },
         })
-        .fromTo(elm_2.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 }, 0);
+        .fromTo(elm_2.current, { x: 60, opacity: 0 }, { x: 0, opacity: 1 });
     }); // <- scopes all selector text to the root element
 
     return () => ctx.revert();

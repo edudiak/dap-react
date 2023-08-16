@@ -64,6 +64,7 @@ export default function PanelOne() {
               alt="dog-13"
               width={2000}
               height={2000}
+              priority
               className="overflow-hidden rounded-full"
             />
           </div>

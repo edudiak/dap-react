@@ -1,8 +1,9 @@
 import { gsap } from 'gsap';
 import { ScrollSmoother } from 'gsap/dist/ScrollSmoother';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useLayoutEffect, useRef } from 'react';
+import { useRef } from 'react';
 
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import Footer from './footer';
 import Header from './header';
 
@@ -11,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 export default function SmoothScroll({ children }) {
   const root = useRef(null);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
       ScrollSmoother.create({
         smooth: 2,
