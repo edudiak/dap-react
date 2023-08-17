@@ -49,7 +49,7 @@ export default function PanelThree() {
 
   return (
     <div
-      className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-white pt-20 lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:pb-[80rem] lg:pt-[21.333rem] "
+      className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] bg-white px-5 pb-[16rem] pt-20 sm:pb-[20rem] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem] lg:pb-[80rem] lg:pt-[21.333rem] "
       style={{
         background:
           'url(/images/dap-bg-noise-20.png), linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%), linear-gradient(180deg, #250A60 0%, #250A60 0.01%, #9169E8 100%, #F37676 100%), linear-gradient(0deg, #FFDADA 0%, #FFDADA 100%), #FFF',
@@ -101,7 +101,7 @@ export default function PanelThree() {
         </div>
         <div
           data-speed={1.07}
-          className="absolute top-[93%] flex max-w-[25%] items-center justify-center md:top-[88%] lg:right-[41%] lg:top-[100%] lg:max-w-[20%]"
+          className="absolute top-[100%] flex max-w-[25%] items-center justify-center sm:top-[93%] md:top-[88%] lg:right-[41%] lg:top-[100%] lg:max-w-[20%]"
         >
           <div className="absolute -right-2 flex h-[calc(100%+1rem)] w-[calc(100%+1rem)] text-transparent md:-right-4 md:h-[calc(100%+2rem)] md:w-[calc(100%+2rem)] lg:right-[-3rem] lg:h-[calc(100%+6rem)] lg:w-[calc(100%+6rem)]">
             <div className="svg_icon h-full w-full">

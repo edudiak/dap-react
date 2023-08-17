@@ -76,7 +76,7 @@ export default function ContactUs() {
   return (
     <div>
       <div
-        className="relative pb-36 pt-36 md:pb-24 lg:pb-[30rem] lg:pt-[22rem]"
+        className="relative pb-36 pt-28 md:pt-36 lg:pb-[30rem] lg:pt-[22rem]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png) repeat, url(/images/footer-bg.png) 0 0 / cover no-repeat, #6543A5',
@@ -85,7 +85,7 @@ export default function ContactUs() {
       >
         <div className="mx-auto w-full lg:max-w-[122rem]">
           <div className="md:pb-18 relative z-[1] flex flex-wrap-reverse items-center px-5 pb-12 text-white lg:flex-nowrap lg:px-0 lg:pb-[13.333rem]">
-            <div className="mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
+            <div className="w-full lg:mt-0 lg:w-3/4">
               <h1
                 ref={elm_1}
                 className="text-4xl leading-tight md:text-5xl lg:max-w-[92rem] lg:text-[10.667rem] lg:leading-none"
@@ -118,7 +118,7 @@ export default function ContactUs() {
           </div>
           <div
             ref={elm_3}
-            className="mx-5 rounded-3xl px-3 py-8 sm:px-6 lg:rounded-[5.333rem] lg:px-[4rem] lg:py-[5.333rem]"
+            className="mx-5 mt-16 rounded-3xl px-3 py-8 sm:px-6 lg:mt-0 lg:rounded-[5.333rem] lg:px-[4rem] lg:py-[5.333rem]"
             style={{
               boxShadow:
                 '0px 0px 0px 0px rgba(0, 0, 0, 0.10), 2px 3px 8px 0px rgba(0, 0, 0, 0.10), 8px 12px 14px 0px rgba(0, 0, 0, 0.09), 18px 26px 19px 0px rgba(0, 0, 0, 0.05), 31px 46px 22px 0px rgba(0, 0, 0, 0.01), 49px 73px 25px 0px rgba(0, 0, 0, 0.00)',

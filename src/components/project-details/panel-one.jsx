@@ -77,7 +77,7 @@ export default function PanelOne() {
 
   return (
     <div className="panel">
-      <div className="relative mb-14 px-5 md:mb-20 lg:mb-[26.667rem] lg:pl-[8%] lg:pr-[8%]">
+      <div className="relative mb-8 px-5 md:mb-14 lg:mb-[26.667rem] lg:pl-[8%] lg:pr-[8%]">
         <h1
           ref={elm_1}
           className="text-4xl leading-tight text-[#F7F3FF] md:text-5xl lg:text-[10.667rem] lg:leading-none"
@@ -108,9 +108,9 @@ export default function PanelOne() {
 
       <div
         ref={panel_2}
-        className="relative mb-14 flex flex-wrap-reverse items-center px-5 md:mb-20 lg:mb-[10rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]"
+        className="relative mb-8 flex flex-wrap-reverse items-center px-5 md:mb-14 lg:mb-[10rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]"
       >
-        <div className="mt-14 w-full md:mt-20 lg:mt-0 lg:w-1/2">
+        <div className="mt-8 w-full md:mt-14 lg:mt-0 lg:w-1/2">
           <h2
             ref={elm_3}
             className="text-3xl leading-snug text-[#250a60] md:text-4xl lg:text-[6.267rem] lg:leading-snug"
@@ -169,7 +169,7 @@ export default function PanelOne() {
             </div>
           </div>
         </div>
-        <div className="mt-6 w-full md:mt-20 lg:mt-0 lg:w-1/2">
+        <div className="mt-8 w-full md:mt-14 lg:mt-0 lg:w-1/2">
           <h3
             ref={elm_6}
             className="font-plex-mono mb-4 mt-0 text-xl font-medium uppercase leading-snug md:text-2xl lg:mb-[2rem] lg:mt-[4rem] lg:text-[3.6rem] lg:leading-snug"

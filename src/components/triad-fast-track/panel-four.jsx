@@ -45,7 +45,10 @@ export default function PanelFour() {
   }, []);
 
   return (
-    <div ref={panel} className="panel flex w-full flex-1 items-start px-[4%]">
+    <div
+      ref={panel}
+      className="panel flex w-full flex-1 items-start px-[4%] pt-10"
+    >
       <div
         ref={elm_1}
         className="flex flex-1 items-center rounded-3xl p-6 lg:rounded-[4rem] lg:p-[5.33rem]"

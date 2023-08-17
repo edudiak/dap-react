@@ -74,7 +74,7 @@ export default function PanelTwo() {
             }}
           >
             <div className="text-[#250A60]">
-              <h3 className="font-plex-mono text-2xl uppercase leading-none md:text-3xl lg:text-[3.6rem]">
+              <h3 className="font-plex-mono text-2xl uppercase leading-tight sm:leading-none md:text-3xl lg:text-[3.6rem]">
                 What is triad?
               </h3>
               <div className="mt-2 leading-snug md:text-xl lg:mt-[2.5rem] lg:text-[2.8rem] lg:leading-snug">
@@ -84,7 +84,7 @@ export default function PanelTwo() {
             </div>
           </div>
 
-          <div className="flex items-start gap-x-5 lg:gap-x-[2.667rem]">
+          <div className="flex items-start gap-x-5 pt-16 lg:gap-x-[2.667rem] lg:pt-0">
             <div className="rounded-full bg-[#3A1982] px-3 py-2 leading-none text-[#F7F3FF] shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] md:text-xl lg:px-[2rem] lg:py-[1.333rem] lg:text-[2.8rem] lg:leading-none">
               Note
             </div>
@@ -107,7 +107,7 @@ export default function PanelTwo() {
           }}
         >
           <div className="text-[#250A60]">
-            <h3 className="font-plex-mono text-2xl uppercase leading-none md:text-3xl lg:text-[3.6rem]">
+            <h3 className="font-plex-mono text-2xl uppercase leading-tight sm:leading-none md:text-3xl lg:text-[3.6rem]">
               What is its purpose?
             </h3>
             <div className="mt-2 leading-snug md:text-xl lg:mt-[2.5rem] lg:text-[2.8rem] lg:leading-snug">

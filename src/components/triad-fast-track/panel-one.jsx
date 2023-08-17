@@ -42,7 +42,7 @@ export default function PanelOne() {
   }, []);
 
   return (
-    <div className="panel pb-32 lg:pb-[16%] lg:pt-[5%]">
+    <div className="panel pb-16 sm:pb-16 md:pb-24  lg:pb-[16%] lg:pt-[5%]">
       <div className="relative flex flex-wrap-reverse items-center px-5 lg:flex-nowrap lg:pl-[8%] lg:pr-[4%]">
         <div className="z-[1] mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
           <h1

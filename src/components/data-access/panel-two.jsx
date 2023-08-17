@@ -78,7 +78,7 @@ export default function PanelTwo() {
   }, []);
 
   return (
-    <div className="relative lg:px-[8%]">
+    <div className="relative px-5 lg:px-[8%]">
       <div
         ref={panel_1}
         className="mb-8 ml-auto w-full lg:-mb-[32rem] lg:w-1/2"

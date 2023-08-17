@@ -243,11 +243,11 @@ export default function PanelTwo() {
                     {story.title}
                   </p>
                 </div>
-                <div className="mt-auto flex w-full items-center justify-between text-[#6543A5]">
-                  <p className="font-plex-mono w-1/2 text-xs uppercase leading-snug lg:text-[1.867rem]">
+                <div className="mt-auto flex w-full flex-wrap items-center justify-between gap-y-2 text-[#6543A5]">
+                  <p className="font-plex-mono w-full text-xs uppercase leading-snug sm:w-1/2 lg:text-[1.867rem]">
                     {story.category}
                   </p>
-                  <p className="flex w-1/2 items-center justify-end gap-x-3 text-sm font-medium lg:gap-x-[1.333rem] lg:text-[2.133rem]">
+                  <p className="flex w-full items-center justify-between gap-x-3 text-sm font-medium sm:w-1/2 sm:justify-end lg:gap-x-[1.333rem] lg:text-[2.133rem]">
                     <Link href={story.link}>Go to the article</Link>
                     <span className="svg_icon w-5 text-transparent lg:w-[3.333rem]">
                       <ArrowWithCircle />

@@ -95,15 +95,15 @@ export default function PanelOne() {
   return (
     <>
       <div className="relative flex flex-wrap-reverse items-center px-5 pb-16 md:pb-24 lg:flex-nowrap lg:pb-[20rem] lg:pl-[8%] lg:pr-[2%]">
-        <div className="mt-16 w-full md:mt-20 lg:mt-0">
+        <div className="w-full lg:mt-0">
           <h1
             ref={elm_1}
-            className="flex items-center text-4xl leading-tight text-[#514730] md:text-5xl lg:text-[10.667rem] lg:leading-none"
+            className="flex flex-wrap items-center gap-x-2 gap-y-4 text-4xl leading-tight text-[#514730] md:flex-nowrap md:gap-x-0 md:text-5xl lg:text-[10.667rem] lg:leading-none"
           >
             DAP Resources{' '}
             <a
               href="#"
-              className="inline-block rounded-full bg-[#F7F3FF] px-6 py-3 text-center font-medium leading-none text-[#847553] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white hover:shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] md:ml-[2.6rem] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+              className="inline-block rounded-full bg-[#F7F3FF] px-6 py-3 text-center text-xl font-medium leading-none text-[#847553] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white hover:shadow-[0px_0px_14px_3px_rgba(0,0,0,0.30)] md:ml-[2.6rem] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
             >
               Contact Media Relations
             </a>

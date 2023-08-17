@@ -460,7 +460,7 @@ export default function Footer() {
             <div className="flex items-center gap-x-[3rem] lg:items-stretch">
               <div className="w-3/4 lg:border-t lg:border-t-[#B894FF]">
                 <p className="text-sm leading-snug text-[#C0A3FE] lg:mt-[4.4rem] lg:text-[2rem] lg:leading-snug">
-                  Copyright © 2018 - 2028 The Dog Aging Project
+                  Copyright © 2018 - 2023 The Dog Aging Project
                   <Link href="/privacy-policy" className="block">
                     Project Privacy Policy
                   </Link>

@@ -73,7 +73,7 @@ export default function PanelTwo() {
   }, []);
 
   return (
-    <div className="relative mb-20 px-5 md:mb-40 lg:mb-[33.333rem] lg:px-[4%]">
+    <div className="relative mb-20 px-5 md:mb-28 lg:mb-[33.333rem] lg:px-[4%]">
       <div ref={panel_1} className="mb-20 lg:mb-[20rem]">
         <h2
           ref={elm_1}
@@ -121,40 +121,40 @@ export default function PanelTwo() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <div className="flex flex-wrap justify-center">
-            <div className="w-1/3">
+          <div className="flex flex-wrap justify-between p-8 sm:justify-center lg:p-0">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <img
                 src="/images/logos/annenberg-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/3">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <img
                 src="/images/logos/american-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/3">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <img
                 src="/images/logos/glenn-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/3">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <img
                 src="/images/logos/william-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/3">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <img
                 src="/images/logos/iwane-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
           </div>
@@ -180,82 +180,82 @@ export default function PanelTwo() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <div className="flex flex-wrap justify-center">
-            <div className="w-1/4">
+          <div className="flex flex-wrap justify-center p-8 lg:p-0">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/annenberg-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/american-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/glenn-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/william-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/iwane-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/annenberg-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/american-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/glenn-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/william-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/iwane-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/annenberg-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
           </div>
@@ -281,61 +281,61 @@ export default function PanelTwo() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <div className="flex flex-wrap justify-center">
-            <div className="w-1/4">
+          <div className="flex flex-wrap justify-center p-8 lg:p-0">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/annenberg-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/american-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/glenn-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/william-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/iwane-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/annenberg-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/american-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-full sm:w-1/2 lg:w-1/4">
               <img
                 src="/images/logos/glenn-logo.png"
                 alt="NIA"
-                className="w-2/3"
+                className="w-full md:w-2/3"
               />
             </div>
           </div>

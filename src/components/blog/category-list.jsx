@@ -83,7 +83,7 @@ export default function CategoryList() {
   ];
 
   return (
-    <div>
+    <div className="mt-16 sm:mt-20 lg:mt-0">
       <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
         Filter
       </h2>

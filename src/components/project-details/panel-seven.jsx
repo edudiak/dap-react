@@ -76,7 +76,7 @@ export default function PanelSeven() {
 
   return (
     <div className="relative overflow-hidden bg-white pb-20 pt-20 lg:pb-[18.66rem] lg:pt-[18.667rem]">
-      <div className="px-5 pb-10 lg:px-[8%] lg:pb-[10rem]">
+      <div className="px-5 pb-20 lg:px-[8%] lg:pb-[10rem]">
         <h2
           ref={elm_1}
           className="mb-8 ml-auto text-4xl leading-none text-[#6543A5] md:max-w-[700px] lg:mb-[8rem] lg:max-w-[73rem] lg:text-[8.133rem] lg:tracking-[0.114rem]"

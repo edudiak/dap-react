@@ -43,7 +43,7 @@ export default function PanelOne() {
   }, []);
 
   return (
-    <div className="relative flex justify-between px-5 pb-16 md:pb-20 lg:flex-nowrap lg:pb-[10rem] lg:pl-[4%] lg:pr-[4%]">
+    <div className="relative flex flex-wrap justify-between px-5 pb-16 md:pb-20 lg:flex-nowrap lg:pb-[10rem] lg:pl-[4%] lg:pr-[4%]">
       <div className="mt-20 w-full lg:mt-[5rem]">
         <div className="mb-20 lg:mb-[12rem] lg:pl-[4%]">
           <h1
@@ -72,8 +72,8 @@ export default function PanelOne() {
             className="relative w-full shrink-0 overflow-hidden rounded-[20px] bg-white md:flex-1 lg:h-[calc(100%-8rem)] lg:rounded-[2.667rem]"
           >
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[2.667rem]" />
-            <div className="flex h-full items-stretch justify-center overflow-hidden rounded-3xl text-[#250A60] lg:min-h-[20.6rem] lg:rounded-[2.667rem]">
-              <div className="flex w-7/12 flex-col justify-between p-5 lg:p-[3rem]">
+            <div className="flex h-full flex-wrap-reverse items-stretch justify-center gap-y-8 overflow-hidden rounded-3xl text-[#250A60] sm:flex-nowrap lg:min-h-[20.6rem] lg:rounded-[2.667rem]">
+              <div className="flex w-full flex-col justify-between p-5 lg:w-7/12 lg:p-[3rem]">
                 <div>
                   <div className="font-plex-mono mb-4 flex flex-wrap justify-between gap-y-4 text-xs uppercase leading-none text-[#532EA4] md:flex-nowrap lg:mb-[2.667rem] lg:text-[1.867rem]">
                     <p>{featuredArticle.date}</p>
@@ -95,13 +95,13 @@ export default function PanelOne() {
                 >
                   Read More
                   <div className="svg_icon ml-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#532EA4] text-transparent lg:ml-[1rem] lg:h-[3.333rem] lg:w-[3.333rem]">
-                    <div className="lg:w-[1.7rem]">
+                    <div className=" w-[10px] lg:w-[1.7rem]">
                       <ArrowRight />
                     </div>
                   </div>
                 </Link>
               </div>
-              <div className="w-5/12">
+              <div className="w-full lg:w-5/12">
                 <img
                   src={featuredArticle.image}
                   alt={featuredArticle.title}

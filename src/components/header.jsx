@@ -116,7 +116,7 @@ export default function Header() {
         </ul>
 
         <div>
-          <ul className="flex items-center rounded-bl-full rounded-tl-full bg-[#6543A5] text-[2.4rem] font-bold text-white">
+          <ul className="flex items-center rounded-bl-full rounded-tl-full bg-[#6543A5] text-[2.4rem] font-bold text-white lg:items-stretch">
             <li>
               <a
                 href="https://portal.dogagingproject.org/"

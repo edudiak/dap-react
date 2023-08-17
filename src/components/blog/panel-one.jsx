@@ -75,9 +75,9 @@ export default function PanelOne() {
   }, []);
 
   return (
-    <div className="relative flex justify-between px-5 pb-16 md:pb-20 lg:flex-nowrap lg:pb-[10rem] lg:pl-[4%] lg:pr-[4%]">
+    <div className="relative flex flex-wrap justify-between px-5 pb-16 md:pb-20 lg:flex-nowrap lg:pb-[10rem] lg:pl-[4%] lg:pr-[4%]">
       <div className="mt-20 w-full lg:mt-[5rem]">
-        <div className="mb-20 lg:mb-[12rem] lg:pl-[4%]">
+        <div className="mb-16 lg:mb-[12rem] lg:pl-[4%]">
           <h1
             ref={elm_1}
             className="text-4xl leading-tight text-[#532EA4] md:text-5xl lg:max-w-[112rem] lg:text-[10.667rem] lg:leading-none"
@@ -138,7 +138,7 @@ export default function PanelOne() {
             </div>
           </div>
 
-          <div className="col-span-full mt-8 md:mt-14 lg:col-span-3 lg:mt-0">
+          <div className="col-span-full mt-8 lg:col-span-3 lg:mt-0">
             <h2 className="mb-4 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[3.2rem] lg:text-[4.8rem] lg:-tracking-[0.114rem]">
               Popular articles
             </h2>
@@ -150,8 +150,8 @@ export default function PanelOne() {
                   className="relative w-full shrink-0 overflow-hidden rounded-[20px] bg-white md:flex-1 lg:rounded-[2.667rem]"
                 >
                   <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[2.667rem]" />
-                  <div className="flex items-stretch justify-center overflow-hidden rounded-3xl text-[#250A60] lg:rounded-[2.667rem]">
-                    <div className="flex w-2/3 flex-col justify-between p-4 lg:p-[2.667rem]">
+                  <div className="flex flex-wrap-reverse items-stretch justify-center gap-y-8 overflow-hidden rounded-3xl text-[#250A60] lg:rounded-[2.667rem]">
+                    <div className="flex w-full flex-col justify-between p-4 sm:w-2/3 lg:p-[2.667rem]">
                       <div>
                         <p className="font-plex-mono mb-1 text-xs uppercase leading-tight text-[#532EA4] lg:mb-[.8rem] lg:text-[1.867rem]">
                           {article.category}
@@ -171,13 +171,13 @@ export default function PanelOne() {
                           href={article.url}
                           className="svg_icon ml-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-[#532EA4] text-transparent lg:ml-[1rem] lg:h-[3.333rem] lg:w-[3.333rem]"
                         >
-                          <div className="lg:w-[1.7rem]">
+                          <div className="w-[12px] lg:w-[1.7rem]">
                             <ArrowRight />
                           </div>
                         </Link>
                       </div>
                     </div>
-                    <div className="w-1/3">
+                    <div className="w-full sm:w-1/3">
                       <img
                         src={article.image}
                         alt={article.title}

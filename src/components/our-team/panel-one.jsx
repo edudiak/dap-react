@@ -36,7 +36,7 @@ export default function PanelOne() {
   }, []);
 
   return (
-    <div className="panel relative mb-8 mt-16 px-5 md:mb-10 md:mt-20 lg:mb-[10.667rem] lg:mt-0 lg:px-[4%]">
+    <div className="panel relative mb-8 px-5 md:mb-10 lg:mb-[10.667rem] lg:mt-0 lg:px-[4%]">
       <div ref={elm_3}>
         <Image
           src="/images/our-team-group.jpeg"
@@ -45,7 +45,7 @@ export default function PanelOne() {
           className="rounded-xl lg:rounded-[4rem]"
         />
       </div>
-      <div className="mt-5 flex flex-wrap lg:mt-[4rem] lg:flex-nowrap">
+      <div className="mt-6 flex flex-wrap lg:mt-[4rem] lg:flex-nowrap">
         <div className="w-full lg:w-1/2">
           <h1
             ref={elm_1}

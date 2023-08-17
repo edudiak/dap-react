@@ -7,7 +7,7 @@ export default function TriadFastTrack() {
   return (
     <div>
       <div
-        className="bg-cover bg-left-top bg-no-repeat pb-20 pt-48 lg:pb-[20rem] lg:pt-[13.333rem]"
+        className="bg-cover bg-left-top bg-no-repeat pb-36 pt-28 md:pb-52 md:pt-36 lg:pb-[20rem] lg:pt-[13.333rem]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #815DC7 29.50%, #C0A4FF 100%)',

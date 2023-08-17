@@ -52,7 +52,7 @@ export default function PanelTwo() {
             />
             <button
               type="submit"
-              className="svg_icon absolute right-5 top-4 w-6 text-[#9169E8] lg:right-[2.667rem] lg:top-[1.5rem] lg:w-[3.2rem]"
+              className="svg_icon absolute right-3 top-4 w-6 text-[#9169E8] lg:right-[2.667rem] lg:top-[1.5rem] lg:w-[3.2rem]"
             >
               <SearchIcon />
             </button>

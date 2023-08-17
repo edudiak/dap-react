@@ -6,7 +6,7 @@ export default function ProjectDetails() {
   return (
     <div>
       <div
-        className="relative pb-36 pt-36 md:pb-52 lg:pb-[46rem] lg:pt-[22rem]"
+        className="relative pb-36 pt-28 md:pt-36 lg:pb-[46rem] lg:pt-[22rem]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #815DC7 29.50%, #C0A4FF 100%)',

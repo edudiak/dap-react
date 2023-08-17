@@ -310,10 +310,10 @@ export default function PanelTwo() {
         </div>
       </div>
 
-      <div className="pb-32 md:pb-0">
+      <div className="mb-32 md:pb-0">
         <h2
           ref={elm_3}
-          className="mb-8 text-4xl leading-tight sm:leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]"
+          className="mb-0 text-4xl leading-tight sm:leading-none lg:mb-[5.333rem] lg:text-[8.133rem] lg:tracking-[0.114rem]"
         >
           Dog Aging Project Team
         </h2>

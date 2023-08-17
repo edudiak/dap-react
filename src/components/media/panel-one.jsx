@@ -87,7 +87,7 @@ export default function PanelOne() {
   return (
     <>
       <div className="relative flex flex-wrap-reverse items-center px-5 pb-16 md:pb-20 lg:flex-nowrap lg:pb-[16rem] lg:pl-[8%] lg:pr-[2%]">
-        <div className="mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
+        <div className="w-full lg:mt-0 lg:w-3/4">
           <h1
             ref={elm_1}
             className="text-4xl leading-tight text-[#532EA4] md:text-5xl lg:max-w-[92rem] lg:text-[10.667rem] lg:leading-none"
@@ -96,7 +96,7 @@ export default function PanelOne() {
           </h1>
         </div>
       </div>
-      <div className="px-5 pb-24 md:pb-40 lg:px-[4%] lg:pb-[20rem]">
+      <div className="px-5 pb-24 lg:px-[4%] lg:pb-[20rem]">
         <h2
           ref={elm_2}
           className="mb-6 text-4xl font-medium leading-none text-[#532EA4] lg:mb-[6.4rem] lg:text-[6.267rem] lg:-tracking-[0.114rem]"
@@ -126,11 +126,11 @@ export default function PanelOne() {
                       {story.title}
                     </p>
                   </div>
-                  <div className="mt-auto flex w-full items-center justify-between text-[#6543A5]">
-                    <p className="font-plex-mono w-1/2 text-xs uppercase leading-snug lg:text-[1.867rem]">
+                  <div className="mt-auto flex w-full flex-wrap items-center justify-between gap-y-4 text-[#6543A5]">
+                    <p className="font-plex-mono w-full text-xs uppercase leading-snug sm:w-1/2 lg:text-[1.867rem]">
                       {story.category}
                     </p>
-                    <p className="flex w-1/2 items-center justify-end gap-x-3 text-sm font-medium lg:gap-x-[1.333rem] lg:text-[2.133rem]">
+                    <p className="flex w-full items-center justify-between gap-x-3 text-sm font-medium sm:w-1/2 sm:justify-end lg:gap-x-[1.333rem] lg:text-[2.133rem]">
                       <Link href={story.link}>Go to the article</Link>
                       <span className="svg_icon w-5 text-transparent lg:w-[3.333rem]">
                         <ArrowWithCircle />
