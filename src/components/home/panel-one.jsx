@@ -114,6 +114,7 @@ export default function HomePanelOne() {
                 alt="Dog in a field"
                 width={584 * 2}
                 height={584 * 2}
+                priority
               />
             </div>
           </div>

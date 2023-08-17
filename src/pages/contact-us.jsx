@@ -1,11 +1,16 @@
+import axios from 'axios';
 import { gsap } from 'gsap';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export default function ContactUs() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
   const elm_1 = useRef(null);
   const elm_2 = useRef(null);
+  const elm_3 = useRef(null);
+  const formRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -23,11 +28,50 @@ export default function ContactUs() {
           { y: 100, opacity: 0 },
           { y: 0, opacity: 1 },
           'section1_Start+=0.1',
+        )
+        .fromTo(
+          elm_3.current,
+          { opacity: 0 },
+          { opacity: 1 },
+          'section1_Start+=0.3',
         );
     }); // <- scopes all selector text to the root element
 
     return () => ctx.revert();
   }, []);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    const GF_API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/gf/v2/forms/5/submissions`;
+
+    setIsLoading(true);
+
+    try {
+      const { data: res } = await axios.post(GF_API_URL, data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      setIsLoading(false);
+      if (res.is_valid) {
+        setMessage(
+          'Thanks for contacting us! We will get in touch with you shortly.',
+        );
+        formRef.current.reset();
+      }
+    } catch (error) {
+      const { data: errData } = error.response;
+      console.log('error', errData);
+      setMessage('Something went wrong. Please try again.');
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div>
@@ -73,6 +117,7 @@ export default function ContactUs() {
             </div>
           </div>
           <div
+            ref={elm_3}
             className="mx-5 rounded-3xl px-3 py-8 sm:px-6 lg:rounded-[5.333rem] lg:px-[4rem] lg:py-[5.333rem]"
             style={{
               boxShadow:
@@ -83,14 +128,19 @@ export default function ContactUs() {
               backdropFilter: 'blur(20px)',
             }}
           >
-            <div className="grid grid-cols-1 gap-x-5 gap-y-8 lg:grid-cols-4 lg:gap-x-[5.333rem] lg:gap-y-[8rem]">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit(onSubmit)}
+              className="grid grid-cols-1 gap-x-5 gap-y-8 lg:grid-cols-4 lg:gap-x-[5.333rem] lg:gap-y-[8rem]"
+            >
               <div className="relative col-span-4 sm:col-span-3 lg:col-span-2">
                 <input
                   type="text"
-                  id="firstName"
-                  name="firstName"
+                  id="input_1"
+                  {...register('input_1', {
+                    required: 'First Name is required!',
+                  })}
                   placeholder="First Name"
-                  required
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
                 <div className="absolute right-0 top-[25%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
@@ -98,24 +148,35 @@ export default function ContactUs() {
                     *
                   </span>
                 </div>
+
+                {errors.input_1 && (
+                  <p className="mt-3 text-red-900 lg:mt-[1.6rem] lg:text-[2.4rem]">
+                    {errors?.input_1?.message}
+                  </p>
+                )}
               </div>
               <div className="relative col-span-4 sm:col-span-3 lg:col-span-2">
                 <input
                   type="text"
-                  id="lastName"
-                  name="lastName"
+                  id="input_2"
+                  {...register('input_2')}
                   placeholder="Last Name"
-                  required
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
               </div>
               <div className="relative col-span-4 sm:col-span-3">
                 <input
                   type="text"
-                  id="email"
-                  name="email"
+                  id="input_4"
+                  {...register('input_4', {
+                    required: 'Email is required!',
+                    pattern: {
+                      value:
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      message: 'Invalid email address!',
+                    },
+                  })}
                   placeholder="your.address@email.com"
-                  required
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
                 <div className="absolute right-0 top-[25%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
@@ -123,14 +184,20 @@ export default function ContactUs() {
                     *
                   </span>
                 </div>
+                {errors.input_4 && (
+                  <p className="mt-3 text-red-900 lg:mt-[1.6rem] lg:text-[2.4rem]">
+                    {errors?.input_4?.message}
+                  </p>
+                )}
               </div>
               <div className="relative col-span-4 sm:col-span-3">
                 <input
                   type="text"
-                  id="email"
-                  name="email"
-                  placeholder="your.address@email.com"
-                  required
+                  id="input_5"
+                  {...register('input_5', {
+                    required: 'Subject is required!',
+                  })}
+                  placeholder="Subject - a few words about your message"
                   className="h-12 w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-b-[#7048C6] focus-visible:outline-none lg:h-[6.667rem] lg:border-b-[0.267rem] lg:text-[3.6rem]"
                 />
                 <div className="absolute right-0 top-[25%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:h-[3.333rem] lg:w-[3.333rem]">
@@ -138,14 +205,20 @@ export default function ContactUs() {
                     *
                   </span>
                 </div>
+                {errors.input_5 && (
+                  <p className="mt-3 text-red-900 lg:mt-[1.6rem] lg:text-[2.4rem]">
+                    {errors?.input_5?.message}
+                  </p>
+                )}
               </div>
               <div className="relative col-span-4">
                 <textarea
                   type="text"
-                  id="email"
-                  name="email"
+                  id="input_6"
+                  {...register('input_6', {
+                    required: 'Message is required!',
+                  })}
                   placeholder="Write your message here, in the length of a tweet - about 140 characters up to 400"
-                  required
                   className="h-40 w-full rounded-lg border-2 border-b-[#E5D8FF] bg-transparent text-lg font-medium leading-snug text-[#7048C6] placeholder:text-[#7048C6] focus-visible:border-[#7048C6] focus-visible:outline-none lg:h-[41rem] lg:rounded-[1.333rem] lg:border-[0.267rem] lg:p-[2rem] lg:text-[3.6rem]"
                 />
                 <div className="absolute bottom-4 right-4 flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:bottom-[2rem] lg:right-[2rem] lg:h-[3.333rem] lg:w-[3.333rem]">
@@ -153,16 +226,34 @@ export default function ContactUs() {
                     *
                   </span>
                 </div>
+                {errors.input_6 && (
+                  <p className="mt-3 text-red-900 lg:mt-[1.6rem] lg:text-[2.4rem]">
+                    {errors?.input_6?.message}
+                  </p>
+                )}
               </div>
-              <div className="col-span-4 text-right">
-                <Link
-                  href="#"
-                  className="mt-6 inline-block rounded-full bg-[#F7F3FF] px-6 py-3 text-center font-semibold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white md:mt-0 lg:px-[2.667rem] lg:py-[2rem] lg:text-[2.4rem]"
+              <div className="col-span-4 flex items-center justify-end text-right">
+                {isLoading ? (
+                  <div className="lds-dual-ring mr-4 h-6 w-6 after:h-5 after:w-5 lg:mr-[3rem] lg:h-[7rem] lg:w-[7rem] lg:after:h-[5.333rem] lg:after:w-[5.333rem]" />
+                ) : (
+                  ''
+                )}
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className="mt-6 inline-block rounded-full bg-[#F7F3FF] px-6 py-3 text-center font-semibold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white disabled:pointer-events-none disabled:opacity-40 md:mt-0 lg:px-[2.667rem] lg:py-[2rem] lg:text-[2.4rem]"
                 >
                   Submit
-                </Link>
+                </button>
               </div>
-            </div>
+              {message ? (
+                <div className="col-span-4 text-center text-xl font-medium text-[#7048C6] lg:text-[3.6rem]">
+                  {message}
+                </div>
+              ) : (
+                ''
+              )}
+            </form>
           </div>
 
           <div className="mt-14 px-5 text-white md:mt-24 lg:mt-[20rem] lg:px-[4%]">

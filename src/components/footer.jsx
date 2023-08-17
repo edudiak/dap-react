@@ -1,5 +1,8 @@
+/* eslint no-unused-vars: "off" */
 import { Gradient } from '@/lib/Gradient';
-import { useEffect } from 'react';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 import FacebookIcon from '@assets/images/icons/facebook.svg';
 import InstagramIcon from '@assets/images/icons/instagram.svg';
@@ -7,15 +10,51 @@ import LinkedInIcon from '@assets/images/icons/linkedin.svg';
 import TiktokIcon from '@assets/images/icons/tiktok.svg';
 import TwitterIcon from '@assets/images/icons/twitter.svg';
 import YoutubeIcon from '@assets/images/icons/youtube.svg';
-import Link from 'next/link';
+import axios from 'axios';
 
 export default function Footer() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
+  const formRef = useRef(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   useEffect(() => {
     // Create your instance
     const gradient = new Gradient();
     // Call `initGradient` with the selector to your canvas
     gradient.initGradient('#footer-gradient-canvas');
   }, []);
+
+  const onSubmit = async (data) => {
+    const GF_API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/gf/v2/forms/2/submissions`;
+
+    setIsLoading(true);
+
+    try {
+      const { data: res } = await axios.post(GF_API_URL, data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      setIsLoading(false);
+      if (res.is_valid) {
+        setMessage(
+          'Thanks for contacting us! We will get in touch with you shortly.',
+        );
+        formRef.current.reset();
+      }
+    } catch (error) {
+      const { data: errData } = error.response;
+      console.log('error', errData);
+      setMessage('Something went wrong. Please try again.');
+      setIsLoading(false);
+    }
+  };
 
   return (
     <footer
@@ -54,7 +93,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <form action="">
+              <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
                 <label
                   htmlFor="signUpForBlog"
                   className="mb-3 flex items-center lg:mb-[3rem]"
@@ -62,8 +101,9 @@ export default function Footer() {
                   <input
                     id="signUpForBlog"
                     type="checkbox"
-                    value=""
-                    name="signUpForBlog"
+                    {...register('input_2')}
+                    value={1}
+                    checked
                   />
                   <div className="ml-3 text-[#F8F4FF] lg:ml-[1rem] lg:text-[2.133rem] lg:leading-none">
                     Sign me up for blog updates
@@ -76,21 +116,55 @@ export default function Footer() {
                   <input
                     id="signUpForNewsletter"
                     type="checkbox"
-                    value=""
-                    name="signUpForNewsletter"
+                    {...register('input_2')}
+                    value={1}
+                    checked
                   />
                   <div className="ml-3 text-[#F8F4FF] lg:ml-[1rem] lg:text-[2.133rem] lg:leading-none">
                     Sign me up for the newsletter
                   </div>
                 </label>
 
-                <div className="mt-4 md:mt-6 lg:mt-[2.2rem]">
-                  <input
-                    type="text"
-                    placeholder="your.address@email.com"
-                    className="h-[50px] w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg text-[#7048C6] placeholder:text-[#7048C6] focus:outline-none focus-visible:border-b-[#7048C6] md:text-xl lg:h-[6.667rem] lg:text-[3.6rem]"
-                  />
+                <div className="relative mt-4 flex items-center md:mt-6 lg:mt-[2.2rem]">
+                  <div className="relative w-full pr-4 lg:pr-[2rem]">
+                    <input
+                      type="text"
+                      {...register('input_1', {
+                        required: 'Email is required!',
+                        pattern: {
+                          value:
+                            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                          message: 'Invalid email address!',
+                        },
+                      })}
+                      placeholder="your.address@email.com"
+                      className="h-[50px] w-full border-b-2 border-b-[#E5D8FF] bg-transparent text-lg text-[#7048C6] placeholder:text-[#7048C6] focus:outline-none focus-visible:border-b-[#7048C6] md:text-xl lg:h-[6.667rem] lg:text-[3.6rem]"
+                    />
+                    <div className="absolute right-0 top-[30%] flex h-4 w-4 items-center justify-center rounded-full border-2 border-[#7048C6] text-[#7048C6] lg:right-[2rem] lg:h-[3.333rem] lg:w-[3.333rem]">
+                      <span className="h-[12px] text-xl leading-none lg:h-[2.667rem] lg:text-[4.667rem]">
+                        *
+                      </span>
+                    </div>
+                    {errors.input_1 && (
+                      <p className="mt-3 text-red-900 lg:mt-[1.6rem] lg:text-[2.4rem]">
+                        {errors?.input_1?.message}
+                      </p>
+                    )}
+                  </div>
+                  <button
+                    type="submit"
+                    className="inline-block shrink-0 rounded-full bg-[#F7F3FF] px-8 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#6543A5] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+                  >
+                    Submit
+                  </button>
                 </div>
+                {message ? (
+                  <div className="col-span-4 text-center text-xl font-medium text-[#7048C6] lg:text-[3.6rem]">
+                    {message}
+                  </div>
+                ) : (
+                  ''
+                )}
               </form>
             </div>
           </div>
