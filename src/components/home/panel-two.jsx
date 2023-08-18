@@ -57,7 +57,7 @@ export default function HomePanelTwo() {
     <>
       <div
         ref={panel}
-        className="panel relative mb-[25%] flex w-full flex-wrap gap-y-5 px-5 lg:flex-nowrap lg:gap-[4rem] lg:px-[4%]"
+        className="panel relative mb-[25%] flex w-full flex-wrap gap-y-5 px-5 lg:flex-nowrap lg:gap-[2.083vw] lg:px-[4%]"
       >
         <video
           autoPlay
@@ -71,7 +71,7 @@ export default function HomePanelTwo() {
         </video>
         <div
           ref={elm_1}
-          className="flex w-full items-center rounded-3xl p-6 lg:flex-1 lg:rounded-[4rem] lg:p-[5.33rem]"
+          className="flex w-full items-center rounded-3xl p-6 lg:flex-1 lg:rounded-[2.083vw] lg:p-[2.778vw]"
           style={{
             background:
               'url(/images/dap-bg-noise-20.png) repeat, linear-gradient(228deg, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(132deg, rgba(80, 0, 0, 0.42) 0%, rgba(80, 0, 0, 0.36) 48.44%, rgba(80, 0, 0, 0.00) 100%)',
@@ -81,10 +81,10 @@ export default function HomePanelTwo() {
           }}
         >
           <div>
-            <h3 className="text-3xl leading-none -tracking-[2px] text-white md:text-4xl lg:text-[8rem] lg:leading-none lg:-tracking-[0.267rem]">
+            <h3 className="text-3xl leading-none -tracking-[2px] text-white md:text-4xl lg:text-[4.167vw] lg:leading-none lg:-tracking-[00.139vw]">
               Partner With Us
             </h3>
-            <div className="my-5 text-lg leading-snug text-[#FFF2F2] md:text-xl lg:mb-[5.333rem] lg:mt-[2.667rem] lg:text-[2.4rem] lg:leading-normal">
+            <div className="my-5 text-lg leading-snug text-[#FFF2F2] md:text-xl lg:mb-[2.778vw] lg:mt-[1.389vw] lg:text-[1.250vw] lg:leading-normal">
               The Dog Aging Project is an innovative initiative that brings
               together a community of dogs, owners, veterinarians, researchers,
               and volunteers to carry out the most ambitious canine health study
@@ -93,7 +93,7 @@ export default function HomePanelTwo() {
             </div>
             <a
               href="https://portal.dogagingproject.org/nomination"
-              className="inline-block rounded-full bg-[#790F0F] px-6 py-4 font-bold leading-none text-white shadow-[0px_0px_15px_5px_rgba(0,0,0,0.60)_inset] transition hover:bg-[#FFDADA] hover:text-[#A22727] hover:shadow-none lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+              className="inline-block rounded-full bg-[#790F0F] px-6 py-4 font-bold leading-none text-white shadow-[0px_0px_15px_5px_rgba(0,0,0,0.60)_inset] transition hover:bg-[#FFDADA] hover:text-[#A22727] hover:shadow-none lg:px-[2.083vw] lg:py-[1.111vw] lg:text-[1.250vw]"
             >
               Enroll Your Dog
             </a>
@@ -101,7 +101,7 @@ export default function HomePanelTwo() {
         </div>
         <div
           ref={elm_2}
-          className="relative flex w-full items-center justify-center overflow-hidden rounded-3xl bg-[rgba(255,255,255,0.54)] bg-cover bg-center bg-no-repeat p-6 lg:flex-1 lg:rounded-[4rem] lg:p-[5.33rem]"
+          className="relative flex w-full items-center justify-center overflow-hidden rounded-3xl bg-[rgba(255,255,255,0.54)] bg-cover bg-center bg-no-repeat p-6 lg:flex-1 lg:rounded-[2.083vw] lg:p-[2.778vw]"
           style={{ backgroundImage: 'url(/images/dog-play.jpg)' }}
         >
           <button
@@ -111,7 +111,7 @@ export default function HomePanelTwo() {
           >
             <span className="invisible opacity-0">Open Video Popup</span>
           </button>
-          <div className="pointer-events-none relative w-60 lg:w-[42rem]">
+          <div className="pointer-events-none relative w-60 lg:w-[21.875vw]">
             <PlayIcon />
           </div>
         </div>

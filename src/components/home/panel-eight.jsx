@@ -73,16 +73,16 @@ export default function HomePanelEight() {
   return (
     <div className="flex flex-wrap-reverse lg:flex-nowrap">
       <div className="flex w-full items-center bg-[#500000] px-5 lg:w-1/2 lg:px-[8%]">
-        <div className="py-10 md:py-16 lg:py-[6rem]">
+        <div className="py-10 md:py-16 lg:py-[3.125vw]">
           <h2
             ref={elm_1}
-            className="text-4xl leading-tight tracking-tight text-[#FF9494] md:text-5xl lg:text-[8.133rem] lg:leading-tight"
+            className="text-4xl leading-tight tracking-tight text-[#FF9494] md:text-5xl lg:text-[4.167vw] lg:leading-tight"
           >
             Support Our Science
           </h2>
           <div
             ref={elm_2}
-            className="pb-6 text-lg leading-normal text-[#FF9494] md:pt-6 lg:mt-[7rem] lg:pb-[6rem] lg:text-[2.8rem] lg:leading-normal"
+            className="pb-6 text-lg leading-normal text-[#FF9494] md:pt-6 lg:mt-[1.389vw] lg:pb-[3.125vw] lg:text-[1.458vw] lg:leading-normal"
           >
             We have established the Dog Aging Project as an engine for
             innovation. While core research activities are supported by the
@@ -95,7 +95,7 @@ export default function HomePanelEight() {
             <a
               href="https://dogagingproject.org/donate"
               target="_blank"
-              className="inline-block rounded-full bg-[#F7F3FF] px-8 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#6543A5] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+              className="inline-block rounded-full bg-[#F7F3FF] px-8 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#6543A5] hover:text-[#F7F3FF] lg:px-[2.083vw] lg:py-[1.111vw] lg:text-[1.250vw]"
               rel="noreferrer"
             >
               Donate Now

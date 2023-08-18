@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="relative pb-36 pt-28 md:pb-52 md:pt-36 lg:pb-[30rem] lg:pt-[28rem]">
+      <div className="relative pb-36 pt-28 md:pb-52 md:pt-36 lg:pb-[15.625vw] lg:pt-[9vw]">
         <canvas
           id="gradient-canvas"
           data-transition-in
@@ -46,7 +46,7 @@ export default function Home() {
       <HomePanelFive />
 
       <div
-        className="pb-16 pt-20 lg:pb-[10rem] lg:pt-[33.333rem]"
+        className="pb-16 pt-20 lg:pb-[5.208vw] lg:pt-[17.361vw]"
         style={{
           background:
             'url(/images/dap-bg-noise-20.png), linear-gradient(180deg, #6543A5 0%, #B894FF 53.65%, #FFF 93.75%), #FFF',

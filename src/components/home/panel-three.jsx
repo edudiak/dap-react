@@ -205,11 +205,11 @@ export default function HomePanelThree() {
         className="bg- w-full pt-5 lg:w-[45%] lg:bg-transparent lg:pt-0"
       >
         <div>
-          <h2 className="text-4xl leading-none text-[#F7F3FF] md:text-5xl lg:text-[10.667rem]">
+          <h2 className="text-4xl leading-none text-[#F7F3FF] md:text-5xl lg:text-[5.556vw]">
             Meet The Pack
           </h2>
-          <div className="mb-5 mt-3 leading-snug text-[#EEE] md:text-lg lg:mb-[6rem] lg:mt-[4rem] lg:max-w-[70.667rem] lg:text-[2.8rem] lg:leading-normal">
-            <p className="mb-2 md:mb-4 lg:mb-[2.5rem]">
+          <div className="mb-5 mt-3 leading-snug text-[#EEE] md:text-lg lg:mb-[3.125vw] lg:mt-[2.083vw] lg:max-w-[36.806vw] lg:text-[1.458vw] lg:leading-normal">
+            <p className="mb-2 md:mb-4 lg:mb-[1.302vw]">
               We welcome ALL dogs—young and old, mixed breed and purebred,
               healthy and those with chronic illness—from all fifty US states.
             </p>
@@ -221,7 +221,7 @@ export default function HomePanelThree() {
           </div>
           <a
             href="https://portal.dogagingproject.org/nomination"
-            className="inline-block rounded-full bg-[#F7F3FF] px-6 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#6543A5] hover:text-[#fff] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+            className="inline-block rounded-full bg-[#F7F3FF] px-6 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#6543A5] hover:text-[#fff] lg:px-[2.083vw] lg:py-[1.111vw] lg:text-[1.250vw]"
           >
             Enroll Your Dog
           </a>
@@ -235,7 +235,7 @@ export default function HomePanelThree() {
               dog.position.y
             } ${dog.position.x} w-[60%] ${
               i % 2 ? 'md:w-[50%]' : 'md:w-[35%]'
-            }  overflow-hidden rounded-3xl lg:rounded-[4rem] shadow-2xl`;
+            }  overflow-hidden rounded-3xl lg:rounded-[2.083vw] shadow-2xl`;
             return (
               <div
                 key={dog.id}
@@ -252,7 +252,7 @@ export default function HomePanelThree() {
               >
                 <div
                   className={`w-full overflow-hidden rounded-bl-full rounded-br-full ${
-                    i % 2 ? 'lg:h-[30rem]' : 'lg:h-[20rem]'
+                    i % 2 ? 'lg:h-[15.625vw]' : 'lg:h-[10.417vw]'
                   }`}
                 >
                   <img
@@ -261,11 +261,11 @@ export default function HomePanelThree() {
                     className="h-[160px] w-full object-cover md:h-[250px] lg:h-full"
                   />
                 </div>
-                <div className="p-4 lg:p-[2.667rem]">
-                  <p className="mb-4 text-lg font-bold leading-none text-[#250A60] lg:mb-[2rem] lg:text-[2.667rem]">
+                <div className="p-4 lg:p-[1.389vw]">
+                  <p className="mb-4 text-lg font-bold leading-none text-[#250A60] lg:mb-[1.042vw] lg:text-[1.389vw]">
                     Dog Name
                   </p>
-                  <p className="leading-none text-[#532EA4] lg:text-[2.133rem]">
+                  <p className="leading-none text-[#532EA4] lg:text-[1.111vw]">
                     Pack Number 12345
                   </p>
                 </div>

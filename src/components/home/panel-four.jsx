@@ -26,7 +26,7 @@ export default function HomePanelFour() {
   return (
     <div
       ref={panel}
-      className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] lg:-mt-[10.667rem] lg:rounded-tl-[10.667rem] lg:rounded-tr-[10.667rem]"
+      className="relative -mt-[30px] overflow-hidden rounded-tl-[30px] rounded-tr-[30px] lg:-mt-[5.556vw] lg:rounded-tl-[5.556vw] lg:rounded-tr-[5.556vw]"
     >
       <div ref={panel_bg} className="absolute w-full lg:min-h-screen">
         <img
@@ -36,13 +36,13 @@ export default function HomePanelFour() {
         />
       </div>
 
-      <div className="panel relative px-5 py-20 lg:px-[4%] lg:py-[21.333rem]">
-        <h2 className="max-w-[300px] text-4xl leading-none -tracking-[3px] text-white lg:max-w-[80rem] lg:text-5xl lg:text-[14rem] lg:-tracking-[0.42rem]">
+      <div className="panel relative px-5 py-20 lg:px-[4%] lg:py-[11.111vw]">
+        <h2 className="max-w-[300px] text-4xl leading-none -tracking-[3px] text-white lg:max-w-[41.667vw] lg:text-5xl lg:text-[7.292vw] lg:-tracking-[0.219vw]">
           Become a community scientist
         </h2>
 
         <div
-          className="mt-12 rounded-[20px] p-5 md:mt-20 lg:mt-[18rem] lg:max-w-[88rem] lg:rounded-[4rem] lg:p-[5.333rem]"
+          className="lg:mt-[[9.375vw] mt-12 rounded-[20px] p-5 md:mt-20 lg:max-w-[45.833vw] lg:rounded-[2.083vw] lg:p-[2.778vw]"
           style={{
             background:
               'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
@@ -51,11 +51,11 @@ export default function HomePanelFour() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <h4 className="font-plex-mono mb-3 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-4 md:text-2xl lg:mb-[2.66rem] lg:text-[3.6rem] lg:leading-tight">
+          <h4 className="font-plex-mono mb-3 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-4 md:text-2xl lg:mb-[2.63.125vw] lg:text-[1.875vw] lg:leading-tight">
             General Requirements
           </h4>
-          <div className="leading-snug text-[#FFDADA] md:text-lg lg:text-[2.8rem] lg:leading-snug">
-            <p className="mb-4 lg:mb-[2.5rem]">
+          <div className="leading-snug text-[#FFDADA] md:text-lg lg:text-[1.458vw] lg:leading-snug">
+            <p className="mb-4 lg:mb-[1.302vw]">
               The Dog Aging Project is a community science project. This means
               that we rely on our participating dog owners and their primary
               care veterinarians to provide the information that fuels our
@@ -72,7 +72,7 @@ export default function HomePanelFour() {
         </div>
 
         <div
-          className="ml-auto mt-16 rounded-[20px] p-5 md:mt-32 lg:mt-[18rem] lg:max-w-[73rem] lg:rounded-[4rem] lg:p-[5.333rem]"
+          className="lg:mt-[[9.375vw] ml-auto mt-16 rounded-[20px] p-5 md:mt-32 lg:max-w-[38.194vw] lg:rounded-[2.083vw] lg:p-[2.778vw]"
           style={{
             background:
               'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
@@ -81,10 +81,10 @@ export default function HomePanelFour() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <h4 className="font-plex-mono mb-3 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-5 md:text-2xl lg:mb-[2.66rem] lg:text-[3.6rem] lg:leading-tight">
+          <h4 className="font-plex-mono mb-3 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-5 md:text-2xl lg:mb-[2.63.125vw] lg:text-[1.875vw] lg:leading-tight">
             Benefits of Community
           </h4>
-          <p className="leading-snug text-[#FFDADA] md:text-lg lg:text-[2.8rem] lg:leading-snug">
+          <p className="leading-snug text-[#FFDADA] md:text-lg lg:text-[1.458vw] lg:leading-snug">
             Everyone whose dog is a member of the Pack is invited to join the
             Dog Park, a private, online community where dog owners can interact
             with other participants, join clubs, post cute dog pics, attend
@@ -94,7 +94,7 @@ export default function HomePanelFour() {
         </div>
 
         <div
-          className="mt-16 w-full rounded-[20px] p-5 pr-2 md:mt-28 lg:mt-[18rem] lg:rounded-[4rem] lg:p-[5.333rem] lg:pr-[2.667rem]"
+          className="lg:mt-[[9.375vw] mt-16 w-full rounded-[20px] p-5 pr-2 md:mt-28 lg:rounded-[2.083vw] lg:p-[2.778vw] lg:pr-[1.389vw]"
           style={{
             background:
               'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
@@ -105,99 +105,99 @@ export default function HomePanelFour() {
         >
           <div className="flex flex-wrap lg:flex-nowrap">
             <div className="w-full lg:w-[60%]">
-              <h4 className="font-plex-mono mb-5 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-7 md:text-2xl lg:mb-[6rem] lg:text-[3.6rem] lg:leading-tight">
+              <h4 className="font-plex-mono mb-5 text-xl font-medium uppercase leading-tight text-[#FFF2F2] md:mb-7 md:text-2xl lg:mb-[3.125vw] lg:text-[1.875vw] lg:leading-tight">
                 What to Expect
               </h4>
 
-              <ul className="flex list-none flex-col gap-y-3 leading-snug text-[#FFDADA] md:text-lg lg:gap-y-[5rem] lg:text-[3.6rem] lg:leading-snug">
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+              <ul className="flex list-none flex-col gap-y-3 leading-snug text-[#FFDADA] md:text-lg lg:gap-y-[2.639vw] lg:text-[1.875vw] lg:leading-snug">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     1
                   </span>
                   <div className="relative">
                     Enroll your dog by completing a short survey
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       5 MIN
                     </span>
                   </div>
                 </li>
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     2
                   </span>
                   <div className="relative">
                     Set up your personal research portal
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       5 MIN
                     </span>
                   </div>
                 </li>
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     3
                   </span>
                   <div className="relative">
                     Complete the Health and Life Experience Survey
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       60-90 min
                     </span>
                   </div>
                 </li>
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     4
                   </span>
                   <div className="relative">
                     Express your interest in additional studies like our
                     genetics research or clinical trial
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       Optional
                     </span>
                   </div>
                 </li>
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     5
                   </span>
                   <div className="relative">
                     Upload your dog’s veterinary medical records to qualify for
                     additional studies
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       Optional
                     </span>
                   </div>
                 </li>
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     6
                   </span>
                   <div className="relative">
                     Complete other surveys throughout the year about behavior,
                     physical activity, and more
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       10-30 min
                     </span>
                   </div>
                 </li>
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     7
                   </span>
                   <div className="relative">
                     Update your dog’s health & lifestyle info annually
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       30-45 min
                     </span>
                   </div>
                 </li>
-                <li className="flex pr-2 md:pr-[8rem]">
-                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[4rem] lg:h-[4.933rem] lg:w-[4.933rem] lg:text-[2.667rem]">
+                <li className="flex pr-2 md:pr-[4.167vw]">
+                  <span className="mr-3 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F37676] font-bold text-[#500000] md:h-7 md:w-7 md:text-lg lg:mr-[2.083vw] lg:h-[2.569vw] lg:w-[2.569vw] lg:text-[1.389vw]">
                     8
                   </span>
                   <div className="relative">
                     Connect with other participants on the Dog Park for fun and
                     community
-                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[6rem] lg:-top-[1.7rem] lg:text-[1.867rem]">
+                    <span className="absolute -top-3 right-0 shrink-0 text-xs text-[#FFABAB] md:-right-20 md:top-0 md:text-sm lg:-right-[3.125vw] lg:-top-[0.903vw] lg:text-[0.972vw]">
                       your choice
                     </span>
                   </div>
@@ -225,7 +225,7 @@ export default function HomePanelFour() {
         </div>
 
         <div
-          className="mt-20 w-full rounded-[20px] p-5 md:mt-28 lg:mt-[18rem] lg:max-w-[91rem] lg:rounded-[4rem] lg:p-[5.333rem]"
+          className="lg:mt-[[9.375vw] mt-20 w-full rounded-[20px] p-5 md:mt-28 lg:max-w-[47.569vw] lg:rounded-[2.083vw] lg:p-[2.778vw]"
           style={{
             background:
               'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, #500000 -3.98%, rgba(80, 0, 0, 0) 108.56%)',
@@ -234,7 +234,7 @@ export default function HomePanelFour() {
             backdropFilter: 'blur(20px)',
           }}
         >
-          <p className="text-sm leading-snug text-[#FFDADA] md:text-lg lg:text-[4.8rem] lg:leading-snug">
+          <p className="text-sm leading-snug text-[#FFDADA] md:text-lg lg:text-[2.500vw] lg:leading-snug">
             Once you’ve completed the Health and Life Experience Survey, your
             dog will be an official member of the Dog Aging Project Pack!
           </p>

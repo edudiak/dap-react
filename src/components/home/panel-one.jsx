@@ -60,17 +60,17 @@ export default function HomePanelOne() {
 
   return (
     <div className="panel pb-[25%] md:pb-[30%]">
-      <div className="relative mb-14 flex flex-wrap-reverse items-center px-5 md:mb-20 lg:mb-[8rem] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
+      <div className="relative mb-14 flex flex-wrap-reverse items-center px-5 md:mb-20 lg:mb-[4.167vw] lg:flex-nowrap lg:pl-[8%] lg:pr-[2%]">
         <div className="z-[1] mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
           <h1
             ref={elm_1}
-            className="text-4xl leading-tight -tracking-[2.4px] text-[#F8F4FF] md:text-5xl lg:max-w-[98rem] lg:text-[10.667rem] lg:leading-none lg:-tracking-[0.32rem]"
+            className="text-4xl leading-tight -tracking-[2.4px] text-[#F8F4FF] md:text-5xl lg:max-w-[51.042vw] lg:text-[5.556vw] lg:leading-none lg:-tracking-[00.167vw]"
           >
             Discovering the keys to a healthy lifespan
           </h1>
           <div
             ref={elm_2}
-            className="mt-6 text-lg leading-snug -tracking-[1.3px] text-[#F8F4FF] md:text-xl lg:mt-[5.333rem] lg:max-w-[83rem] lg:text-[3.6rem] lg:leading-snug lg:-tracking-[0.173rem]"
+            className="mt-6 text-lg leading-snug -tracking-[1.3px] text-[#F8F4FF] md:text-xl lg:mt-[2.778vw] lg:max-w-[43.403vw] lg:text-[1.875vw] lg:leading-snug lg:-tracking-[00.090vw]"
           >
             At the Dog Aging Project, we care deeply about the health and
             happiness of dogs. Our discoveries about healthy aging in our canine
@@ -80,22 +80,22 @@ export default function HomePanelOne() {
           </div>
           <div
             ref={elm_3}
-            className="mt-10 flex flex-wrap items-center justify-between text-sm text-white md:text-base lg:mt-[16rem] lg:max-w-[96rem] lg:flex-nowrap lg:text-[2.4rem]"
+            className="mt-10 flex flex-wrap items-center justify-between text-sm text-white md:text-base lg:mt-[13.125vw] lg:max-w-[93.125vw] lg:flex-nowrap lg:text-[1.250vw]"
           >
-            <div className="flex items-center gap-x-3 md:gap-x-4 lg:gap-x-[2rem]">
+            <div className="flex items-center gap-x-3 md:gap-x-4 lg:gap-x-[1.042vw]">
               <div className="flex">
-                <span className="will-be-dynamic mr-2 block md:mr-3 lg:mr-[3rem]">
+                <span className="will-be-dynamic mr-2 block md:mr-3 lg:mr-[1.528vw]">
                   45,202
                 </span>
                 <span className="block">Dogs in the Pack</span>
               </div>
-              <div className="h-[2px] w-10 bg-white md:w-20 lg:h-[.267rem] lg:w-[10rem]" />
+              <div className="h-[2px] w-10 bg-white md:w-20 lg:h-[0.139vw] lg:w-[5.208vw]" />
               <div>June 12th, 2023</div>
             </div>
             <div>
               <a
                 href="https://portal.dogagingproject.org/nomination"
-                className="mt-6 block rounded-full bg-[#F7F3FF] px-6 py-3 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white md:mt-0 lg:px-[2.667rem] lg:py-[1.333rem] lg:text-[2.4rem]"
+                className="mt-6 block rounded-full bg-[#F7F3FF] px-6 py-3 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-white md:mt-0 lg:px-[1.389vw] lg:py-[0.694vw] lg:text-[1.250vw]"
               >
                 Enroll Your Dog
               </a>
@@ -104,9 +104,9 @@ export default function HomePanelOne() {
         </div>
         <div
           ref={elm_4}
-          className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:absolute lg:-top-[12%] lg:right-[2%] lg:mx-0 lg:max-w-[90rem]"
+          className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:absolute lg:-top-[12%] lg:right-[2%] lg:mx-0 lg:max-w-[46.875vw]"
         >
-          <div className="relative p-4 lg:p-14">
+          <div className="relative p-4 lg:p-7">
             <div className="absolute left-0 top-0 h-full w-full rotate-[90deg] transform rounded-full border-[7px] border-[#6543A5] border-b-transparent" />
             <div className="overflow-hidden rounded-full shadow-[inset_0px_0px_7px_rgba(0,0,0,0.7)]">
               <Image
@@ -124,7 +124,7 @@ export default function HomePanelOne() {
         type="button"
         className="relative mx-auto flex flex-col items-center text-[#D8C4FF] opacity-75"
       >
-        <span className="mb-2 block lg:text-[2.133rem]">scroll</span>
+        <span className="mb-2 block lg:text-[1.111vw]">scroll</span>
         <div className="svg_icon w-[3vw]">
           <ArrowDown />
         </div>
