@@ -12,12 +12,12 @@ import HomePanelEight from '@/components/home/panel-eight';
 import HomePanelNine from '@/components/home/panel-nine';
 
 export default function Home() {
-  useEffect(() => {
-    // Create your instance
-    const gradient = new Gradient();
-    // Call `initGradient` with the selector to your canvas
-    gradient.initGradient('#gradient-canvas');
-  }, []);
+  // useEffect(() => {
+  //   // Create your instance
+  //   const gradient = new Gradient();
+  //   // Call `initGradient` with the selector to your canvas
+  //   gradient.initGradient('#gradient-canvas');
+  // }, []);
 
   return (
     <div>

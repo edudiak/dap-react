@@ -22,12 +22,12 @@ export default function Footer() {
     formState: { errors },
   } = useForm();
 
-  useEffect(() => {
-    // Create your instance
-    const gradient = new Gradient();
-    // Call `initGradient` with the selector to your canvas
-    gradient.initGradient('#footer-gradient-canvas');
-  }, []);
+  // useEffect(() => {
+  //   // Create your instance
+  //   const gradient = new Gradient();
+  //   // Call `initGradient` with the selector to your canvas
+  //   gradient.initGradient('#footer-gradient-canvas');
+  // }, []);
 
   const onSubmit = async (data) => {
     const GF_API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/gf/v2/forms/2/submissions`;

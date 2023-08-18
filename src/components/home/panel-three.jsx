@@ -202,7 +202,7 @@ export default function HomePanelThree() {
     >
       <div
         ref={elm_1}
-        className="bg- w-full pt-5 lg:w-[45%] lg:bg-transparent lg:pt-0"
+        className="bg- w-full pt-5 will-change-transform lg:w-[45%] lg:bg-transparent lg:pt-0"
       >
         <div>
           <h2 className="text-4xl leading-none text-[#F7F3FF] md:text-5xl lg:text-[10.667rem]">
@@ -231,43 +231,42 @@ export default function HomePanelThree() {
         <div className="relative">
           {thePackDogs.map((dog, i) => {
             const dogSpeed = dog.position.speed;
-            const cssClass = `${dog.mobilePosition.y} ${dog.mobilePosition.x} ${
-              dog.position.y
-            } ${dog.position.x} w-[60%] ${
+            const cssClass = `${dog.mobilePosition.y} will-change-transform ${
+              dog.mobilePosition.x
+            } ${dog.position.y} ${dog.position.x} w-[60%] ${
               i % 2 ? 'md:w-[50%]' : 'md:w-[35%]'
             }  overflow-hidden rounded-3xl lg:rounded-[4rem] shadow-2xl`;
             return (
-              <div
-                key={dog.id}
-                data-speed={dogSpeed}
-                className={cssClass}
-                style={{
-                  background:
-                    'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
-                  backgroundBlendMode: 'overlay, normal, normal',
-                  boxShadow:
-                    '31px 46px 22px rgba(0, 0, 0, 0.01), 18px 26px 19px rgba(0, 0, 0, 0.05), 8px 12px 14px rgba(0, 0, 0, 0.09), 2px 3px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
-                  backdropFilter: 'blur(20px)',
-                }}
-              >
+              <div key={dog.id} data-speed={dogSpeed} className={cssClass}>
                 <div
-                  className={`w-full overflow-hidden rounded-bl-full rounded-br-full ${
-                    i % 2 ? 'lg:h-[30rem]' : 'lg:h-[20rem]'
-                  }`}
+                  style={{
+                    background:
+                      'url(/images/dap-bg-noise-20.png), linear-gradient(250.64deg, rgba(255, 255, 255, 0.36) -39.08%, rgba(255, 255, 255, 0) 107.65%), linear-gradient(109.32deg, rgba(255, 255, 255, 0.24) -3.98%, rgba(255, 255, 255, 0.54) 51.7%, rgba(255, 255, 255, 0.1) 108.56%)',
+                    backgroundBlendMode: 'overlay, normal, normal',
+                    boxShadow:
+                      '31px 46px 22px rgba(0, 0, 0, 0.01), 18px 26px 19px rgba(0, 0, 0, 0.05), 8px 12px 14px rgba(0, 0, 0, 0.09), 2px 3px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1)',
+                    backdropFilter: 'blur(20px)',
+                  }}
                 >
-                  <img
-                    src={`/images/dogs/dog-${i + 1}-min.jpg`}
-                    alt={`Dog-${i}`}
-                    className="h-[160px] w-full object-cover md:h-[250px] lg:h-full"
-                  />
-                </div>
-                <div className="p-4 lg:p-[2.667rem]">
-                  <p className="mb-4 text-lg font-bold leading-none text-[#250A60] lg:mb-[2rem] lg:text-[2.667rem]">
-                    Dog Name
-                  </p>
-                  <p className="leading-none text-[#532EA4] lg:text-[2.133rem]">
-                    Pack Number 12345
-                  </p>
+                  <div
+                    className={`w-full overflow-hidden rounded-bl-full rounded-br-full ${
+                      i % 2 ? 'lg:h-[30rem]' : 'lg:h-[20rem]'
+                    }`}
+                  >
+                    <img
+                      src={`/images/dogs/dog-${i + 1}-min.jpg`}
+                      alt={`Dog-${i}`}
+                      className="h-[160px] w-full object-cover md:h-[250px] lg:h-full"
+                    />
+                  </div>
+                  <div className="p-4 lg:p-[2.667rem]">
+                    <p className="mb-4 text-lg font-bold leading-none text-[#250A60] lg:mb-[2rem] lg:text-[2.667rem]">
+                      Dog Name
+                    </p>
+                    <p className="leading-none text-[#532EA4] lg:text-[2.133rem]">
+                      Pack Number 12345
+                    </p>
+                  </div>
                 </div>
               </div>
             );
