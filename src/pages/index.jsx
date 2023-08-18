@@ -1,5 +1,8 @@
-import { useEffect } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { Gradient } from '@/lib/Gradient';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import HomePanelOne from '@/components/home/panel-one';
 import HomePanelTwo from '@/components/home/panel-two';
@@ -11,17 +14,47 @@ import HomePanelSeven from '@/components/home/panel-seven';
 import HomePanelEight from '@/components/home/panel-eight';
 import HomePanelNine from '@/components/home/panel-nine';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
-  // useEffect(() => {
-  //   // Create your instance
-  //   const gradient = new Gradient();
-  //   // Call `initGradient` with the selector to your canvas
-  //   gradient.initGradient('#gradient-canvas');
-  // }, []);
+  const canvasContainer = useRef();
+
+  useLayoutEffect(() => {
+    if (canvasContainer.current) {
+      // Create your instance
+      const gradient = new Gradient();
+      // Call `initGradient` with the selector to your canvas
+      gradient.initGradient('#gradient-canvas');
+
+      const onEnter = () => {
+        gradient.play();
+      };
+
+      const onLeave = () => {
+        gradient.pause();
+      };
+
+      ScrollTrigger.create({
+        trigger: canvasContainer.current,
+        start: 'top bottom',
+        end: 'bottom',
+        markers: true,
+        onEnter,
+        onLeave,
+        onEnterBack: () => onEnter(),
+        onLeaveBack: () => onLeave(),
+      });
+
+      ScrollTrigger.refresh();
+    }
+  }, []);
 
   return (
     <div>
-      <div className="relative pb-36 pt-28 md:pb-52 md:pt-36 lg:pb-[30rem] lg:pt-[28rem]">
+      <div
+        className="relative pb-36 pt-28 md:pb-52 md:pt-36 lg:pb-[30rem] lg:pt-[28rem]"
+        ref={canvasContainer}
+      >
         <canvas
           id="gradient-canvas"
           data-transition-in
