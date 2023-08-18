@@ -257,3 +257,11 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-transform-opacity {
+  will-change: opacity, transform;
+}

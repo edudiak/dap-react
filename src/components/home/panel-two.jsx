@@ -71,10 +71,7 @@ export default function HomePanelTwo() {
         </video>
         <div
           ref={elm_1}
-          className="flex w-full will-change-transform lg:flex-1"
-          style={{
-            willChange: 'opacity',
-          }}
+          className="will-change-opacity flex w-full will-change-transform lg:flex-1"
         >
           <div
             className="flex w-full items-center rounded-3xl p-6 lg:rounded-[4rem] lg:p-[5.33rem]"
@@ -109,10 +106,7 @@ export default function HomePanelTwo() {
         </div>
         <div
           ref={elm_2}
-          className="will-change-opacity lg:flex-1"
-          style={{
-            willChange: 'opacity',
-          }}
+          className="will-change-opacity will-change-opacity lg:flex-1"
         >
           <div
             className="relative flex w-full items-center justify-center overflow-hidden rounded-3xl bg-[rgba(255,255,255,0.54)] bg-cover bg-center bg-no-repeat p-6 lg:rounded-[4rem] lg:p-[5.33rem]"

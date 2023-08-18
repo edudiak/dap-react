@@ -79,13 +79,13 @@ export default function HomePanelSix() {
       <div className="relative z-[1] pb-20 lg:w-3/4 lg:pb-0">
         <h2
           ref={elm_1}
-          className="text-4xl leading-tight tracking-tighter text-[#F8F4FF] md:text-5xl lg:max-w-[100rem] lg:text-[10rem] lg:leading-tight"
+          className="will-change-transform-opacity text-4xl leading-tight tracking-tighter text-[#F8F4FF] md:text-5xl lg:max-w-[100rem] lg:text-[10rem] lg:leading-tight"
         >
           Enroll your dog now & join this exciting project
         </h2>
         <div
           ref={elm_2}
-          className="mb-10 mt-5 text-lg leading-snug text-[#F8F4FF] md:mb-16 md:text-xl lg:mb-[7rem] lg:mt-[5rem] lg:max-w-[74rem] lg:text-[2.8rem] lg:leading-tight"
+          className="will-change-transform-opacity mb-10 mt-5 text-lg leading-snug text-[#F8F4FF] md:mb-16 md:text-xl lg:mb-[7rem] lg:mt-[5rem] lg:max-w-[74rem] lg:text-[2.8rem] lg:leading-tight"
         >
           <p className="mb-5 lg:mb-[4rem]">
             At the Dog Aging Project, we know how important dogs are for the
@@ -99,7 +99,7 @@ export default function HomePanelSix() {
         <a
           ref={elm_3}
           href="https://portal.dogagingproject.org/nomination"
-          className="inline-block rounded-full bg-[#F7F3FF] px-6 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
+          className="will-change-transform-opacity inline-block rounded-full bg-[#F7F3FF] px-6 py-4 font-bold leading-none text-[#250A60] shadow-[inset_0px_0px_15px_5px_rgba(0,0,0,0.3)] transition hover:bg-[#250A60] hover:text-[#F7F3FF] lg:px-[4rem] lg:py-[2.133rem] lg:text-[2.4rem]"
         >
           Enroll Your Dog
         </a>

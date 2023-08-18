@@ -265,11 +265,14 @@ export default function HomePanelFive() {
   }, []);
 
   return (
-    <div ref={section4} className="relative overflow-hidden">
+    <div
+      ref={section4}
+      className="relative overflow-hidden will-change-transform "
+    >
       <div className="section4_sticky_panels relative h-screen">
         <div
           ref={panel_1}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
+          className="will-change-opacity absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -301,7 +304,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_2}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
+          className="will-change-opacity absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -334,7 +337,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_3}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
+          className="will-change-opacity absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -368,7 +371,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_4}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
+          className="will-change-opacity absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -397,7 +400,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_5}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
+          className="will-change-opacity absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -428,7 +431,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_6}
-          className="absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
+          className="will-change-opacity absolute left-0 top-0 z-[3] flex h-[calc(100%-105px)] w-full items-center opacity-0 md:h-[calc(100%-115px)] md:items-start md:pt-[5rem] lg:h-[calc(100%-26rem)]"
         >
           <div className="mx-auto flex w-full flex-wrap items-start px-[5%] md:h-full md:flex-nowrap md:items-center">
             <div className="mx-auto w-[250px] text-center md:mx-0 md:w-1/2">
@@ -458,7 +461,7 @@ export default function HomePanelFive() {
 
         <div
           ref={panel_7}
-          className="absolute left-0 top-0 z-[-1] h-full w-full bg-[#6543A5]"
+          className="will-change-opacity absolute left-0 top-0 z-[-1] h-full w-full bg-[#6543A5]"
         >
           <div className="mx-auto flex h-[calc(100%-105px)] w-full items-center px-5 md:h-[calc(100%-115px)] lg:h-[calc(100%-26rem)] lg:pl-[16%] lg:pr-[4%]">
             <div className="w-full text-[#E8DCFF]">
@@ -500,7 +503,7 @@ export default function HomePanelFive() {
           <div className="relative w-[130px] lg:w-auto">
             <div
               ref={panel_box_1_dot}
-              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full will-change-transform lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_1}
@@ -519,7 +522,7 @@ export default function HomePanelFive() {
           <div className="relative w-[130px] lg:w-auto">
             <div
               ref={panel_box_2_dot}
-              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full will-change-transform lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_2}
@@ -538,7 +541,7 @@ export default function HomePanelFive() {
           <div className="relative w-[130px] lg:w-auto">
             <div
               ref={panel_box_3_dot}
-              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full will-change-transform lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_3}
@@ -557,7 +560,7 @@ export default function HomePanelFive() {
           <div className="relative w-[130px] lg:w-auto">
             <div
               ref={panel_box_4_dot}
-              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full will-change-transform lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_4}
@@ -576,7 +579,7 @@ export default function HomePanelFive() {
           <div className="relative w-[130px] lg:w-auto">
             <div
               ref={panel_box_5_dot}
-              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full will-change-transform lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_5}
@@ -595,7 +598,7 @@ export default function HomePanelFive() {
           <div className="relative w-[130px] lg:w-auto">
             <div
               ref={panel_box_6_dot}
-              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full lg:h-[100px] lg:w-[100px]"
+              className="dot absolute right-0 top-0 h-[50px] w-[50px] rounded-full will-change-transform lg:h-[100px] lg:w-[100px]"
             />
             <div
               ref={panel_box_6}

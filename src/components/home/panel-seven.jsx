@@ -153,7 +153,7 @@ export default function HomePanelSeven() {
     <div className="px-5 pb-[5%] pt-[25%] lg:px-[4%]">
       <h2
         ref={elm_1}
-        className="mb-10 text-4xl leading-none -tracking-[1.5px] text-[#6543A5] md:text-5xl lg:mb-[13.333rem] lg:mr-[4%] lg:max-w-[100rem] lg:text-[8.133rem] lg:-tracking-[0.24rem] lg:text-[#6543A5]"
+        className="will-change-transform-opacity mb-10 text-4xl leading-none -tracking-[1.5px] text-[#6543A5] md:text-5xl lg:mb-[13.333rem] lg:mr-[4%] lg:max-w-[100rem] lg:text-[8.133rem] lg:-tracking-[0.24rem] lg:text-[#6543A5]"
       >
         Our data is already advancing new discoveries
       </h2>
@@ -165,7 +165,7 @@ export default function HomePanelSeven() {
         {recentArticles.map((article) => (
           <article
             key={article.id}
-            className="blog-post relative w-full shrink-0 overflow-hidden rounded-[20px] bg-white md:flex-1 lg:rounded-[2.667rem]"
+            className="blog-post will-change-opacity relative w-full shrink-0 overflow-hidden rounded-[20px] bg-white md:flex-1 lg:rounded-[2.667rem]"
           >
             <div className="pointer-events-none absolute left-0 top-0 h-full w-full rounded-[20px] shadow-[inset_0px_0px_10px_rgba(0,0,0,0.4)] lg:rounded-[2.667rem]" />
             <div className="flex h-full flex-wrap-reverse items-stretch justify-center gap-y-8 overflow-hidden rounded-3xl text-[#250A60] sm:flex-nowrap lg:min-h-[20.6rem] lg:rounded-[2.667rem]">
@@ -208,7 +208,10 @@ export default function HomePanelSeven() {
           </article>
         ))}
       </div>
-      <div ref={elm_3} className="pt-20 text-center lg:pt-[13.333rem]">
+      <div
+        ref={elm_3}
+        className="will-change-opacity pt-20 text-center lg:pt-[13.333rem]"
+      >
         <Link
           href="/blog"
           target="_blank"

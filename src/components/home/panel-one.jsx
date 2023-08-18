@@ -64,13 +64,13 @@ export default function HomePanelOne() {
         <div className="z-[1] mt-16 w-full md:mt-20 lg:mt-0 lg:w-3/4">
           <h1
             ref={elm_1}
-            className="text-4xl leading-tight -tracking-[2.4px] text-[#F8F4FF] md:text-5xl lg:max-w-[98rem] lg:text-[10.667rem] lg:leading-none lg:-tracking-[0.32rem]"
+            className="will-change-transform-opacity text-4xl leading-tight -tracking-[2.4px] text-[#F8F4FF] md:text-5xl lg:max-w-[98rem] lg:text-[10.667rem] lg:leading-none lg:-tracking-[0.32rem]"
           >
             Discovering the keys to a healthy lifespan
           </h1>
           <div
             ref={elm_2}
-            className="mt-6 text-lg leading-snug -tracking-[1.3px] text-[#F8F4FF] md:text-xl lg:mt-[5.333rem] lg:max-w-[83rem] lg:text-[3.6rem] lg:leading-snug lg:-tracking-[0.173rem]"
+            className="will-change-transform-opacity mt-6 text-lg leading-snug -tracking-[1.3px] text-[#F8F4FF] md:text-xl lg:mt-[5.333rem] lg:max-w-[83rem] lg:text-[3.6rem] lg:leading-snug lg:-tracking-[0.173rem]"
           >
             At the Dog Aging Project, we care deeply about the health and
             happiness of dogs. Our discoveries about healthy aging in our canine
@@ -80,7 +80,7 @@ export default function HomePanelOne() {
           </div>
           <div
             ref={elm_3}
-            className="mt-10 flex flex-wrap items-center justify-between text-sm text-white md:text-base lg:mt-[16rem] lg:max-w-[96rem] lg:flex-nowrap lg:text-[2.4rem]"
+            className="will-change-transform-opacity mt-10 flex flex-wrap items-center justify-between text-sm text-white md:text-base lg:mt-[16rem] lg:max-w-[96rem] lg:flex-nowrap lg:text-[2.4rem]"
           >
             <div className="flex items-center gap-x-3 md:gap-x-4 lg:gap-x-[2rem]">
               <div className="flex">
@@ -104,7 +104,7 @@ export default function HomePanelOne() {
         </div>
         <div
           ref={elm_4}
-          className="mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:absolute lg:-top-[12%] lg:right-[2%] lg:mx-0 lg:max-w-[90rem]"
+          className="will-change-transform-opacity mx-auto flex max-w-[90%] items-center justify-center md:max-w-[70%] lg:absolute lg:-top-[12%] lg:right-[2%] lg:mx-0 lg:max-w-[90rem]"
         >
           <div className="relative p-4 lg:p-14">
             <div className="absolute left-0 top-0 h-full w-full rotate-[90deg] transform rounded-full border-[7px] border-[#6543A5] border-b-transparent" />
@@ -122,7 +122,7 @@ export default function HomePanelOne() {
       <button
         ref={elm_5}
         type="button"
-        className="relative mx-auto flex flex-col items-center text-[#D8C4FF] opacity-75"
+        className="will-change-transform-opacity relative mx-auto flex flex-col items-center text-[#D8C4FF] opacity-75"
       >
         <span className="mb-2 block lg:text-[2.133rem]">scroll</span>
         <div className="svg_icon w-[3vw]">

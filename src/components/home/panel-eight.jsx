@@ -76,13 +76,13 @@ export default function HomePanelEight() {
         <div className="py-10 md:py-16 lg:py-[6rem]">
           <h2
             ref={elm_1}
-            className="text-4xl leading-tight tracking-tight text-[#FF9494] md:text-5xl lg:text-[8.133rem] lg:leading-tight"
+            className="will-change-transform-opacity text-4xl leading-tight tracking-tight text-[#FF9494] md:text-5xl lg:text-[8.133rem] lg:leading-tight"
           >
             Support Our Science
           </h2>
           <div
             ref={elm_2}
-            className="pb-6 text-lg leading-normal text-[#FF9494] md:pt-6 lg:mt-[7rem] lg:pb-[6rem] lg:text-[2.8rem] lg:leading-normal"
+            className="will-change-transform-opacity pb-6 text-lg leading-normal text-[#FF9494] md:pt-6 lg:mt-[7rem] lg:pb-[6rem] lg:text-[2.8rem] lg:leading-normal"
           >
             We have established the Dog Aging Project as an engine for
             innovation. While core research activities are supported by the
@@ -91,7 +91,7 @@ export default function HomePanelEight() {
             expand our existing initiatives and to develop new, cutting-edge
             programs that will benefit dogs and people too.
           </div>
-          <div ref={elm_3} className="">
+          <div ref={elm_3} className="will-change-transform-opacity">
             <a
               href="https://dogagingproject.org/donate"
               target="_blank"

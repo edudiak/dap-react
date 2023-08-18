@@ -59,7 +59,7 @@ export default function PanelThree() {
         <div className="relative z-[1] pb-20 lg:w-3/4 lg:pb-0">
           <h2
             ref={elm_1}
-            className="text-4xl leading-tight tracking-tighter text-[#F8F4FF] md:text-5xl lg:max-w-[100rem] lg:text-[10rem] lg:leading-tight"
+            className="will-change-transform-opacity text-4xl leading-tight tracking-tighter text-[#F8F4FF] md:text-5xl lg:max-w-[100rem] lg:text-[10rem] lg:leading-tight"
           >
             Spreading the Word
           </h2>
