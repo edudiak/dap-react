@@ -1,8 +1,11 @@
 /* eslint no-unused-vars: "off" */
 import { Gradient } from '@/lib/Gradient';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import FacebookIcon from '@assets/images/icons/facebook.svg';
 import InstagramIcon from '@assets/images/icons/instagram.svg';
@@ -11,6 +14,8 @@ import TiktokIcon from '@assets/images/icons/tiktok.svg';
 import TwitterIcon from '@assets/images/icons/twitter.svg';
 import YoutubeIcon from '@assets/images/icons/youtube.svg';
 import axios from 'axios';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,12 +27,39 @@ export default function Footer() {
     formState: { errors },
   } = useForm();
 
-  // useEffect(() => {
-  //   // Create your instance
-  //   const gradient = new Gradient();
-  //   // Call `initGradient` with the selector to your canvas
-  //   gradient.initGradient('#footer-gradient-canvas');
-  // }, []);
+  const canvasContainer = useRef();
+
+  useLayoutEffect(() => {
+    if (canvasContainer.current) {
+      // Create your instance
+      const gradient = new Gradient();
+      // Call `initGradient` with the selector to your canvas
+      gradient.initGradient('#footer-gradient-canvas');
+
+      const onEnter = () => {
+        gradient.play();
+      };
+
+      const onLeave = () => {
+        gradient.pause();
+      };
+
+      ScrollTrigger.create({
+        trigger: canvasContainer.current,
+        start: 'top bottom',
+        end: 'bottom',
+        markers: true,
+        onEnter,
+        onLeave,
+        onEnterBack: () => onEnter(),
+        onLeaveBack: () => onLeave(),
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, []);
 
   const onSubmit = async (data) => {
     const GF_API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/gf/v2/forms/2/submissions`;
@@ -63,6 +95,7 @@ export default function Footer() {
         background:
           'url(/images/dap-bg-noise-20.png), url(/images/footer-bg.png), #6543A5',
       }}
+      ref={canvasContainer}
     >
       <canvas
         id="footer-gradient-canvas"
